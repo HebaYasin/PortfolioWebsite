@@ -213,7 +213,7 @@ const SPREADS = [
       <section class="entry proj">
       <h3><span class="mark">Coursework Projects</span></h3>
       <ul>
-      <li><div>Stock Price Prediction with LSTM<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
+      <li><div>Stock Price Prediction with LSTM<p class="meta">Tech or tools used include</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
       <li><div>Telecom Customer Churn Analysis<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
       <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
       <li><div>Frozen dessert market-share optimization<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
