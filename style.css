@@ -373,13 +373,18 @@ top:29px;left:38px;
 .card-role{color:var(--ink-soft);font-size:15px;margin-top:6px}
 .card-rule{height:2px;background:var(--ink);margin:14px 0 12px;width:60%}
 .card-mail{font-size:15px;word-break:break-all;user-select:all}
-.bio{margin-top:228px;display:flex;gap:20px;align-items:flex-start}
+.bio{position: relative;top: 260px;display:flex;gap:20px;align-items:flex-start}
 .polaroid{position:relative;flex:none;width:132px;padding:8px 8px 26px;background:#fff;transform:rotate(-3deg);box-shadow:0 2px 8px rgba(0,0,0,.35)}
 .polaroid .tape{position:absolute;top:-10px;left:38px;width:56px;height:18px;background:rgba(235,235,235,.8);transform:rotate(-5deg);box-shadow:1px 1px 4px rgba(0,0,0,.15)}
 .polaroid .img{height:116px;background:#bfdbe6;display:grid;place-items:center;font-family:var(--font-display);font-size:44px;color:#1b5f7a}
 .polaroid small{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:12px;color:var(--ink-soft)}
 .blurb{font-size:.95em;text-align:left}
-.find{margin-top:40px!important;margin-bottom:12px!important;font-size:1.6em!important}
+.social{    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: 270px;}
+.find{font-size:1.6em!important}
 .links{display:flex;flex-wrap:wrap;gap:14px}
 .stk{display:inline-block;padding:7px 14px;background:#fff;border:2px solid var(--ink);border-radius:12px 4px 12px 4px;box-shadow:3px 3px 0 var(--ink);font-family:var(--font-display);text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s;align-self:end;}
 .stk:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
@@ -849,6 +854,7 @@ position: absolute;
 
 
 
+.entry.proj h3{margin-bottom: 6px;}
 
 .entry.proj ul{
   display: flex;
@@ -876,7 +882,7 @@ position: absolute;
 
 .entry.proj li div{
   font-size: 16px;
-  width: 70%;
+  padding-right: 6px;
 }
 
 
@@ -912,3 +918,38 @@ position: absolute;
 /* hide the contact card once its sheet has flipped (after the page passes halfway) */
 .pcard{transition:left .8s var(--ease),top .8s var(--ease),transform .8s var(--ease),visibility 0s .4s}
 .psheet.flipped .pcard{visibility:hidden}
+
+
+.psheet h1, .psheet h2{
+  font-size: 35px;
+}
+
+.psheet .home{
+  width:60px;
+}
+
+
+.psheet h3{
+  font-size: 25px;
+}
+
+.psheet .shot.edu{
+    width: 138px;
+    position: absolute;
+    bottom: -65px;
+    left: 90px;
+}
+
+
+
+.psheet .note .stk{
+  font-size:16px
+}
+
+
+.psheet .course{
+  font-size: 18px;
+}
+
+
+.entry .meta.exp{text-wrap-mode: nowrap;}

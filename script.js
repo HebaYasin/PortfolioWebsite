@@ -1,16 +1,10 @@
-//TODO: font sizes are not responsive, they are fixed, and they should be responsive to the screen size
-//TODO: convert all pixle values to rem or em
-//TODO: add projects url, and tech used
-//TODO: fix form to have required feilds
-//TODO: change home button to  something meaningful
+//TODO: convert all pixel values to rem or em
+//TODO: fix form to have required fields
 //TODO: find a way to make my website not copied by genAI
 //TODO: make next, prev buttons have more height
-//TODO: fix sizes in phone mode
 //TODO: remove download cv button on phone view
-//TODO: chande images paths
-//TODO: there is a problem after user clicks send and new envelop appears, when i go to prev or next page the contact page still appears
 //TODO: add a welcome message that tells user to treat this website as if it is a real book, click on cover, pages, cards, papers, flipping cards, and how to close it when inside a section
-
+//TODO: fix control
 
 (() => {
 'use strict';
@@ -100,7 +94,7 @@ const SPREADS = [
       `<header class="ph center"><h2>About me</h2></header>
       <main>
       <section class="entry"><p>Hi! I&rsquo;m ${FIRST}, and I&rsquo;m glad you&rsquo;re taking a look at my website! </p><br/><p>I&rsquo;m a Data Science and AI graduate at the beginning of my career, exploring opportunities to learn, build, and grow.</p></section>
-      <section class="note"><b>My interests</b><p>I enjoy using data and AI to build smart solutions and solve problems. I&rsquo;m also very interested in  AI research, particularly Natural Language Processing (NLP).  <br/><br/>Outside of AI, I enjoy front-end development as a hobby, where I explore web design and bring ideas to life through code.</p></section>
+      <section class="note"><b>My interests</b><p>I enjoy using data and AI to build smart solutions and solve problems. I&rsquo;m also very interested in  AI research, particularly Natural Language Processing (NLP) and Agentic AI.  <br/><br/>Outside of AI, I enjoy front-end development as a hobby, where I explore web design and bring ideas to life through code.</p></section>
       </main>
       `,
     ),
@@ -114,7 +108,7 @@ const SPREADS = [
       <main style="gap:16px;">
       <section class="entry"><div style="display:flex;flex-direction:column;"><h3><span class="mark">Bachelor of Data Science and AI</span></h3><p class="meta">Princess Sumaya University For Technology</p></div> <div style="width:100%;display:flex; justify-content: space-between;"><p class="meta">2021 &ndash; 2025</p> <p class="meta">GPA: <span class="mark">80.8</span></p></div></section>
       <section class="note"><b>Graduation project</b><div><p>Together with my teammates <a href="https://www.linkedin.com/in/adam-abuyousef-ab5ab9253/" target="_blank" title="Adam's LinkedIn">Adam</a> and <a href="https://www.linkedin.com/in/abdelrahman-s-145a3b1ab/" target="_blank" title="Abdelrahman's LinkedIn">Abdelrahman</a> we chose to explore how AI can be used to predict local weather in Jordan, under the supervision of <a href="https://www.linkedin.com/in/mohammad-j-abdel-rahman-5b5a032a/" target="_blank" title="Dr. Mohammad's LinkedIn">Dr. Mohammad Abdel-Rahman</a>.<br/>We built a four-stage deep learning pipeline using a fine-tuned IBM Tiny Time Mixer, LSTM/ConvLSTM models, historical weather station data, and NASA satellite imagery.<br/> Despite challenges with data quality and pipeline design, the project gave us hands-on experience in AI-based weather forecasting.</p></div> 
-      <div class="shot" style="width:45%;position:absolute ;bottom:-90px;left:50px;"><img src="assets/images/project-images/grad_project.png" alt="Graduation Project Image"><small>Jawwak</small></div><a class="stk" href="https://github.com/abood-shehade/Weather-prediction" target="_blank" rel="noopener noreferrer">View project</a></section>
+      <div class="shot edu"><img src="assets/images/project-images/grad_project.png" alt="Graduation Project Image"><small>Jawwak</small></div><a class="stk" href="https://github.com/abood-shehade/Weather-prediction" target="_blank" rel="noopener noreferrer">View project</a></section>
       </main>`,
     ),
     right: page(
@@ -137,7 +131,7 @@ const SPREADS = [
       `<header class="ph">${HOME}<h1>Experience</h1></header>
       <main>
       <section class="entry">
-      <h3><span class="mark">Junior Data Scientist</span></h3><p class="meta"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p>
+      <h3><span class="mark">Junior Data Scientist</span></h3><p class="meta exp"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p>
       <p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
@@ -156,7 +150,7 @@ const SPREADS = [
       <main>
       <section class="entry">
       <h3><span class="mark">AI Intern</span></h3>
-      <p class="meta"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
+      <p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. AI-powered Anti-Money Laundry</span>Enhanced an AML name similarity model accuracy by 20% by identifying and resolving critical data quality issues.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1.png" alt=""></div><small>Names Clustering</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_2.png" alt=""></div><small>Training Results</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_4.png" alt=""></div><small>Testing</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_3.png" alt=""></div><small>Evaluation</small></div></div></div>
@@ -178,7 +172,7 @@ const SPREADS = [
       <main>
       <section class="entry">
       <h3><span class="mark">Data Science Intern</span></h3>
-      <p class="meta"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
+      <p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. Building a classification model for HR data</span> Trained multiple ML models for a job status classification problem. Standardized 12,000+ job titles into clusters, and engineered features after analysis.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_1.png" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_2.png" alt=""></div><small>processing</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_3.png" alt=""></div><small>feature engineering</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_4.png" alt=""></div><small>ML evaluation</small></div></div></div>
@@ -193,7 +187,7 @@ const SPREADS = [
       <main>
       <section class="entry">
       <h3><span class="mark">Software Engineering Intern</span></h3>
-      <p class="meta"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
+      <p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
         <div class="tcard"><span class="title">1. Web Page Cloning with HTML, CSS, and JavaScript</span> Recreated multiple web pages to strengthen front-end development skills, focusing on clean HTML structure, consistent naming conventions, organized file architecture, and maintainable code.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task1.png" alt=""></div><small>Clone One</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task2.png" alt=""></div><small>Clone Two</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task3.png" alt=""></div><small>Clone Three</small></div></div></div>
@@ -213,17 +207,26 @@ const SPREADS = [
       
 
       <section class="entry proj">
-      <h3><span class="mark">Coursework Projects</span></h3>
+      <h3><span class="mark">Data Analysis Projects</span></h3>
       <ul>
-<li><div>AI-Driven SOC Dashboard for Anomaly Detection<p class="meta">Unsupervised ML+ Data Visualization</p></div><a class="stk"  href="https://github.com/llaxna/AI-driven-SOC-Dashboard" target="_blank">View project</a></li>
-      <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">Integrating ML with IBM CPLEX solver to accelerate ILP optimization.</p></div><a class="stk"  href="https://github.com/HebaYasin/ML-GuidedOptimization" target="_blank">View project</a></li>
-      <li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
-      <li><div>A graphical solver that solves 2D and 3D LP problems<p class="meta"></p></div><a class="stk" href="https://colab.research.google.com/drive/1oUmmzuhHyf_ETIG6PPyxM3n2jRF1AK2Z?usp=sharing" target="_blank">View project</a></li>
-            <li><div>Gold Price Prediction with LSTM<p class="meta">Time Series Analysis + DL </p></div><a class="stk" href="https://github.com/HebaYasin/GoldPricePredictionLSTM" target="_blank">View project</a></li>
-<li><div>Analysis of Classification Algorithms for Movies Data<p class="meta">EDA + ML</p></div><a class="stk" href="https://colab.research.google.com/drive/1LPuWyxpdnWAeRymv-151IYrneTh4z9DK?usp=sharing" target="_blank">View project</a></li>
-
+        <li><div>One Piece Analysis<p class="meta">Web Scraping + NLP + Data Visualizing + ML</p></div><a class="stk"  href="https://github.com/HebaYasin/OnePieceDataAnalysis" target="_blank">View project</a></li>
+        <li><div>Enhancing Students well-being in jordanian schools form data analysis<p class="meta">Data Analysis + Data Visualization</p></div><a class="stk"  href="https://github.com/HebaYasin/EnhancingStudentsWellness" target="_blank">View project</a></li>
+        <li><div>Telecom Customer Churn Analysis<p class="meta">Data Visualization</p></div><a class="stk" href="https://github.com/HebaYasin/DataAnalysisofTelecomData" target="_blank">View project</a></li>
+            
       </ul>
       </section>
+<section class="entry proj">
+      <h3><span class="mark">ML/DL Projects</span></h3>
+      <ul> 
+      <li><div>AI-Driven SOC Dashboard for Anomaly Detection<p class="meta">Unsupervised ML+ Data Visualization</p></div><a class="stk"  href="https://github.com/llaxna/AI-driven-SOC-Dashboard" target="_blank">View project</a></li>
+      <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">ML + IBM CPLEX </p></div><a class="stk"  href="https://github.com/HebaYasin/ML-GuidedOptimization" target="_blank">View project</a></li>
+       <li><div>Gold Price Prediction with LSTM<p class="meta">Time Series Analysis + DL </p></div><a class="stk" href="https://github.com/HebaYasin/GoldPricePredictionLSTM" target="_blank">View project</a></li>
+
+           
+      </ul>
+      </section>
+
+
       </main>`,
     ),
     right: page(
@@ -231,29 +234,28 @@ const SPREADS = [
       9,
       `
       <main>
+            <section class="entry proj">
+            <ul>
+      <li><div>Analysis of Classification Algorithms for Movies Data<p class="meta">EDA + ML</p></div><a class="stk" href="https://colab.research.google.com/drive/1LPuWyxpdnWAeRymv-151IYrneTh4z9DK?usp=sharing" target="_blank">View project</a></li>
+      <li><div>Employee Status Prediction<<p class="meta">EDA + Feature Engineering + NLP + ML</p></div><a class="stk"  href="https://colab.research.google.com/drive/1X_Vgkl_Kct1tc0cmVBsjWdBRBIHFmQiN?usp=sharing" target="_blank">View project</a></li>
+</ul>
+      </section>
       <section class="entry proj">
+            <h3><span class="mark">LLMs and Agents Projects</span></h3>
       <ul> 
-      
-            <li><div>Enhancing Students well-being in jordanian schools form data analysis<p class="meta">Data Analysis + Data Visualization</p></div><a class="stk"  href="https://github.com/HebaYasin/EnhancingStudentsWellness" target="_blank">View project</a></li>
-<li><div>Telecom Customer Churn Analysis<p class="meta">Data Visualization</p></div><a class="stk" href="https://github.com/HebaYasin/DataAnalysisofTelecomData" target="_blank">View project</a></li>
-      
+<li><div>Multimodal RAG Chatbot<p class="meta">Document AI  + Langchain + Ollama</p></div><a class="stk"  href="https://github.com/HebaYasin/Multimodal-RAG-Chatbot" target="_blank">View project</a></li> 
       </ul>
       </section>
 <section class="entry proj">
       <h3><span class="mark">Other Projects</span></h3>
       <ul>
-      <li><div>One Piece Analysis<p class="meta">Web Scraping + NLP + Data Visualizing + ML</p></div><a class="stk"  href="#" target="_blank">View project</a></li>
-      <li><div>Clones of Web Components<br/> @ Optimum Partners<p class="meta">HTML + CSS + JavaScript + React.js</p></div><a class="stk"  href="#" target="_blank">View projects</a></li>
-      <li><div>Employee Status Prediction<br/> @ Zain<p class="meta">EDA + Feature Engineering + NLP + ML</p></div><a class="stk"  href="https://colab.research.google.com/drive/1X_Vgkl_Kct1tc0cmVBsjWdBRBIHFmQiN?usp=sharing" target="_blank">View project</a></li>
-
+      <li><div>Clones of Web Components<p class="meta">HTML + CSS + JavaScript + React.js</p></div><a class="stk"  href="https://github.com/HebaYasin/" target="_blank">View projects</a></li>
+<li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
+      <li><div>A graphical solver that solves 2D and 3D LP problems<p class="meta"></p></div><a class="stk" href="https://colab.research.google.com/drive/1oUmmzuhHyf_ETIG6PPyxM3n2jRF1AK2Z?usp=sharing" target="_blank">View project</a></li>
       </ul>
       </section>
 
-      
-      
-
-
-      <section class="note" style="gap:0px; flex-direction:row; font-size:12px;"><b>Currently Building:</b><ul><li>Bashrati: computer vision</li><li>a team of agents to perform data cleaning and EDA</li><li>University RAG</li></ul></section>
+      <section class="note" style="gap:0px; flex-direction:row; font-size:12px;"><b>Currently Building:</b><ul><li>Bashrati Prototype</li><li>A team of agents to perform data cleaning and EDA</li><li>University Multimodal RAG</li></ul></section>
       </main>`,
     ),
   },
@@ -284,7 +286,6 @@ const SPREADS = [
       <div class="skillrow">ML and DL:<div>
 <img src="assets/icons/skills-ml-and-dl-1.svg" alt="Scikit-Learn Library" title="Scikit-Learn Library">
 <img src="assets/icons/skills-ml-and-dl-2.svg" alt="TensorFlow Library" title="TensorFlow Library">
-      <img src="assets/icons/skills-ml-and-dl-3.svg" alt="Yolo Library" title="Yolo Library">
 
 </div></div>
 
@@ -323,8 +324,7 @@ const SPREADS = [
 
 </div></div>
       <div class="skillrow">Cloud and DevOps:<div>
-<img src="assets/icons/skills-cloud-and-devops-1.svg" alt="Amazon Web Services" title="Amazon Web Services">
-<img src="assets/icons/skills-cloud-and-devops-2.svg" alt="Microsoft Azure" title="Microsoft Azure">
+
 <img src="assets/icons/skills-cloud-and-devops-3.svg" alt="GitHub" title="GitHub">
 <img src="assets/icons/skills-cloud-and-devops-4.svg" alt="GitLab" title="GitLab">
 <img src="assets/icons/skills-cloud-and-devops-5.svg" alt="Microsoft Azure Foundry" title="Microsoft Azure Foundry">
@@ -365,6 +365,8 @@ const SPREADS = [
 
       <div class="skillrow">Cloud and DevOps:<div>
       <img src="assets/icons/skills-cloud-and-devops-7.svg" alt="Docker" title="Docker">
+      <img src="assets/icons/skills-cloud-and-devops-1.svg" alt="Amazon Web Services" title="Amazon Web Services">
+<img src="assets/icons/skills-cloud-and-devops-2.svg" alt="Microsoft Azure" title="Microsoft Azure">
 
       </div></div>
       <div class="skillrow">Web Development:<div>
@@ -432,8 +434,9 @@ const SPREADS = [
       `<div class="card"><div class="card-name">${CONFIG.name}</div><div class="card-role">${CONFIG.role}</div><div class="card-rule"></div><div class="card-mail" id="card-mail">${CONFIG.email}</div></div>
       <div class="bio"><div><i class="tape"></i><img src="assets/images/personal-images/heba-emoji-1.webp" alt="Personal Emoji" class="grad-img"></div>
         <p class="blurb">i am always open to aspiring disscussions and opportunities. so dont hesitate to contact me!</p></div>
+        <div class="social">
       <h2 class="find">Find me here</h2>
-      <div class="links"><a class="stk" data-link="linkedinUrl" href="#">LinkedIn</a><a class="stk" data-link="githubUrl" href="#">GitHub</a></div>`,
+      <div class="links"><a class="stk" data-link="linkedinUrl" href="#">LinkedIn</a><a class="stk" data-link="githubUrl" href="#">GitHub</a></div></div>`,
     ),
   },
 ];
