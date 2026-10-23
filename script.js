@@ -210,16 +210,18 @@ const SPREADS = [
       8,
       `<header class="ph">${HOME}<h1>Projects</h1></header>
       <main>
+      
+
       <section class="entry proj">
       <h3><span class="mark">Coursework Projects</span></h3>
       <ul>
-      <li><div>Stock Price Prediction with LSTM<p class="meta">Tech or tools used include</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>Telecom Customer Churn Analysis<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>Frozen dessert market-share optimization<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>a Graphical solver that solves 2D and 3D LP problems<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>Students well-being in jordanian schools form data analysis<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      
+<li><div>AI-Driven SOC Dashboard for Anomaly Detection<p class="meta">Unsupervised ML+ Data Visualization</p></div><a class="stk"  href="https://github.com/llaxna/AI-driven-SOC-Dashboard" target="_blank">View project</a></li>
+      <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">Integrating ML with IBM CPLEX solver to accelerate ILP optimization.</p></div><a class="stk"  href="https://github.com/HebaYasin/ML-GuidedOptimization" target="_blank">View project</a></li>
+      <li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
+      <li><div>A graphical solver that solves 2D and 3D LP problems<p class="meta"></p></div><a class="stk" href="https://colab.research.google.com/drive/1oUmmzuhHyf_ETIG6PPyxM3n2jRF1AK2Z?usp=sharing" target="_blank">View project</a></li>
+            <li><div>Gold Price Prediction with LSTM<p class="meta">Time Series Analysis + DL </p></div><a class="stk" href="https://github.com/HebaYasin/GoldPricePredictionLSTM" target="_blank">View project</a></li>
+<li><div>Analysis of Classification Algorithms for Movies Data<p class="meta">EDA + ML</p></div><a class="stk" href="https://colab.research.google.com/drive/1LPuWyxpdnWAeRymv-151IYrneTh4z9DK?usp=sharing" target="_blank">View project</a></li>
+
       </ul>
       </section>
       </main>`,
@@ -231,27 +233,24 @@ const SPREADS = [
       <main>
       <section class="entry proj">
       <ul> 
-      <li><div>AI-Driven SOC Dashboard for Anomaly Detection<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>Winkly search engine<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
+      
+            <li><div>Enhancing Students well-being in jordanian schools form data analysis<p class="meta">Data Analysis + Data Visualization</p></div><a class="stk"  href="https://github.com/HebaYasin/EnhancingStudentsWellness" target="_blank">View project</a></li>
+<li><div>Telecom Customer Churn Analysis<p class="meta">Data Visualization</p></div><a class="stk" href="https://github.com/HebaYasin/DataAnalysisofTelecomData" target="_blank">View project</a></li>
+      
+      </ul>
+      </section>
+<section class="entry proj">
+      <h3><span class="mark">Other Projects</span></h3>
+      <ul>
+      <li><div>One Piece Analysis<p class="meta">Web Scraping + NLP + Data Visualizing + ML</p></div><a class="stk"  href="#" target="_blank">View project</a></li>
+      <li><div>Clones of Web Components<br/> @ Optimum Partners<p class="meta">HTML + CSS + JavaScript + React.js</p></div><a class="stk"  href="#" target="_blank">View projects</a></li>
+      <li><div>Employee Status Prediction<br/> @ Zain<p class="meta">EDA + Feature Engineering + NLP + ML</p></div><a class="stk"  href="https://colab.research.google.com/drive/1X_Vgkl_Kct1tc0cmVBsjWdBRBIHFmQiN?usp=sharing" target="_blank">View project</a></li>
+
       </ul>
       </section>
 
-      <section class="entry proj">
-      <h3><span class="mark">Kaggle Projects</span></h3>
-      <ul>
-      <li><div>Predicting diamond prices<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>Metastatic Cancer Prediction<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>Analysis of Classification Algorithms for Movies Data<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      </ul>
-      </section>
       
-      <section class="entry proj">
-      <h3><span class="mark">Personal Projects</span></h3>
-      <ul>
-      <li><div>One Piece Analysis<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      <li><div>Awn: Computer-Vision<p class="meta">Tech or tools used</p></div><a class="stk" data-link="githubUrl" href="#">View project</a></li>
-      </ul>
-      </section>
+      
 
 
       <section class="note" style="gap:0px; flex-direction:row; font-size:12px;"><b>Currently Building:</b><ul><li>Bashrati: computer vision</li><li>a team of agents to perform data cleaning and EDA</li><li>University RAG</li></ul></section>
@@ -431,7 +430,7 @@ const SPREADS = [
       "right",
       13,
       `<div class="card"><div class="card-name">${CONFIG.name}</div><div class="card-role">${CONFIG.role}</div><div class="card-rule"></div><div class="card-mail" id="card-mail">${CONFIG.email}</div></div>
-      <div class="bio"><div class="polaroid"><i class="tape"></i><img src="assets/images/personal-images/grad2.jpeg" alt="Profile Image" class="grad-img"><small>that&rsquo;s me</small></div>
+      <div class="bio"><div><i class="tape"></i><img src="assets/images/personal-images/heba-emoji-1.webp" alt="Personal Emoji" class="grad-img"></div>
         <p class="blurb">i am always open to aspiring disscussions and opportunities. so dont hesitate to contact me!</p></div>
       <h2 class="find">Find me here</h2>
       <div class="links"><a class="stk" data-link="linkedinUrl" href="#">LinkedIn</a><a class="stk" data-link="githubUrl" href="#">GitHub</a></div>`,
