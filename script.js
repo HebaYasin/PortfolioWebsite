@@ -1,4 +1,3 @@
-//TODO: convert all pixel values to rem or em
 //TODO: fix form to have required fields
 //TODO: find a way to make my website not copied by genAI
 //TODO: make next, prev buttons have more height
@@ -105,7 +104,7 @@ const SPREADS = [
       "left",
       2,
       `<header class="ph">${HOME}<h1>Education</h1></header>
-      <main style="gap:16px;">
+      <main style="gap:1rem;">
       <section class="entry"><div style="display:flex;flex-direction:column;"><h3><span class="mark">Bachelor of Data Science and AI</span></h3><p class="meta">Princess Sumaya University For Technology</p></div> <div style="width:100%;display:flex; justify-content: space-between;"><p class="meta">2021 &ndash; 2025</p> <p class="meta">GPA: <span class="mark">80.8</span></p></div></section>
       <section class="note"><b>Graduation project</b><div><p>Together with my teammates <a href="https://www.linkedin.com/in/adam-abuyousef-ab5ab9253/" target="_blank" title="Adam's LinkedIn">Adam</a> and <a href="https://www.linkedin.com/in/abdelrahman-s-145a3b1ab/" target="_blank" title="Abdelrahman's LinkedIn">Abdelrahman</a> we chose to explore how AI can be used to predict local weather in Jordan, under the supervision of <a href="https://www.linkedin.com/in/mohammad-j-abdel-rahman-5b5a032a/" target="_blank" title="Dr. Mohammad's LinkedIn">Dr. Mohammad Abdel-Rahman</a>.<br/>We built a four-stage deep learning pipeline using a fine-tuned IBM Tiny Time Mixer, LSTM/ConvLSTM models, historical weather station data, and NASA satellite imagery.<br/> Despite challenges with data quality and pipeline design, the project gave us hands-on experience in AI-based weather forecasting.</p></div> 
       <div class="shot edu"><img src="assets/images/project-images/grad_project.png" alt="Graduation Project Image"><small>Jawwak</small></div><a class="stk" href="https://github.com/abood-shehade/Weather-prediction" target="_blank" rel="noopener noreferrer">View project</a></section>
@@ -116,10 +115,10 @@ const SPREADS = [
       3,
       `<header class="ph center"><h2>Training & Certificates</h2></header>
       <main>
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:16px;"><span class="yr">2026</span><div><b>Levant Samsung Innovation Campus AI Course</b><p class="meta">Samsung Levant<br/>Currently enrolled</p></div></div><img src="assets/images/course-images/sic_course.png" alt="Samsung Course Image" class="course-img"></div>  
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:16px;"><span class="yr">2026</span><div><b>Microsoft Azure AI Fundamentals<br/> <span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">AI-900</span></b><p class="meta">Microsoft <br/> Preparing for the Exam</p></div></div><img src="assets/images/course-images/azure_course.png" alt="Microsoft Course Image" class="course-img"></div>     
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:16px;"><span class="yr">2026</span><div><b>AWS AI Practitioner <br/><span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">AIF-C01</span></b><p class="meta">Amazon Web Services <br/>Preparing for the Exam</p></div></div><img src="assets/images/course-images/aws_ai_course.png" alt="AWS AI Course Image" class="course-img"></div>
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:16px;"><span class="yr">2025</span><div><b>AWS Cloud Practitioner <br/><span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">CLF-C02</span></b><p class="meta">Amazon Web Services<br/> <a href="https://www.credly.com/badges/66c09cae-6b19-46ac-85ba-635d8c7f7513/" target="_blank" rel="noopener noreferrer">View the Badge</a></p></div></div><img src="assets/images/course-images/aws_course.webp" alt="AWS Cloud Course Image" class="course-img"></div>
+      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2026</span><div><b>Levant Samsung Innovation Campus AI Course</b><p class="meta">Samsung Levant<br/>Currently enrolled</p></div></div><img src="assets/images/course-images/sic_course.png" alt="Samsung Course Image" class="course-img"></div>  
+      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2026</span><div><b>Microsoft Azure AI Fundamentals<br/> <span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">AI-900</span></b><p class="meta">Microsoft <br/> Preparing for the Exam</p></div></div><img src="assets/images/course-images/azure_course.png" alt="Microsoft Course Image" class="course-img"></div>     
+      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2026</span><div><b>AWS AI Practitioner <br/><span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">AIF-C01</span></b><p class="meta">Amazon Web Services <br/>Preparing for the Exam</p></div></div><img src="assets/images/course-images/aws_ai_course.png" alt="AWS AI Course Image" class="course-img"></div>
+      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2025</span><div><b>AWS Cloud Practitioner <br/><span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">CLF-C02</span></b><p class="meta">Amazon Web Services<br/> <a href="https://www.credly.com/badges/66c09cae-6b19-46ac-85ba-635d8c7f7513/" target="_blank" rel="noopener noreferrer">View the Badge</a></p></div></div><img src="assets/images/course-images/aws_course.webp" alt="AWS Cloud Course Image" class="course-img"></div>
     </main>`,
     ),
   },
@@ -132,7 +131,7 @@ const SPREADS = [
       <main>
       <section class="entry">
       <h3><span class="mark">Junior Data Scientist</span></h3><p class="meta exp"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p>
-      <p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
+      <p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. Agentic Multimodal RAG Chatbot</span> Built an assistant that answers questions over a freight-forwarding project PDFs and meeting transcripts, with Docling-based extraction of tables and images and hierarchical parent/child retrieval over a Chroma vector store.<br/>Delivered a Streamlit chat interface (LangChain + Ollama) that surfaces the referenced tables and images alongside answers.<div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task1.jpg" alt=""></div><small>Project Architecture</small></div></div>
@@ -150,7 +149,7 @@ const SPREADS = [
       <main>
       <section class="entry">
       <h3><span class="mark">AI Intern</span></h3>
-      <p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
+      <p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. AI-powered Anti-Money Laundry</span>Enhanced an AML name similarity model accuracy by 20% by identifying and resolving critical data quality issues.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1.png" alt=""></div><small>Names Clustering</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_2.png" alt=""></div><small>Training Results</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_4.png" alt=""></div><small>Testing</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_3.png" alt=""></div><small>Evaluation</small></div></div></div>
@@ -172,7 +171,7 @@ const SPREADS = [
       <main>
       <section class="entry">
       <h3><span class="mark">Data Science Intern</span></h3>
-      <p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
+      <p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. Building a classification model for HR data</span> Trained multiple ML models for a job status classification problem. Standardized 12,000+ job titles into clusters, and engineered features after analysis.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_1.png" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_2.png" alt=""></div><small>processing</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_3.png" alt=""></div><small>feature engineering</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_4.png" alt=""></div><small>ML evaluation</small></div></div></div>
@@ -187,7 +186,7 @@ const SPREADS = [
       <main>
       <section class="entry">
       <h3><span class="mark">Software Engineering Intern</span></h3>
-      <p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: 12px;}">click on the cards to view them</span></p>
+      <p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
       </section>
       <div class="cardstack">
         <div class="tcard"><span class="title">1. Web Page Cloning with HTML, CSS, and JavaScript</span> Recreated multiple web pages to strengthen front-end development skills, focusing on clean HTML structure, consistent naming conventions, organized file architecture, and maintainable code.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task1.png" alt=""></div><small>Clone One</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task2.png" alt=""></div><small>Clone Two</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task3.png" alt=""></div><small>Clone Three</small></div></div></div>
@@ -255,7 +254,7 @@ const SPREADS = [
       </ul>
       </section>
 
-      <section class="note" style="gap:0px; flex-direction:row; font-size:12px;"><b>Currently Building:</b><ul><li>Bashrati Prototype</li><li>A team of agents to perform data cleaning and EDA</li><li>University Multimodal RAG</li></ul></section>
+      <section class="note" style="gap:0rem; flex-direction:row; font-size:.75rem;"><b>Currently Building:</b><ul><li>Bashrati Prototype</li><li>A team of agents to perform data cleaning and EDA</li><li>University Multimodal RAG</li></ul></section>
       </main>`,
     ),
   },
@@ -265,7 +264,7 @@ const SPREADS = [
       "left",
       10,
       `<header class="ph">${HOME}<h2>Technical Skills</h2></header>
-      <main style="gap:0px">
+      <main style="gap:0rem">
       <div class="group">
       <h3><span class="mark">Tools I'm very good with:</span></h3>
       <div class="skillrow">Programming Languages
@@ -416,9 +415,9 @@ const SPREADS = [
           <div class="clip-fun">
           <form class="letter" id="contact-form" novalidate>
             <p>${FIRST},</p>
-            <p>This is <input class="inp" id="f-name" name="name" type="text" autocomplete="name" placeholder="your name" aria-label="Your name">, and I&rsquo;d like to chat.</p>
-            <p>You can reach me at<input class="inp wide" id="f-email" name="email" type="email" autocomplete="email" placeholder="your email" aria-label="Your email"></p>
-            <p>Here&rsquo;s what I&rsquo;m thinking:<textarea class="inp msg" id="f-msg" name="message" placeholder="your message" aria-label="Your message"></textarea></p>
+            <p>This is <input required class="inp" id="f-name" name="name" type="text" autocomplete="name" placeholder="your name" aria-label="Your name">, and I&rsquo;d like to chat.</p>
+            <p>You can reach me at<input required class="inp wide" id="f-email" name="email" type="email" autocomplete="email" placeholder="your email" aria-label="Your email"></p>
+            <p>Here&rsquo;s what I&rsquo;m thinking:<textarea required class="inp msg" id="f-msg" name="message" placeholder="your message" aria-label="Your message"></textarea></p>
             <button class="send" type="submit">Send</button>
           </form>
           </div>
@@ -707,7 +706,7 @@ function layout() {
     S = Math.min((vw - 56) / 500, (availH - 60) / 830);
     cy = availH / 2 + 30;
   }
-  scaler.style.transform = dscaler.style.transform = `translate(0px,${cy}px) scale(${S})`;
+  scaler.style.transform = dscaler.style.transform = `translate(0rem,${cy}px) scale(${S})`;
 }
 const shiftFor = (s, side) => s < 0 ? -244 : mode === 'phone' ? (side === 'L' ? 238 : -238) : 0;
 
@@ -882,7 +881,7 @@ form.addEventListener('submit', async e => {
   sending = true;
   if (CONFIG.contactEndpoint) fetch(CONFIG.contactEndpoint, { method: 'POST', body: new FormData(form), mode: 'no-cors' }).catch(() => {});
   $('#demo').textContent = CONFIG.contactEndpoint ? '' : 'Demo mode: no form endpoint is set, so nothing was actually sent.';
-  await run(form, [{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(350px)', opacity: 1, offset: .85 }, { transform: 'translateY(380px)', opacity: 1 }], { duration: D(1200), easing: 'cubic-bezier(.6,0,.3,1)' });
+  await run(form, [{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(21.875rem)', opacity: 1, offset: .85 }, { transform: 'translateY(23.75rem)', opacity: 1 }], { duration: D(1200), easing: 'cubic-bezier(.6,0,.3,1)' });
   setTimeout(() => { flap.style.zIndex = 5; }, D(400));
   await run(flap, [{ transform: 'rotateX(0)' }, { transform: 'rotateX(180deg)' }], { duration: D(800), easing: 'ease-in-out' });
   env.classList.add('fly');
@@ -951,4 +950,3 @@ requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove(
 
 
 
-            //  <button class="stk" type="button" data-action="copy-email">Copy email</button>
