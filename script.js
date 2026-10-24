@@ -1,22 +1,9 @@
-//TODO: fix form to have required fields
 //TODO: find a way to make my website not copied by genAI
 //TODO: make next, prev buttons have more height
-//TODO: remove download cv button on phone view
-//TODO: add a welcome message that tells user to treat this website as if it is a real book, click on cover, pages, cards, papers, flipping cards, and how to close it when inside a section
-//TODO: fix control
 
 (() => {
 'use strict';
-const CONFIG = {
-  name: 'Heba Yasin',
-  role: 'AI Engineer',
-  email: 'heba.yasin.hdaib@gmail.com',
-  tagline: 'Welcome to my Portfolio Website',
-  cvUrl: 'assets/documents/Resume__HebaYasin.pdf',           
-  linkedinUrl: 'https://www.linkedin.com/in/hebah-yasin/',
-  githubUrl: 'https://github.com/HebaYasin',
-  contactEndpoint: 'https://formspree.io/f/xwlpgynl' 
-};
+const CONFIG = {name: 'Heba Yasin',role: 'AI Engineer',email: 'heba.yasin.hdaib@gmail.com',tagline: 'Welcome to my Portfolio Website',cvUrl: 'assets/documents/Resume__HebaYasin.pdf',linkedinUrl: 'https://www.linkedin.com/in/hebah-yasin/',githubUrl: 'https://github.com/HebaYasin',contactEndpoint: 'https://formspree.io/f/xwlpgynl' };
 
 const $ = (s, r = document) => r.querySelector(s);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -43,7 +30,6 @@ const svgUrl = s => 'url("data:image/svg+xml,' + encodeURIComponent(s) + '")';
 root.style.setProperty('--wood-grain', svgUrl("<svg xmlns='http://www.w3.org/2000/svg' width='900' height='500'><filter id='w' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='0.004 0.09' numOctaves='5' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.20  0 0 0 0 0.09  0 0 0 0 0.03  1.8 0 0 0 -0.7'/></filter><rect width='100%' height='100%' filter='url(#w)'/></svg>"));
 root.style.setProperty('--noise', svgUrl("<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  .35 0 0 0 -.08'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>"));
 
-/* ===== Content ===== */
 const FIRST = CONFIG.name.split(' ')[0];
 const HOME = `<button class="home" type="button" data-action="home" aria-label="Close the notebook and go back to the cover"><svg viewBox="0 0 66 42" fill="none" stroke="#2b2018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22L33 4l27 18"/><path d="M14 19v19h38V19"/><path d="M29 38V27h8v11"/></svg></button>`;
 const page = (side, no, inner) => `<div class="pg ${side}">${inner}<span class="pgno">${no}</span>` +
@@ -57,35 +43,7 @@ const SPREADS = [
     left: page(
       "left",
       "",
-      ` <div class="cover-art"><div class="sticker">
-      <div class="grad-card-2">
-      <div class="img-wrapper"><img src="assets/images/personal-images/grad.jpeg" alt="Gradient background image" class="grad-img"></div>
-      <div class="text"> done it!</div>
-      2025
-      <div class="deco">
-        <span class="dotted-hearts">💛💛💛</span>
-        <span class="crown">👑</span>
-        <span class="heart_1">💗</span>
-        <span class="heart_2">💙</span>
-        <span class="heart_22">💙</span>
-        <span class="balloon_1">🎈</span>
-        <span class="balloon_2">🎈</span>
-        <span class="balloon_3">🎈</span>
-        <span class="ribbon">🎀</span>
-        <span class="heart_3">🖤</span>
-        <span class="heart_33">🖤</span>
-        <span class="heart_333">🖤</span>
-        <span class="star_1">⭐</span>
-        <span class="star_11">⭐</span>
-        <span class="teddy">🧸</span>
-        <span class="sparkles">✨</span>
-        <span class="cake">🍰</span>
-        <span class="flowers">🌷</span>
-        <span class="heart_3">🖤</span>
-        <span class="cat">🐱</span>
-      </div>
-    </div>
-    </div></div>`,
+      ` <div class="cover-art"><div class="sticker"><div class="grad-card-2"><div class="img-wrapper"><img src="assets/images/personal-images/grad.jpeg" alt="Gradient background image" class="grad-img"></div><div class="text"> done it!</div>2025<div class="deco"><span class="dotted-hearts">💛💛💛</span><span class="crown">👑</span><span class="heart_1">💗</span><span class="heart_2">💙</span><span class="heart_22">💙</span><span class="balloon_1">🎈</span><span class="balloon_2">🎈</span><span class="balloon_3">🎈</span><span class="ribbon">🎀</span><span class="heart_3">🖤</span><span class="heart_33">🖤</span><span class="heart_333">🖤</span><span class="star_1">⭐</span><span class="star_11">⭐</span><span class="teddy">🧸</span><span class="sparkles">✨</span><span class="cake">🍰</span><span class="flowers">🌷</span><span class="heart_3">🖤</span><span class="cat">🐱</span></div></div></div></div>`,
     ),
     right: page(
       "right",
@@ -130,36 +88,28 @@ const SPREADS = [
       `<header class="ph">${HOME}<h1>Experience</h1></header>
       <main>
       <section class="entry">
-      <h3><span class="mark">Junior Data Scientist</span></h3><p class="meta exp"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p>
-      <p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
-      </section>
+      <h3><span class="mark">Junior Data Scientist</span></h3><p class="meta exp"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p><p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p></section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. Agentic Multimodal RAG Chatbot</span> Built an assistant that answers questions over a freight-forwarding project PDFs and meeting transcripts, with Docling-based extraction of tables and images and hierarchical parent/child retrieval over a Chroma vector store.<br/>Delivered a Streamlit chat interface (LangChain + Ollama) that surfaces the referenced tables and images alongside answers.<div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task1.jpg" alt=""></div><small>Project Architecture</small></div></div>
           <div class="tcard"><span class="title">2. AI Document Parsing</span>Built a prototype OCR and HCR engine that extracts printed and handwritten text from scans and PDFs with per-word confidence scores, exporting structured data for downstream pipelines, which helped in solving a six-month bottleneck and reduced reliance on third-party tools.<br/>Evaluated a modular deep-learning pipeline against a single-step vision-language model (Qwen 2.5) and chose the modular approach.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task2.png" alt=""></div><small>Project Architecture</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task2_2.png" alt=""></div><small>Project Prototype</small></div></div></div>
           <div class="tcard"><span class="title">3. Freight Email Processor</span>Designed an email-to-lead automation pipeline using 12 custom Claude Skills orchestrated across 5 stages to parse emails, extract shipment data, validate information, store records, and automate responses, achieving 98.6% recall against human-logged records. <div class="shot"><div class="img"><img src="assets/images/project-images/gwc_task3_.png" alt=""></div><small>System Design</small></div></div>
           <div class="tcard"><span class="title">4. Lead Maturity Automation Through Email Tracking & Analytics</span>Designed a workflow to track HubSpot email follow-ups with agents and managers, with activity reporting through a centralized dashboard. I designed 2 versions of this workflow, one for the marketing team and the other for the CEO.<div class="shot"><div class="img"><img src="assets/images/project-images/gwc_task4_.png" alt=""></div><small>System Design</small></div></div>
       </div>
-      </main>
-`,
+      </main>`,
     ),
     right: page(
       "right",
       5,
-      `
-      <main>
+      `<main>
       <section class="entry">
-      <h3><span class="mark">AI Intern</span></h3>
-      <p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
-      </section>
+      <h3><span class="mark">AI Intern</span></h3><p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p></section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. AI-powered Anti-Money Laundry</span>Enhanced an AML name similarity model accuracy by 20% by identifying and resolving critical data quality issues.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1.png" alt=""></div><small>Names Clustering</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_2.png" alt=""></div><small>Training Results</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_4.png" alt=""></div><small>Testing</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_3.png" alt=""></div><small>Evaluation</small></div></div></div>
           <div class="tcard"><span class="title">2. Rule-based Fraud Detection</span>Developed a fraud detection system prototype that preprocesses transaction records stored in a MySQL database and identifies potentially fraudulent activity using predefined rule-based checks, Utilizing SQLAlchemy ORM for maintainability and scalability. <br/>This approach was chosen due to data availability constraints, without relying on a sufficiently large labeled dataset to train a machine learning model.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task2.png" alt=""></div><small>Results Plot</small></div>    <div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task2_2.png" alt=""></div><small>Results</small></div>  </div></div>
           <div class="tcard"><span class="title">3. Text2SQL query generator</span>Built a text-to-SQL query generator by fine-tuning the Llama-2-7B using QLoRA on 2,000+ domain-specific query pairs. Prepared and cleaned training and validation datasets, explored database schemas, and implemented SQL validation workflows to improve the quality and consistency of fine-tuning examples. Generated synthetic NL2SQL training examples to expand the available dataset.<div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task3.png" alt=""></div><small>Model Output vs. Human Baseline</small></div> </div>
           <div class="tcard"><span class="title">4. Agentic Database Chatbot</span>Designed an agentic database chatbot prototype that enables clients to query databases through conversations. After user questions are translated into SQL queries, the LangChain agent execute them against a SQLite database, and return conversational responses with tabular results. Also implemented user-to-database mapping and integrated it with a Django web application.<div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task4.png" alt=""></div><small>Chat Interface</small></div></div>
-          </div>
-      
-      </main>
-`,
+      </div>
+      </main>`,
     ),
   },
   {
@@ -167,12 +117,9 @@ const SPREADS = [
     left: page(
       "left",
       6,
-      `
-      <main>
+      `<main>
       <section class="entry">
-      <h3><span class="mark">Data Science Intern</span></h3>
-      <p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
-      </section>
+      <h3><span class="mark">Data Science Intern</span></h3><p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p></section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. Building a classification model for HR data</span> Trained multiple ML models for a job status classification problem. Standardized 12,000+ job titles into clusters, and engineered features after analysis.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_1.png" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_2.png" alt=""></div><small>processing</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_3.png" alt=""></div><small>feature engineering</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_4.png" alt=""></div><small>ML evaluation</small></div></div></div>
           <div class="tcard"><span class="title">2. Agentic Database Chatbot</span>Performed EDA and feature engineering across three datasets, addressing missing values and detecting outliers to improve data quality. Developed a Streamlit-based conversational chatbot using LangChain’s pre-built SQL agent and GPT-4o-mini, enabling users to query SQLite databases using natural language. Integrated conversational memory and an interactive data visualization dashboard to provide better insight.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task2_1.png" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task2_2.png" alt=""></div><small>Chatbot</small></div></div></div>
@@ -182,18 +129,14 @@ const SPREADS = [
     right: page(
       "right",
       7,
-      `
-      <main>
+      `<main>
       <section class="entry">
-      <h3><span class="mark">Software Engineering Intern</span></h3>
-      <p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p>
-      </section>
+      <h3><span class="mark">Software Engineering Intern</span></h3><p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;}">click on the cards to view them</span></p></section>
       <div class="cardstack">
         <div class="tcard"><span class="title">1. Web Page Cloning with HTML, CSS, and JavaScript</span> Recreated multiple web pages to strengthen front-end development skills, focusing on clean HTML structure, consistent naming conventions, organized file architecture, and maintainable code.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task1.png" alt=""></div><small>Clone One</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task2.png" alt=""></div><small>Clone Two</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task3.png" alt=""></div><small>Clone Three</small></div></div></div>
         <div class="tcard"><span class="title">2. React Component Cloning</span>Recreated web components using React, applying best practices for component organization, naming conventions, and file structure. Practiced component-based development, state management, and the use of props and hooks to build reusable, interactive interfaces.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task4.png" alt=""></div><small>Clone four</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task5.png" alt=""></div><small>Clone five</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task6.png" alt=""></div><small>Clone six</small></div></div></div>
       </div>
-      </main>
-`,
+      </main>`,
     ),
   },
   {
@@ -203,57 +146,48 @@ const SPREADS = [
       8,
       `<header class="ph">${HOME}<h1>Projects</h1></header>
       <main>
-      
-
       <section class="entry proj">
       <h3><span class="mark">Data Analysis Projects</span></h3>
       <ul>
-        <li><div>One Piece Analysis<p class="meta">Web Scraping + NLP + Data Visualizing + ML</p></div><a class="stk"  href="https://github.com/HebaYasin/OnePieceDataAnalysis" target="_blank">View project</a></li>
-        <li><div>Enhancing Students well-being in jordanian schools form data analysis<p class="meta">Data Analysis + Data Visualization</p></div><a class="stk"  href="https://github.com/HebaYasin/EnhancingStudentsWellness" target="_blank">View project</a></li>
-        <li><div>Telecom Customer Churn Analysis<p class="meta">Data Visualization</p></div><a class="stk" href="https://github.com/HebaYasin/DataAnalysisofTelecomData" target="_blank">View project</a></li>
-            
+      <li><div>One Piece Analysis<p class="meta">Web Scraping + NLP + Data Visualizing + ML</p></div><a class="stk"  href="https://github.com/HebaYasin/OnePieceDataAnalysis" target="_blank">View project</a></li>
+      <li><div>Enhancing Students well-being in jordanian schools form data analysis<p class="meta">Data Analysis + Data Visualization</p></div><a class="stk"  href="https://github.com/HebaYasin/EnhancingStudentsWellness" target="_blank">View project</a></li>
+      <li><div>Telecom Customer Churn Analysis<p class="meta">Data Visualization</p></div><a class="stk" href="https://github.com/HebaYasin/DataAnalysisofTelecomData" target="_blank">View project</a></li>  
       </ul>
       </section>
-<section class="entry proj">
+      <section class="entry proj">
       <h3><span class="mark">ML/DL Projects</span></h3>
       <ul> 
       <li><div>AI-Driven SOC Dashboard for Anomaly Detection<p class="meta">Unsupervised ML+ Data Visualization</p></div><a class="stk"  href="https://github.com/llaxna/AI-driven-SOC-Dashboard" target="_blank">View project</a></li>
       <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">ML + IBM CPLEX </p></div><a class="stk"  href="https://github.com/HebaYasin/ML-GuidedOptimization" target="_blank">View project</a></li>
-       <li><div>Gold Price Prediction with LSTM<p class="meta">Time Series Analysis + DL </p></div><a class="stk" href="https://github.com/HebaYasin/GoldPricePredictionLSTM" target="_blank">View project</a></li>
-
-           
+      <li><div>Gold Price Prediction with LSTM<p class="meta">Time Series Analysis + DL </p></div><a class="stk" href="https://github.com/HebaYasin/GoldPricePredictionLSTM" target="_blank">View project</a></li>
       </ul>
       </section>
-
-
       </main>`,
     ),
     right: page(
       "right",
       9,
-      `
-      <main>
-            <section class="entry proj">
-            <ul>
+      `<main>
+      <section class="entry proj">
+      <ul>
       <li><div>Analysis of Classification Algorithms for Movies Data<p class="meta">EDA + ML</p></div><a class="stk" href="https://colab.research.google.com/drive/1LPuWyxpdnWAeRymv-151IYrneTh4z9DK?usp=sharing" target="_blank">View project</a></li>
       <li><div>Employee Status Prediction<<p class="meta">EDA + Feature Engineering + NLP + ML</p></div><a class="stk"  href="https://colab.research.google.com/drive/1X_Vgkl_Kct1tc0cmVBsjWdBRBIHFmQiN?usp=sharing" target="_blank">View project</a></li>
-</ul>
-      </section>
-      <section class="entry proj">
-            <h3><span class="mark">LLMs and Agents Projects</span></h3>
-      <ul> 
-<li><div>Multimodal RAG Chatbot<p class="meta">Document AI  + Langchain + Ollama</p></div><a class="stk"  href="https://github.com/HebaYasin/Multimodal-RAG-Chatbot" target="_blank">View project</a></li> 
       </ul>
       </section>
-<section class="entry proj">
+      <section class="entry proj">
+      <h3><span class="mark">LLMs and Agents Projects</span></h3>
+      <ul> 
+      <li><div>Multimodal RAG Chatbot<p class="meta">Document AI  + Langchain + Ollama</p></div><a class="stk"  href="https://github.com/HebaYasin/Multimodal-RAG-Chatbot" target="_blank">View project</a></li> 
+      </ul>
+      </section>
+      <section class="entry proj">
       <h3><span class="mark">Other Projects</span></h3>
       <ul>
       <li><div>Clones of Web Components<p class="meta">HTML + CSS + JavaScript + React.js</p></div><a class="stk"  href="https://github.com/HebaYasin/" target="_blank">View projects</a></li>
-<li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
+      <li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
       <li><div>A graphical solver that solves 2D and 3D LP problems<p class="meta"></p></div><a class="stk" href="https://colab.research.google.com/drive/1oUmmzuhHyf_ETIG6PPyxM3n2jRF1AK2Z?usp=sharing" target="_blank">View project</a></li>
       </ul>
       </section>
-
       <section class="note" style="gap:0rem; flex-direction:row; font-size:.75rem;"><b>Currently Building:</b><ul><li>Bashrati Prototype</li><li>A team of agents to perform data cleaning and EDA</li><li>University Multimodal RAG</li></ul></section>
       </main>`,
     ),
@@ -267,136 +201,43 @@ const SPREADS = [
       <main style="gap:0rem">
       <div class="group">
       <h3><span class="mark">Tools I'm very good with:</span></h3>
-      <div class="skillrow">Programming Languages
-      <img src="assets/icons/skills-programming-languages-1.svg" alt="Python Language" title="Python Language">
-      
+      <div class="skillrow">Programming Languages<img src="assets/icons/skills-programming-languages-1.svg" alt="Python Language" title="Python Language"></div>
+      <div class="skillrow">Data Analysis:<div><img src="assets/icons/skills-data-analysis-1.svg" alt="Pandas Library" title="Pandas Library"><img src="assets/icons/skills-data-analysis-2.svg" alt="NumPy Library" title="NumPy Library"></div></div>
+      <div class="skillrow">Data Visualization:<div><img src="assets/icons/skills-data-visualization-1.svg" alt="Plotly Library" title="Plotly Library"><img src="assets/icons/skills-data-visualization-2.svg" alt="MatPlotLib Library" title="MatPlotLib Library"><img src="assets/icons/skills-data-visualization-3.svg" alt="Seaborn Library" title="Seaborn Library"></div></div>
+      <div class="skillrow">ML and DL:<div><img src="assets/icons/skills-ml-and-dl-1.svg" alt="Scikit-Learn Library" title="Scikit-Learn Library"><img src="assets/icons/skills-ml-and-dl-2.svg" alt="TensorFlow Library" title="TensorFlow Library"></div></div>
+      <div class="skillrow">GenAI and Agents:<div><img src="assets/icons/skills-genai-and-agents-1.svg" alt="LangChain Library" title="LangChain Library"><img src="assets/icons/skills-genai-and-agents-2.svg" alt="Claude" title="Claude"><img src="assets/icons/skills-genai-and-agents-3.svg" alt="Ollama" title="Ollama"><img src="assets/icons/skills-genai-and-agents-4.svg" alt="Hugging Face" title="Hugging Face"></div></div>
+      <div class="skillrow">Documentation:<div><img src="assets/icons/skills-documentation-1.svg" alt="Latex" title="Latex"><img src="assets/icons/skills-documentation-2.svg" alt="Diagram.net" title="Diagram.net"><img src="assets/icons/skills-documentation-3.svg" alt="Microsoft Office" title="Microsoft Office"></div></div>
+      <div class="skillrow">Operating Systems:<div><img src="assets/icons/skills-operating-systems-1.svg" alt="Ubonto" title="Ubonto"><img src="assets/icons/skills-operating-systems-2.svg" alt="Windows" title="Windows"></div></div>
+      <div class="skillrow">Coding IDE:<div><img src="assets/icons/skills-coding-ide-1.svg" alt="Google Colab" title="Google Colab"><img src="assets/icons/skills-coding-ide-2.svg" alt="Jupyter" title="Jupyter"><img src="assets/icons/skills-coding-ide-3.svg" alt="VS Code" title="VS Code"><img src="assets/icons/skills-coding-ide-4.svg" alt="Claude Code" title="Claude Code"></div></div>
+      <div class="skillrow">Web Development:<div><img src="assets/icons/skills-web-development-1.svg" alt="CSS" title="CSS"><img src="assets/icons/skills-web-development-2.svg" alt="HTML" title="HTML"><img src="assets/icons/skills-web-development-3.svg" alt="JavaScript" title="JavaScript"><img src="assets/icons/skills-web-development-4.svg" alt="React.js" title="React.js"><img src="assets/icons/skills-web-development-5.svg" alt="Streamlit Framework" title="Streamlit Framework"></div></div>
+      <div class="skillrow">Cloud and DevOps:<div><img src="assets/icons/skills-cloud-and-devops-3.svg" alt="GitHub" title="GitHub"><img src="assets/icons/skills-cloud-and-devops-4.svg" alt="GitLab" title="GitLab"><img src="assets/icons/skills-cloud-and-devops-5.svg" alt="Microsoft Azure Foundry" title="Microsoft Azure Foundry"></div></div>
       </div>
-      <div class="skillrow">Data Analysis:
-      <div>
-<img src="assets/icons/skills-data-analysis-1.svg" alt="Pandas Library" title="Pandas Library">
-<img src="assets/icons/skills-data-analysis-2.svg" alt="NumPy Library" title="NumPy Library">
-</div></div>
-      <div class="skillrow">Data Visualization:
-      <div>
-      <img src="assets/icons/skills-data-visualization-1.svg" alt="Plotly Library" title="Plotly Library">
-<img src="assets/icons/skills-data-visualization-2.svg" alt="MatPlotLib Library" title="MatPlotLib Library">
-<img src="assets/icons/skills-data-visualization-3.svg" alt="Seaborn Library" title="Seaborn Library">
-</div></div>
-      <div class="skillrow">ML and DL:<div>
-<img src="assets/icons/skills-ml-and-dl-1.svg" alt="Scikit-Learn Library" title="Scikit-Learn Library">
-<img src="assets/icons/skills-ml-and-dl-2.svg" alt="TensorFlow Library" title="TensorFlow Library">
-
-</div></div>
-
-      
-      <div class="skillrow">GenAI and Agents:<div>
-      <img src="assets/icons/skills-genai-and-agents-1.svg" alt="LangChain Library" title="LangChain Library">
-<img src="assets/icons/skills-genai-and-agents-2.svg" alt="Claude" title="Claude">
-<img src="assets/icons/skills-genai-and-agents-3.svg" alt="Ollama" title="Ollama">
-      <img src="assets/icons/skills-genai-and-agents-4.svg" alt="Hugging Face" title="Hugging Face">
-
-      </div></div>
-      
-      <div class="skillrow">Documentation:<div>
-      <img src="assets/icons/skills-documentation-1.svg" alt="Latex" title="Latex">
-<img src="assets/icons/skills-documentation-2.svg" alt="Diagram.net" title="Diagram.net">
-<img src="assets/icons/skills-documentation-3.svg" alt="Microsoft Office" title="Microsoft Office">
-      </div></div>
-      <div class="skillrow">Operating Systems:<div>
-      <img src="assets/icons/skills-operating-systems-1.svg" alt="Ubonto" title="Ubonto">
-      <img src="assets/icons/skills-operating-systems-2.svg" alt="Windows" title="Windows">
-      </div></div>
-      <div class="skillrow">Coding IDE:   <div>  
-<img src="assets/icons/skills-coding-ide-1.svg" alt="Google Colab" title="Google Colab">
-<img src="assets/icons/skills-coding-ide-2.svg" alt="Jupyter" title="Jupyter">
-<img src="assets/icons/skills-coding-ide-3.svg" alt="VS Code" title="VS Code">
-<img src="assets/icons/skills-coding-ide-4.svg" alt="Claude Code" title="Claude Code">
-      
-</div></div>
-      
-      <div class="skillrow">Web Development:<div>
-      <img src="assets/icons/skills-web-development-1.svg" alt="CSS" title="CSS">
-<img src="assets/icons/skills-web-development-2.svg" alt="HTML" title="HTML">
-<img src="assets/icons/skills-web-development-3.svg" alt="JavaScript" title="JavaScript">
-<img src="assets/icons/skills-web-development-4.svg" alt="React.js" title="React.js">
-<img src="assets/icons/skills-web-development-5.svg" alt="Streamlit Framework" title="Streamlit Framework">
-
-</div></div>
-      <div class="skillrow">Cloud and DevOps:<div>
-
-<img src="assets/icons/skills-cloud-and-devops-3.svg" alt="GitHub" title="GitHub">
-<img src="assets/icons/skills-cloud-and-devops-4.svg" alt="GitLab" title="GitLab">
-<img src="assets/icons/skills-cloud-and-devops-5.svg" alt="Microsoft Azure Foundry" title="Microsoft Azure Foundry">
-</div></div>
-      </div>
-     </main>
-      `,
+     </main>`,
     ),
     right: page(
       "right",
       11,
       `<main>
-      
-            <div class="group">
+      <div class="group">
       <h3><span class="mark">Tools I'm familiar with:</span></h3>
-      <div class="skillrow">Programming Languages:<div>
-      <img src="assets/icons/skills-programming-languages-3.svg" alt="R Language" title="R Language">
-<img src="assets/icons/skills-programming-languages-2.svg" alt="C++ Language" title="C++ Language">
-      </div></div>
-      <div class="skillrow">Document AI:<div>
-<img src="assets/icons/skills-document-ai-1.svg" alt="DocLing Library" title="DocLing Library">
-<img style="background:#082747; display:inline-block;" src="https://mindee.github.io/doctr/_static/Logo-docTR-white.png" alt="docTR Library" title="docTR Library"/> 
-
-</div></div>
-      <div class="skillrow">Databases:<div>
-      
-<img src="assets/icons/skills-databases-1.svg" alt="SQLAlchemy Framework" title="SQLAlchemy Framework">
-<img src="assets/icons/skills-databases-2.svg" alt="SQLite DBMS" title="SQLite DBMS">
-<img src="assets/icons/skills-databases-3.svg" alt="PostgreSQL DBMS" title="PostgreSQL DBMS">
-</div></div>
-
-<div class="skillrow">Data Visualization:<div>
-      <img src="assets/icons/skills-data-visualization-4.svg" alt="Tidyverse ggplot Library" title="Tidyverse ggplot Library">
-      <img src="assets/icons/skills-data-visualization-5.svg" alt="Tablue" title="Tablue">
-<img src="assets/icons/skills-data-visualization-6.svg" alt="Microsoft Power BI" title="Microsoft Power BI">
-
-      </div></div>
-
-      <div class="skillrow">Cloud and DevOps:<div>
-      <img src="assets/icons/skills-cloud-and-devops-7.svg" alt="Docker" title="Docker">
-      <img src="assets/icons/skills-cloud-and-devops-1.svg" alt="Amazon Web Services" title="Amazon Web Services">
-<img src="assets/icons/skills-cloud-and-devops-2.svg" alt="Microsoft Azure" title="Microsoft Azure">
-
-      </div></div>
-      <div class="skillrow">Web Development:<div>
-      <img src="assets/icons/skills-web-development-6.svg" alt="Postman" title="Postman">
-      <img src="assets/icons/skills-web-development-7.svg" alt="WordPress" title="WordPress">    
-      <img src="assets/icons/skills-web-development-8.svg" alt="Figma" title="Figma">
-<img src="assets/icons/skills-web-development-9.svg" alt="FastAPI Library" title="FastAPI Library">
-<img src="assets/icons/skills-web-development-11.svg" alt="Django Framework" title="Django Framework">
-            </div>
-</div>
+      <div class="skillrow">Programming Languages:<div><img src="assets/icons/skills-programming-languages-3.svg" alt="R Language" title="R Language"><img src="assets/icons/skills-programming-languages-2.svg" alt="C++ Language" title="C++ Language"></div></div>
+      <div class="skillrow">Document AI:<div><img src="assets/icons/skills-document-ai-1.svg" alt="DocLing Library" title="DocLing Library"><img style="background:#082747; display:inline-block;" src="https://mindee.github.io/doctr/_static/Logo-docTR-white.png" alt="docTR Library" title="docTR Library"/> </div></div>
+      <div class="skillrow">Databases:<div><img src="assets/icons/skills-databases-1.svg" alt="SQLAlchemy Framework" title="SQLAlchemy Framework"><img src="assets/icons/skills-databases-2.svg" alt="SQLite DBMS" title="SQLite DBMS"><img src="assets/icons/skills-databases-3.svg" alt="PostgreSQL DBMS" title="PostgreSQL DBMS"></div></div>
+      <div class="skillrow">Data Visualization:<div><img src="assets/icons/skills-data-visualization-4.svg" alt="Tidyverse ggplot Library" title="Tidyverse ggplot Library"><img src="assets/icons/skills-data-visualization-5.svg" alt="Tablue" title="Tablue"><img src="assets/icons/skills-data-visualization-6.svg" alt="Microsoft Power BI" title="Microsoft Power BI"></div></div>
+      <div class="skillrow">Cloud and DevOps:<div><img src="assets/icons/skills-cloud-and-devops-7.svg" alt="Docker" title="Docker"><img src="assets/icons/skills-cloud-and-devops-1.svg" alt="Amazon Web Services" title="Amazon Web Services"><img src="assets/icons/skills-cloud-and-devops-2.svg" alt="Microsoft Azure" title="Microsoft Azure"></div></div>
+      <div class="skillrow">Web Development:<div><img src="assets/icons/skills-web-development-6.svg" alt="Postman" title="Postman"><img src="assets/icons/skills-web-development-7.svg" alt="WordPress" title="WordPress">    <img src="assets/icons/skills-web-development-8.svg" alt="Figma" title="Figma"><img src="assets/icons/skills-web-development-9.svg" alt="FastAPI Library" title="FastAPI Library"><img src="assets/icons/skills-web-development-11.svg" alt="Django Framework" title="Django Framework"></div></div>
       </div>
 
-      
       <div class="group">
       <h3><span class="mark">In general, I enjoy:</span></h3>
       <ul>
       <li>Research, reading papers and knowing every new about AI</li>
       <li>Visualizing data</li>
       <li>Finding and designing solutions that cost 0$</li>
-      <li>Building agents that will replace me!</li>
+      <li>Building agents that do cool things!</li>
       </ul>
-      </div>
- 
-            
-            
-</main>
-
-
-      
-
-      `,
+      </div>         
+      </main>`,
     ),
   },
   {
@@ -406,13 +247,8 @@ const SPREADS = [
       12,
       `<header class="ph">${HOME}<h1>Contact</h1></header>
       <div class="envzone" id="envzone">
-        <div class="thanks"><h2>Thank you!</h2><p>Your letter is on its way.</p><p class="demo" id="demo"></p>
-          <button class="another" type="button" data-action="another"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l1-4L14 3l3 3L7 16z"/></svg>Write another message</button></div>
-        
-          <div class="env" id="env">
-          <div class="env-back"></div><div class="env-flap" id="flap"></div>
-          
-          <div class="clip-fun">
+        <div class="thanks"><h2>Thank you!</h2><p>Your letter is on its way.</p><p class="demo" id="demo"></p><button class="another" type="button" data-action="another"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l1-4L14 3l3 3L7 16z"/></svg>Write another message</button></div>
+        <div class="env" id="env"><div class="env-back"></div><div class="env-flap" id="flap"></div><div class="clip-fun">
           <form class="letter" id="contact-form" novalidate>
             <p>${FIRST},</p>
             <p>This is <input required class="inp" id="f-name" name="name" type="text" autocomplete="name" placeholder="your name" aria-label="Your name">, and I&rsquo;d like to chat.</p>
@@ -421,9 +257,7 @@ const SPREADS = [
             <button class="send" type="submit">Send</button>
           </form>
           </div>
-          
-<div class="env-pocket"><div class="env-bottom"><i class="fl"></i><i class="fr"></i><i class="fb"></i></div></div>
-          
+          <div class="env-pocket"><div class="env-bottom"><i class="fl"></i><i class="fr"></i><i class="fb"></i></div></div>
         </div>
       </div>`,
     ),
@@ -431,11 +265,8 @@ const SPREADS = [
       "right",
       13,
       `<div class="card"><div class="card-name">${CONFIG.name}</div><div class="card-role">${CONFIG.role}</div><div class="card-rule"></div><div class="card-mail" id="card-mail">${CONFIG.email}</div></div>
-      <div class="bio"><div><i class="tape"></i><img src="assets/images/personal-images/heba-emoji-1.webp" alt="Personal Emoji" class="grad-img"></div>
-        <p class="blurb">i am always open to aspiring disscussions and opportunities. so dont hesitate to contact me!</p></div>
-        <div class="social">
-      <h2 class="find">Find me here</h2>
-      <div class="links"><a class="stk" data-link="linkedinUrl" href="#">LinkedIn</a><a class="stk" data-link="githubUrl" href="#">GitHub</a></div></div>`,
+      <div class="bio"><div><i class="tape"></i><img src="assets/images/personal-images/heba-emoji-2.webp" alt="Personal Emoji" class="grad-img"></div><p class="blurb">i am always open to aspiring disscussions and opportunities. so dont hesitate to contact me!</p></div>
+      <div class="social"><h2 class="find">Find me here</h2><div class="links"><a class="stk" data-link="linkedinUrl" href="#">LinkedIn</a><a class="stk" data-link="githubUrl" href="#">GitHub</a></div></div>`,
     ),
   },
 ];
@@ -457,15 +288,12 @@ const coverFront = `<div class="sticker"><h1 aria-label="${CONFIG.name} Portfoli
   <p class="tagline">${CONFIG.tagline}</p>`;
 
 
-
 const TABS = [
   { id: 'education', leaf: rangeOf('education')[0], top: -380, cls: '' },
   { id: 'experience', leaf: rangeOf('experience')[0], top: -180, cls: 'd1' },
   { id: 'projects', leaf: rangeOf('projects')[0], top: 20, cls: 'd2' },
   { id: 'skills', leaf: rangeOf('skills')[0], top: 220, cls: 'd3' }
 ];
-
-
 
 
 const leaves = [];
@@ -501,8 +329,6 @@ for (let j = 0; j < N; j++) {
 }
 const isFlipped = (j, s) => j <= s;
 
-
-
 /* ===== Phone notebook: top-bound, pages flip vertically ===== */
 const dscaler = document.createElement('div'); dscaler.id = 'dscaler';
 const deckEl = document.createElement('div'); deckEl.id = 'deck';
@@ -523,11 +349,6 @@ const ppad = document.createElement('a');
 ppad.className = 'ppad'; ppad.dataset.link = 'cvUrl'; ppad.href = '#';
 ppad.setAttribute('aria-label', 'Open my CV (PDF) in a new tab'); ppad.innerHTML = '<span>CV</span>';
 dscaler.insertBefore(ppad, deckEl);
-
-
-
-
-
 
 
 const contactCardPage = DPAGES.indexOf(SPREADS.find(sp => sp.section === 'contact').right);
@@ -559,10 +380,6 @@ const placeContactHeader = phone => {
 };
 
 
-
-
-
-
 let dk = 0, pagesIn = 'desk';                                            // dk = sheet on top (0 = cover)
 const deckSection = () => dk === 0 ? null : SPREADS[Math.floor((dk - 1) / 2)].section;
 
@@ -586,9 +403,6 @@ function updateSheetWindow(instant = false, settleDelay = 1700) {
     }
   }), instant ? 0 : settleDelay);
 }
-
-
-
 
 
 function deckApply(t, opts = {}) {
@@ -648,22 +462,13 @@ deckEl.addEventListener('click', e => {
 function updatePhoneUI() {
   const sec = deckSection();
   document.querySelectorAll('#tabbar [data-sec]').forEach(b => b.setAttribute('aria-current', b.dataset.sec === sec ? 'true' : 'false'));
-  $('#controls').dataset.state = dk === 0 ? 'closed' : 'open';
-  $('#hint').textContent = 'Tap the cover to open';
+  const isClosed = dk === 0;
+  $('#controls').dataset.state = isClosed ? 'closed' : 'open';
+  $('#hint').textContent = isClosed
+    ? 'Tap the cover to open my portfolio'
+    : 'Tab the bottom edge to turn pages, or tap the top edge to go back';
   if (dk === 0) return;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ===== State ===== */
 const FLIP = reduced ? 1 : 950, STAG = reduced ? 0 : 120, BAND = reduced ? 0 : 480;
@@ -697,13 +502,10 @@ function layout() {
   if (mode === 'desk') {
     const availH = vh - 70;
     S = Math.min(vw / 1120, availH / 960, 1.25);
-    // S = Math.min(vw / 1200, availH / 960, 1.25);
     cy = availH / 2 + 26 * S;
   } else {
     const availH = vh - 128;
-    // S = Math.min((vw - 24) / 500, availH / 830);
-    // cy = availH / 2 + 8;
-    S = Math.min((vw - 56) / 500, (availH - 60) / 830);
+    S = Math.min((vw - 120) / 500, (availH - 60) / 830);
     cy = availH / 2 + 30;
   }
   scaler.style.transform = dscaler.style.transform = `translate(0rem,${cy}px) scale(${S})`;
@@ -756,7 +558,9 @@ function updateUI() {
   document.querySelectorAll('#tabbar [data-sec]').forEach(b => b.setAttribute('aria-current', b.dataset.sec === sec ? 'true' : 'false'));
   const ctl = $('#controls');
   ctl.dataset.state = state.s < 0 ? 'closed' : 'open';
-  $('#hint').textContent = mode === 'phone' ? 'Tap the cover to open my portfolio' : 'Click the cover to open my portfolio or just click directly on the bookmarks to navigate sections, cv papers to download my cv or the contact card to navigate to contact page';
+  $('#hint').textContent = state.s < 0
+    ? 'Click the cover to open my portfolio'
+    : 'Click the page corners to turn pages, or use the arrow keys';
   document.querySelectorAll('.turn').forEach(button => { button.style.pointerEvents = 'none'; });
   if (state.s < 0) { book.classList.remove('can-next', 'can-prev'); return; }
   const phone = mode === 'phone';
@@ -777,15 +581,20 @@ let lastHash = null;
 function syncHash() {
   const id = (mode === 'phone' ? deckSection() : sectionOf(state.s)) || 'cover';
   lastHash = id;
-  try { if (location.hash.slice(1) !== id) location.hash = id; } catch (e) {}
+    try {
+    const open = id !== 'cover', st = history.state;
+    if (!open && st && st.open) { history.back(); return; }                        // closing the book: step back to the cover entry
+    if (open && !(st && st.open)) history.pushState({ open: true }, '', '#' + id);  // opening adds ONE history entry
+    else if (location.hash.slice(1) !== id) history.replaceState({ open }, '', '#' + id);   // page turns just rewrite it
+  } catch (e) {}
+
+
 }
 function goSection(id, opts) {
   const sec = SECTIONS[id];
   if (!sec) return;
   if (!sec.ready) { toast(sec.label + ' is coming in the next milestone.'); return; }
-
   if (mode === 'phone') { deckApply(2 * rangeOf(id)[0] + 1, opts); return; }
-
   setState({ s: rangeOf(id)[0], side: 'L' }, opts);
 }
 const goHome = opts => mode === 'phone' ? deckApply(0, opts) : setState({ s: -1, side: 'L' }, opts);
@@ -799,7 +608,6 @@ function next() {
   if (state.s < SPREADS.length - 1) setState({ s: state.s + 1, side: 'L' });
   else goHome();
 }
-
 
 
 function prev() {
@@ -895,17 +703,10 @@ env.classList.remove('fly');         // releases the lifted page so it can go ba
 function resetEnvelope() {
   env.classList.remove('fly');
   anims.forEach(a => a.cancel()); anims = [];
-
-
-
   flap.style.zIndex = ''; form.reset(); zone.classList.remove('sent'); sending = false;
   zone.classList.add('returning');
 env.animate([{ transform: 'translateY(760px)' }, { transform: 'translateY(0)' }], { duration: D(900), easing: 'cubic-bezier(.2,.8,.3,1)' });
-setTimeout(() => zone.classList.remove('returning'), D(900));
-
-
-
-}
+setTimeout(() => zone.classList.remove('returning'), D(900));}
 
 
 /* ===== Task cards (click the top card to send it to the back) ===== */
@@ -938,13 +739,15 @@ addEventListener('resize', () => {
   updateUI();
   requestAnimationFrame(() => scaler.classList.remove('no-anim'));
 });
+
+addEventListener('popstate', () => fromHash(false));            // Back / Forward move the notebook
+addEventListener('hashchange', () => fromHash(false));          // typed #section in the address bar
 addEventListener('hashchange', () => fromHash(false));
 scaler.classList.add('no-anim');
+try { history.replaceState({ open: location.hash.slice(1) in SECTIONS }, '', location.href); } catch (e) {}
 fromHash(true);
 requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove('no-anim')));
 })();
-
-
 
 
 

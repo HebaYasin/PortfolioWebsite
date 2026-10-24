@@ -1,43 +1,62 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Heba Yasin Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Indie+Flower&family=Noto+Emoji:wght@300..700&family=Short+Stack&family=Walter+Turncoat&display=swap">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Heba Yasin Portfolio</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#8d5a35">
+  <meta name="author" content="Heba Yasin">
+  <meta name="description" content="Heba Anwar Yasin — Data Science and AI graduate. Explore my projects, experience, and, skills.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/personal-images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/personal-images/favicon.png">
+  <meta property="og:title" content="Heba Yasin Portfolio">
+  <meta property="og:description" content="Data Science and AI graduate. Explore my projects, experience, skills, and portfolio.">
+  <meta property="og:image" content="https://hebayasin.github.io/PortfolioWebsite/assets/images/personal-images/og-preview.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Indie+Flower&family=Noto+Emoji:wght@300..700&family=Short+Stack&family=Walter+Turncoat&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="scaler"><div id="stage"><div class="book" id="book">
-  <div class="backcover"></div>
-  <div class="block r"></div>
-  <div class="block l"></div>
-  <div class="band" id="band"></div>
-  <a class="pad" data-link="cvUrl" href="#" aria-label="Open my CV (PDF) in a new tab"><b class="face-y"></b><span>CV</span></a>
-  <button class="cardtab" type="button" data-action="section:contact" aria-label="Contact">
-    <span class="ct-label"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="30" height="20" rx="2"/><path d="M3 5l14 11L31 5"/></svg>Contact</span>
-    <span class="ct-info"><span class="card-name" id="ct-name"></span><span class="card-role" id="ct-role"></span><span class="card-rule"></span><span class="card-mail" id="ct-mail"></span></span>
-  </button>
-
-
-</div></div></div>
-
-<div id="controls" data-state="closed">
-  <div id="hint">Click the cover to open my portfolio, or just click directly on the bookmarks to view tabs</div>
-</div>
-<nav id="tabbar" aria-label="Sections">
-  <button type="button" data-action="section:education" data-sec="education">Education</button>
-<button type="button" data-action="section:experience" data-sec="experience">Experience</button>
-<button type="button" data-action="section:projects" data-sec="projects">Projects</button>
-<button type="button" data-action="section:skills" data-sec="skills">Skills</button>
-<button type="button" data-action="section:contact" data-sec="contact">Contact</button>
-
-  <a data-link="cvUrl" href="#" aria-label="Download my CV (PDF)">Download my CV</a>
-</nav>
-<div id="toast" role="status"></div>
-
-<script src="script.js"></script>
+  <div id="scaler">
+    <div id="stage">
+      <div class="book" id="book">
+        <div class="backcover"></div>
+        <div class="block r"></div>
+        <div class="block l"></div>
+        <div class="band" id="band"></div>
+        <a class="pad" data-link="cvUrl" href="#" aria-label="Open my CV (PDF) in a new tab"><b
+            class="face-y"></b><span>CV</span></a>
+        <button class="cardtab" type="button" data-action="section:contact" aria-label="Contact">
+          <span class="ct-label"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="30" height="20" rx="2" />
+              <path d="M3 5l14 11L31 5" />
+            </svg>Contact</span>
+          <span class="ct-info"><span class="card-name" id="ct-name"></span><span class="card-role"
+              id="ct-role"></span><span class="card-rule"></span><span class="card-mail" id="ct-mail"></span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="controls" data-state="closed">
+    <div id="hint">Click or tap the cover to open my portfolio</div>
+  </div>
+  <nav id="tabbar" aria-label="Sections">
+    <button type="button" data-action="section:education" data-sec="education">Education</button>
+    <button type="button" data-action="section:experience" data-sec="experience">Experience</button>
+    <button type="button" data-action="section:projects" data-sec="projects">Projects</button>
+    <button type="button" data-action="section:skills" data-sec="skills">Skills</button>
+    <button type="button" data-action="section:contact" data-sec="contact">Contact</button>
+    <a data-link="cvUrl" href="#" aria-label="Download my CV (PDF)">Download my CV</a>
+  </nav>
+  <div id="toast" role="status"></div>
+  <script src="script.js"></script>
 </body>
 </html>
