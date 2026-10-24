@@ -424,6 +424,8 @@ function deckApply(t, opts = {}) {
   changing.forEach(i => {
     const anim = keep.has(i);
     const d = anim ? k++ * gap : 0, dur = instant ? 0 : duration;
+
+    dsheets[i].style.setProperty('--vd', (anim ? d + dur / 2 : 0) + 'ms');
     dsheets[i].style.transition = anim
       ? `transform ${dur}ms var(--ease) ${d}ms, z-index 0s linear ${d + dur / 2}ms`
       : 'none';
@@ -525,11 +527,14 @@ function setState(t, opts = {}) {
   const lead = instant ? 0 : opening ? BAND : 0;
   const dur = instant ? 0 : opts.unit ? 1000 : FLIP;
   let lastDelay = lead, coverDelay = 0;
-  leaves.forEach(l => { const f = isFlipped(l.j, t.s); l.el.style.zIndex = f ? l.j + 2 : N + 2 - l.j; });
+  leaves.forEach(l => { const f = isFlipped(l.j, t.s); 
+  l.el.style.zIndex = f ? l.j + 2 : N + 2 - l.j; });
   changing.forEach((l, i) => {
     const d = instant ? 0 : lead + (opts.unit ? 0 : i * STAG);
     lastDelay = Math.max(lastDelay, d);
     if (l.j === 0) coverDelay = d;
+    l.el.style.setProperty('--vd', (d + dur / 2) + 'ms');     // when this leaf's hidden face switches off (halfway through its turn)
+    l.el.style.transition = `transform ${dur}ms var(--ease) ${d}ms, z-index 0s linear ${d + dur / 2}ms`;
     l.el.style.transition = `transform ${dur}ms var(--ease) ${d}ms, z-index 0s linear ${d + dur / 2}ms`;
     l.el.classList.toggle('flipped', isFlipped(l.j, t.s));
     if (!instant && !reduced) l.el.querySelectorAll('.shade').forEach(sh =>
@@ -582,10 +587,13 @@ function syncHash() {
   const id = (mode === 'phone' ? deckSection() : sectionOf(state.s)) || 'cover';
   lastHash = id;
     try {
-    const open = id !== 'cover', st = history.state;
-    if (!open && st && st.open) { history.back(); return; }                        // closing the book: step back to the cover entry
-    if (open && !(st && st.open)) history.pushState({ open: true }, '', '#' + id);  // opening adds ONE history entry
-    else if (location.hash.slice(1) !== id) history.replaceState({ open }, '', '#' + id);   // page turns just rewrite it
+    const open = id !== 'cover', st = history.state || {};
+    if (!open && st.open) {
+      if (st.pushed) { history.back(); return; }                                   // we added this entry, so step back over it
+      history.replaceState({ open: false }, '', '#cover'); return;                 // page was loaded on a section: don't leave the site
+    }
+    if (open && !st.open) history.pushState({ open: true, pushed: true }, '', '#' + id);   // opening adds ONE history entry
+    else if (location.hash.slice(1) !== id) history.replaceState({ open, pushed: st.pushed }, '', '#' + id);   // page turns just rewrite it
   } catch (e) {}
 
 
@@ -744,11 +752,8 @@ addEventListener('popstate', () => fromHash(false));            // Back / Forwar
 addEventListener('hashchange', () => fromHash(false));          // typed #section in the address bar
 addEventListener('hashchange', () => fromHash(false));
 scaler.classList.add('no-anim');
-try { history.replaceState({ open: location.hash.slice(1) in SECTIONS }, '', location.href); } catch (e) {}
+try { history.replaceState({ open: location.hash.slice(1) in SECTIONS, pushed: history.state && history.state.pushed }, '', location.href); } catch (e) {}
 fromHash(true);
-// requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove('no-anim')));
-// })();
-
 requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove('no-anim')));
 
 /* ===== Loading screen ===== */

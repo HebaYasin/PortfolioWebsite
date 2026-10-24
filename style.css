@@ -2077,12 +2077,6 @@ svg {
   font-size: 1.5rem
 }
 
-/* .ptip{position:absolute;left:0;top:-13.75rem;width:31.25rem;height:13.75rem;pointer-events:none} */
-/* .pcard{    z-index: 3;position:absolute;left:17.5rem;top:23.75rem;width:21rem;height:12rem;transform:rotate(100deg);display:flex;align-items:flex-start;justify-content:flex-start; */
-/* text-align:left;padding:1.25rem 1.5rem;font-family:var(--font-display);font-size:1.375rem;color:var(--ink);background:var(--card); */
-/* box-shadow:.3125rem -0.3125rem 1.5rem rgba(0,0,0,.22);outline:.125rem dashed #d7d7d7;outline-offset:-0.625rem;pointer-events:auto} */
-/* .pcard svg{width:2.125rem;height:1.625rem;margin-right:.625rem;vertical-align:-0.1875rem} */
-/* [data-state=open] .pcard{opacity: 0.5;} */
 
 .pcard {
   position: absolute;
@@ -2271,3 +2265,8 @@ svg {
   flex-direction: row;
   gap: .75rem;
 }
+
+
+
+.leaf .face,.psheet .face{transition:visibility 0s var(--vd,0s)}
+.leaf.flipped .face.front,.leaf:not(.flipped) .face.back,.psheet.flipped .face.front{visibility:hidden}
