@@ -27,11 +27,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 26px;
+      gap: 1.625rem;
       background: radial-gradient(ellipse at 50% 45%, #e69f6c, #462602 90%);
       color: #fff3e2;
       font-family: 'Walter Turncoat', 'Segoe Print', 'Comic Sans MS', cursive;
-      font-size: 20px;
+      font-size: 1.25rem;
       transition: opacity .5s, visibility 0s .5s
     }
   
@@ -43,8 +43,8 @@
   
     .ld-spin {
       animation: ld-rotate 1s infinite;
-      height: 50px;
-      width: 50px
+      height: 3.125rem;
+      width: 3.125rem
     }
   
     .ld-spin::before,
@@ -52,21 +52,21 @@
       border-radius: 50%;
       content: '';
       display: block;
-      height: 20px;
-      width: 20px
+      height: 1.25rem;
+      width: 1.25rem
     }
   
     .ld-spin::before {
       animation: ld-ball1 1s infinite;
       background-color: #1f203a;
-      box-shadow: 30px 0 0 #fbefe1;
-      margin-bottom: 10px
+      box-shadow: 1.875rem 0 0 #fbefe1;
+      margin-bottom: .625rem
     }
   
     .ld-spin::after {
       animation: ld-ball2 1s infinite;
       background-color: #f0c999;
-      box-shadow: 30px 0 0 #fff3e2;
+      box-shadow: 1.875rem 0 0 #fff3e2;
       margin-top: 0
     }
   
@@ -86,34 +86,34 @@
   
     @keyframes ld-ball1 {
       0% {
-        box-shadow: 30px 0 0 #fbefe1
+        box-shadow: 1.875rem 0 0 #fbefe1
       }
   
       50% {
         box-shadow: 0 0 0 #fbefe1;
         margin-bottom: 0;
-        transform: translate(15px, 15px)
+        transform: translate(.9375rem, .9375rem)
       }
   
       100% {
-        box-shadow: 30px 0 0 #fbefe1;
-        margin-bottom: 10px
+        box-shadow: 1.875rem 0 0 #fbefe1;
+        margin-bottom: .625rem
       }
     }
   
     @keyframes ld-ball2 {
       0% {
-        box-shadow: 30px 0 0 #fff3e2
+        box-shadow: 1.875rem 0 0 #fff3e2
       }
   
       50% {
         box-shadow: 0 0 0 #fff3e2;
-        margin-top: -20px;
-        transform: translate(15px, 15px)
+        margin-top: -1.25rem;
+        transform: translate(.9375rem, .9375rem)
       }
   
       100% {
-        box-shadow: 30px 0 0 #fff3e2;
+        box-shadow: 1.875rem 0 0 #fff3e2;
         margin-top: 0
       }
     }
