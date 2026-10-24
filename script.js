@@ -3,7 +3,7 @@
 
 (() => {
 'use strict';
-const CONFIG = {name: 'Heba Yasin',role: 'AI Engineer',email: 'heba.yasin.hdaib@gmail.com',tagline: 'Welcome to my Portfolio Website',cvUrl: 'assets/documents/Resume__HebaYasin.pdf',linkedinUrl: 'https://www.linkedin.com/in/hebah-yasin/',githubUrl: 'https://github.com/HebaYasin',contactEndpoint: 'https://formspree.io/f/xwlpgynl' };
+const CONFIG = {name: 'Heba Yasin',role: 'AI Engineer',email: 'heba.yasin.hdaib@gmail.com',tagline: 'Welcome to my Portfolio Website',cvUrl: 'assets/documents/HebaYasinCV.pdf',linkedinUrl: 'https://www.linkedin.com/in/hebah-yasin/',githubUrl: 'https://github.com/HebaYasin',contactEndpoint: 'https://formspree.io/f/xwlpgynl' };
 
 const $ = (s, r = document) => r.querySelector(s);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
