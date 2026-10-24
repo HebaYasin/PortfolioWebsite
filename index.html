@@ -18,13 +18,159 @@
   <meta property="og:description" content="Data Science and AI graduate. Explore my projects, experience, skills, and portfolio.">
   <meta property="og:image" content="https://hebayasin.github.io/PortfolioWebsite/assets/images/personal-images/og-preview.png">
   <meta property="og:type" content="website">
+  <style>
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      background: radial-gradient(ellipse at 50% 45%, #a8693e, #5a3419 90%);
+      color: #fff3e2;
+      font-family: 'Walter Turncoat', 'Segoe Print', 'Comic Sans MS', cursive;
+      font-size: 20px;
+      transition: opacity .5s, visibility 0s .5s
+    }
+  
+    #loader.done {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
+  
+    .ld-spin {
+      animation: ld-rotate 1s infinite;
+      height: 50px;
+      width: 50px
+    }
+  
+    .ld-spin::before,
+    .ld-spin::after {
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 20px;
+      width: 20px
+    }
+  
+    .ld-spin::before {
+      animation: ld-ball1 1s infinite;
+      background-color: #1f203a;
+      box-shadow: 30px 0 0 #fbefe1;
+      margin-bottom: 10px
+    }
+  
+    .ld-spin::after {
+      animation: ld-ball2 1s infinite;
+      background-color: #f0c999;
+      box-shadow: 30px 0 0 #fff3e2;
+      margin-top: 0
+    }
+  
+    @keyframes ld-rotate {
+      0% {
+        transform: rotate(0) scale(.8)
+      }
+  
+      50% {
+        transform: rotate(360deg) scale(1.2)
+      }
+  
+      100% {
+        transform: rotate(720deg) scale(.8)
+      }
+    }
+  
+    @keyframes ld-ball1 {
+      0% {
+        box-shadow: 30px 0 0 #fbefe1
+      }
+  
+      50% {
+        box-shadow: 0 0 0 #fbefe1;
+        margin-bottom: 0;
+        transform: translate(15px, 15px)
+      }
+  
+      100% {
+        box-shadow: 30px 0 0 #fbefe1;
+        margin-bottom: 10px
+      }
+    }
+  
+    @keyframes ld-ball2 {
+      0% {
+        box-shadow: 30px 0 0 #fff3e2
+      }
+  
+      50% {
+        box-shadow: 0 0 0 #fff3e2;
+        margin-top: -20px;
+        transform: translate(15px, 15px)
+      }
+  
+      100% {
+        box-shadow: 30px 0 0 #fff3e2;
+        margin-top: 0
+      }
+    }
+  
+    #loader p {
+      margin: 0
+    }
+  
+    #loader p::after {
+      content: "";
+      animation: ld-dots 1.2s steps(4) infinite
+    }
+  
+    @keyframes ld-dots {
+      0% {
+        content: ""
+      }
+  
+      25% {
+        content: "."
+      }
+  
+      50% {
+        content: ".."
+      }
+  
+      75% {
+        content: "..."
+      }
+    }
+  
+    @media (prefers-reduced-motion:reduce) {
+  
+      .ld-spin,
+      .ld-spin::before,
+      .ld-spin::after,
+      #loader p::after {
+        animation: none
+      }
+    }
+  </style>
+  <noscript>
+    <style>
+      #loader {
+        display: none
+      }
+    </style>
+  </noscript>
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Indie+Flower&family=Noto+Emoji:wght@300..700&family=Short+Stack&family=Walter+Turncoat&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="scaler">
+    <div id="loader" role="status" aria-label="Loading"><div class="ld-spin"></div><p>Opening my notebook</p></div>  <div id="scaler">
     <div id="stage">
       <div class="book" id="book">
         <div class="backcover"></div>

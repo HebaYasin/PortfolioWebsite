@@ -746,10 +746,19 @@ addEventListener('hashchange', () => fromHash(false));
 scaler.classList.add('no-anim');
 try { history.replaceState({ open: location.hash.slice(1) in SECTIONS }, '', location.href); } catch (e) {}
 fromHash(true);
+// requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove('no-anim')));
+// })();
+
 requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove('no-anim')));
+
+/* ===== Loading screen ===== */
+const loader = $('#loader'), loadStart = performance.now();
+const pageLoaded = new Promise(r => document.readyState === 'complete' ? r() : addEventListener('load', r, { once: true }));
+Promise.race([Promise.all([pageLoaded, document.fonts ? document.fonts.ready : 0]), new Promise(r => setTimeout(r, 6000))]).then(() => {
+  const wait = Math.max(0, 700 - (performance.now() - loadStart));        // show it at least 0.7s so it doesn't flash
+  setTimeout(() => { loader.classList.add('done'); setTimeout(() => loader.remove(), 700); }, wait);
+});
 })();
-
-
 
 
 
