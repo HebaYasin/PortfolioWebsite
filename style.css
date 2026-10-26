@@ -16,7 +16,6 @@
   --font-body: 'Short Stack', 'Segoe Print', 'Comic Sans MS', cursive;
   --flip: 950ms;
   --ease: cubic-bezier(.55, .05, .3, 1);
-
   --airmail: repeating-linear-gradient(135deg, #d95350 0rem, #F09290 .9375rem, transparent .9375rem, transparent 1.5625rem, #4181cb 1.5625rem, #accce3 2.5rem, transparent 2.5rem, transparent 3.125rem), #fff;
   --airmail-flap: repeating-linear-gradient(135deg, #F29B91 0rem, #F09290 1.875rem, transparent 1.875rem, transparent 3.125rem, #83B3DB 3.125rem, #84ADCB 5rem, transparent 5rem, transparent 6.25rem), #fff;
 }
