@@ -757,7 +757,7 @@ requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove(
 /* ===== Loading screen ===== */
 const loader = $('#loader'), loadStart = performance.now();
 const pageLoaded = new Promise(r => document.readyState === 'complete' ? r() : addEventListener('load', r, { once: true }));
-Promise.race([Promise.all([pageLoaded, document.fonts ? document.fonts.ready : 0]), new Promise(r => setTimeout(r, 6000))]).then(() => {
+Promise.race([pageLoaded, new Promise(r => setTimeout(r, 1500))]).then(() => {
   const wait = Math.max(0, 700 - (performance.now() - loadStart));        // show it at least 0.7s so it doesn't flash
   setTimeout(() => { loader.classList.add('done'); setTimeout(() => loader.remove(), 700); }, wait);
 });
