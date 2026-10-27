@@ -90,36 +90,26 @@
     }
   
     @keyframes ld-ball1 {
-      0% {
-        box-shadow: 1.875rem 0 0 #fbefe1
+      0%, 100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1)
       }
-  
+
       50% {
-        box-shadow: 0 0 0 #fbefe1;
-        margin-bottom: 0;
-        transform: translate(.9375rem, .9375rem)
-      }
-  
-      100% {
-        box-shadow: 1.875rem 0 0 #fbefe1;
-        margin-bottom: .625rem
+        opacity: .55;
+        transform: translate(.9375rem, .9375rem) scale(.8)
       }
     }
   
     @keyframes ld-ball2 {
-      0% {
-        box-shadow: 1.875rem 0 0 #fff3e2
+      0%, 100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1)
       }
-  
+
       50% {
-        box-shadow: 0 0 0 #fff3e2;
-        margin-top: -1.25rem;
-        transform: translate(.9375rem, .9375rem)
-      }
-  
-      100% {
-        box-shadow: 1.875rem 0 0 #fff3e2;
-        margin-top: 0
+        opacity: .55;
+        transform: translate(.9375rem, .9375rem) scale(.8)
       }
     }
   
