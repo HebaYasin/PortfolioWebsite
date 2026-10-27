@@ -20,6 +20,12 @@ function setPageMarkup(element, markup) {
   const template = document.createElement('template');
   template.innerHTML = markup;
   template.content.querySelectorAll('img[src]').forEach(img => {
+    if (img.getAttribute('src') === 'assets/images/personal-images/grad.webp') {
+      img.fetchPriority = 'high';
+      img.loading = 'eager';
+      img.decoding = 'async';
+      return;
+    }
     img.dataset.src = img.getAttribute('src');
     img.removeAttribute('src');
     img.loading = 'lazy';
