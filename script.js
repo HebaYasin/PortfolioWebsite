@@ -750,7 +750,6 @@ addEventListener('resize', () => {
 
 addEventListener('popstate', () => fromHash(false));            // Back / Forward move the notebook
 addEventListener('hashchange', () => fromHash(false));          // typed #section in the address bar
-addEventListener('hashchange', () => fromHash(false));
 scaler.classList.add('no-anim');
 try { history.replaceState({ open: location.hash.slice(1) in SECTIONS, pushed: history.state && history.state.pushed }, '', location.href); } catch (e) {}
 fromHash(true);
@@ -764,6 +763,5 @@ Promise.race([Promise.all([pageLoaded, document.fonts ? document.fonts.ready : 0
   setTimeout(() => { loader.classList.add('done'); setTimeout(() => loader.remove(), 700); }, wait);
 });
 })();
-
 
 

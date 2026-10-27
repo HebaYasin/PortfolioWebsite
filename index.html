@@ -4,13 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <script>
+    if (/\/index\.html$/i.test(location.pathname)) {
+      history.replaceState(history.state, '', location.pathname.replace(/index\.html$/i, '') + location.search + location.hash);
+    }
+  </script>
   <title>Heba Yasin Portfolio</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/personal-images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/personal-images/apple-touch-icon.png">
   <meta name="theme-color" content="#8d5a35">
   <meta name="author" content="Heba Yasin">
-  <meta name="description" content="Heba Anwar Yasin — Data Science and AI graduate. Explore my projects, experience, and, skills.">
+  <meta name="description" content="Heba Anwar Yasin — Data Science and AI graduate. Explore my projects, experience, and skills.">
+  <link rel="canonical" href="https://hebayasin.github.io/PortfolioWebsite/">
   <meta property="og:title" content="Heba Yasin Portfolio">
   <meta property="og:description" content="Explore my projects, experience, and skills.">
   <meta property="og:image" content="https://hebayasin.github.io/PortfolioWebsite/assets/images/personal-images/og-preview.png">
@@ -169,14 +175,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="loader" role="status" aria-label="Loading"><div class="ld-spin"></div><p>Opening my notebook</p></div>  <div id="scaler">
+    <div id="loader" role="status" aria-label="Loading"><div class="ld-spin"></div><p>Opening my notebook</p></div>
+  <noscript>
+    <style>
+      body { height: auto; min-height: 100%; overflow: auto; }
+      #scaler, #controls, #tabbar { display: none !important; }
+      .nojs-fallback { max-width: 48rem; margin: 3rem auto; padding: 2rem; background: #fbefe1; color: #2b2018; }
+    </style>
+    <main class="nojs-fallback">
+      <h1>Heba Yasin — Data Science and AI</h1>
+      <p>I am a Data Science and AI graduate and AI Engineer. Explore my education, experience, projects, and skills in my interactive portfolio.</p>
+      <p>The interactive portfolio requires JavaScript. You can still view my <a href="assets/documents/HebaYasinCV.pdf">CV (PDF)</a>, <a href="https://www.linkedin.com/in/hebah-yasin/">LinkedIn</a>, or <a href="https://github.com/HebaYasin">GitHub</a>.</p>
+    </main>
+  </noscript>
+  <div id="scaler">
     <div id="stage">
       <div class="book" id="book">
         <div class="backcover"></div>
         <div class="block r"></div>
         <div class="block l"></div>
         <div class="band" id="band"></div>
-        <a class="pad" data-link="cvUrl" href="#" aria-label="Open my CV (PDF) in a new tab"><b
+        <a class="pad" data-link="cvUrl" href="assets/documents/HebaYasinCV.pdf" aria-label="Download my CV (PDF)"><b
             class="face-y"></b><span>CV</span></a>
         <button class="cardtab" type="button" data-action="section:contact" aria-label="Contact">
           <span class="ct-label"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="2.4"
@@ -199,7 +218,7 @@
     <button type="button" data-action="section:projects" data-sec="projects">Projects</button>
     <button type="button" data-action="section:skills" data-sec="skills">Skills</button>
     <button type="button" data-action="section:contact" data-sec="contact">Contact</button>
-    <a data-link="cvUrl" href="#" aria-label="Download my CV (PDF)">Download my CV</a>
+    <a data-link="cvUrl" href="assets/documents/HebaYasinCV.pdf" aria-label="Download my CV (PDF)">Download my CV</a>
   </nav>
   <div id="toast" role="status"></div>
   <script src="script.js"></script>
