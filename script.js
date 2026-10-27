@@ -1,13 +1,20 @@
 //TODO: find a way to make my website not copied by genAI
 //TODO: make next, prev buttons have more height
 
-(() => {
+(async () => {
 'use strict';
 const CONFIG = {name: 'Heba Yasin',role: 'AI Engineer',email: 'heba.yasin.hdaib@gmail.com',tagline: 'Welcome to my Portfolio Website',cvUrl: 'assets/documents/HebaYasinCV.pdf',linkedinUrl: 'https://www.linkedin.com/in/hebah-yasin/',githubUrl: 'https://github.com/HebaYasin',contactEndpoint: 'https://formspree.io/f/xwlpgynl' };
 
 const $ = (s, r = document) => r.querySelector(s);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const root = document.documentElement;
+
+const loader = $('#loader'), loadStart = performance.now();
+const pageLoaded = new Promise(r => document.readyState === 'complete' ? r() : addEventListener('load', r, { once: true }));
+Promise.race([pageLoaded, new Promise(r => setTimeout(r, 1500))]).then(() => {
+  const wait = Math.max(0, 700 - (performance.now() - loadStart));
+  setTimeout(() => { loader.classList.add('done'); setTimeout(() => loader.remove(), 700); }, wait);
+});
 
 function setPageMarkup(element, markup) {
   const template = document.createElement('template');
@@ -295,8 +302,8 @@ const TABS = [
 ];
 
 
-const leaves = [];
-for (let j = 0; j < N; j++) {
+const leaves = new Array(N);
+function buildLeaf(j) {
   const el = document.createElement('div');
   el.className = 'leaf' + (j === 0 ? ' cover' : '');
   const front = j === 0 ? coverFront : SPREADS[j - 1].right;
@@ -324,8 +331,10 @@ for (let j = 0; j < N; j++) {
   
   el.style.zIndex = N + 2 - j;
   book.appendChild(el);
-  leaves.push({ j, el });
+  leaves[j] = { j, el };
 }
+buildLeaf(0);
+if (N > 1) buildLeaf(1);
 const isFlipped = (j, s) => j <= s;
 
 /* ===== Phone notebook: top-bound, pages flip vertically ===== */
@@ -335,14 +344,62 @@ dscaler.appendChild(deckEl); document.body.appendChild(dscaler);
 const DPAGES = SPREADS.flatMap(sp => sp.section === 'contact'
   ? [sp.right, sp.left]
   : [sp.left, sp.right]);                                                // phone reading order
-const dsheets = [0, ...DPAGES].map((_, i) => {
+const dsheets = new Array(DPAGES.length + 1);
+function buildSheet(i) {
   const el = document.createElement('div');
   el.className = 'psheet' + (i === 0 ? ' pcover' : '');
   el.innerHTML = `<div class="face front">${i === 0 ? coverFront : ''}<div class="shade"></div></div><div class="face back"></div>`;
   deckEl.appendChild(el);
-  return el;
-});
+  dsheets[i] = el;
+}
+buildSheet(0);
+buildSheet(1);
+buildSheet(2);
 const bind = document.createElement('div'); bind.className = 'pbind'; deckEl.appendChild(bind);
+
+let nextLeaf = Math.min(2, N), nextSheet = 3;
+let startupReady = false, pendingSection = null;
+function ensureSectionMarkup(id) {
+  const spread = rangeOf(id)[0];
+  const lastLeaf = Math.min(N - 1, spread + 1);
+  while (nextLeaf <= lastLeaf) buildLeaf(nextLeaf++);
+  const lastSheet = Math.min(dsheets.length - 1, spread * 2 + 1);
+  while (nextSheet <= lastSheet) buildSheet(nextSheet++);
+}
+document.addEventListener('click', event => {
+  if (startupReady) return;
+  const target = event.target.closest('[data-action^="section:"]');
+  if (!target) return;
+  pendingSection = target.dataset.action.slice(8);
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  if (SECTIONS[pendingSection]) ensureSectionMarkup(pendingSection);
+}, true);
+
+await new Promise((resolve, reject) => {
+  const requestIdle = window.requestIdleCallback
+    ? callback => window.requestIdleCallback(callback, { timeout: 100 })
+    : callback => setTimeout(() => callback({ didTimeout: true, timeRemaining: () => 50 }), 0);
+  const buildChunk = deadline => {
+    try {
+      let built = 0;
+      while (built < 2 && (deadline.didTimeout || deadline.timeRemaining() > 1)) {
+        if (nextLeaf < N) buildLeaf(nextLeaf++);
+        else if (nextSheet < dsheets.length) buildSheet(nextSheet++);
+        else break;
+        built++;
+      }
+      if (nextLeaf < N || nextSheet < dsheets.length) requestIdle(buildChunk);
+      else resolve();
+    } catch (error) {
+      reject(error);
+    }
+  };
+
+  const initialSection = location.hash.slice(1);
+  if (SECTIONS[initialSection]) ensureSectionMarkup(initialSection);
+  requestIdle(buildChunk);
+});
 
 const ppad = document.createElement('a');
 ppad.className = 'ppad'; ppad.dataset.link = 'cvUrl'; ppad.href = '#';
@@ -492,15 +549,10 @@ function updateDesktopImages(spread, delay = 0) {
 }
 
 function layout() {
-  const vw = innerWidth, vh = innerHeight;
-  mode = vw <= 760 ? 'phone' : 'desk';
-  root.dataset.mode = mode;
-
-  if (mode !== pagesIn) rehome();
-
-
+  const vw = window.innerWidth, vh = window.innerHeight;
+  const nextMode = vw <= 760 ? 'phone' : 'desk';
   let S, cy;
-  if (mode === 'desk') {
+  if (nextMode === 'desk') {
     const availH = vh - 70;
     S = Math.min(vw / 1120, availH / 960, 1.25);
     cy = availH / 2 + 26 * S;
@@ -509,6 +561,10 @@ function layout() {
     S = Math.min((vw - 120) / 500, (availH - 60) / 830);
     cy = availH / 2 + 30;
   }
+
+  mode = nextMode;
+  root.dataset.mode = mode;
+  if (mode !== pagesIn) rehome();
   scaler.style.transform = dscaler.style.transform = `translate(0rem,${cy}px) scale(${S})`;
 }
 const shiftFor = (s, side) => s < 0 ? -244 : mode === 'phone' ? (side === 'L' ? 238 : -238) : 0;
@@ -751,14 +807,9 @@ addEventListener('popstate', () => fromHash(false));            // Back / Forwar
 addEventListener('hashchange', () => fromHash(false));          // typed #section in the address bar
 scaler.classList.add('no-anim');
 try { history.replaceState({ open: location.hash.slice(1) in SECTIONS, pushed: history.state && history.state.pushed }, '', location.href); } catch (e) {}
-fromHash(true);
+if (pendingSection && SECTIONS[pendingSection]) goSection(pendingSection);
+else fromHash(true);
+startupReady = true;
 requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove('no-anim')));
 
-/* ===== Loading screen ===== */
-const loader = $('#loader'), loadStart = performance.now();
-const pageLoaded = new Promise(r => document.readyState === 'complete' ? r() : addEventListener('load', r, { once: true }));
-Promise.race([pageLoaded, new Promise(r => setTimeout(r, 1500))]).then(() => {
-  const wait = Math.max(0, 700 - (performance.now() - loadStart));        // show it at least 0.7s so it doesn't flash
-  setTimeout(() => { loader.classList.add('done'); setTimeout(() => loader.remove(), 700); }, wait);
-});
 })();
