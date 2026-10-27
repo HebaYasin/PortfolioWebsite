@@ -26,9 +26,8 @@ const loadImagesIn = element => element.querySelectorAll('img[data-src]').forEac
 });
 const releaseImagesIn = element => element.querySelectorAll('img[src][data-src]').forEach(img => img.removeAttribute('src'));
 
-const svgUrl = s => 'url("data:image/svg+xml,' + encodeURIComponent(s) + '")';
-root.style.setProperty('--wood-grain', svgUrl("<svg xmlns='http://www.w3.org/2000/svg' width='900' height='500'><filter id='w' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='0.004 0.09' numOctaves='5' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.20  0 0 0 0 0.09  0 0 0 0 0.03  1.8 0 0 0 -0.7'/></filter><rect width='100%' height='100%' filter='url(#w)'/></svg>"));
-root.style.setProperty('--noise', svgUrl("<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  .35 0 0 0 -.08'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>"));
+root.style.setProperty('--wood-grain', 'url("assets/images/bg/wood.webp")');
+root.style.setProperty('--noise', 'url("assets/images/bg/noise.png")');
 
 const FIRST = CONFIG.name.split(' ')[0];
 const HOME = `<button class="home" type="button" data-action="home" aria-label="Close the notebook and go back to the cover"><svg viewBox="0 0 66 42" fill="none" stroke="#2b2018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22L33 4l27 18"/><path d="M14 19v19h38V19"/><path d="M29 38V27h8v11"/></svg></button>`;
@@ -763,4 +762,3 @@ Promise.race([Promise.all([pageLoaded, document.fonts ? document.fonts.ready : 0
   setTimeout(() => { loader.classList.add('done'); setTimeout(() => loader.remove(), 700); }, wait);
 });
 })();
-
