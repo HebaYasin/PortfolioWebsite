@@ -558,9 +558,13 @@ img {
   transform: rotate(20deg) translate(.5rem, -0.75rem)
 }
 
-.book:not(.open) .cardtab,
 .book.at-contact .cardtab {
   z-index: 11
+}
+
+.book:not(.open) .cardtab {
+  visibility: hidden;
+  pointer-events: none
 }
 
 .cardtab svg {
