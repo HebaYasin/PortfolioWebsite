@@ -142,11 +142,16 @@ window.PORTFOLIO_CONTENT = ({ CONFIG, FIRST, HOME, page }) => [
       </ul>
       </section>
       <section class="entry proj">
+      <h2 class="subheading"><span class="mark">Computer Vision Projects</span></h2>
+      <ul> 
+      <li><div>Smart Document Parser<p class="meta">DocTr  + Image Preprocessing </p></div><a class="stk"  href="https://github.com/HebaYasin/Multimodal-RAG-Chatbot" target="_blank">View project</a></li> 
+      </ul>
+      </section>
+      <section class="entry proj">
       <h2 class="subheading"><span class="mark">Other Projects</span></h2>
       <ul>
       <li><div>Clones of Web Components<p class="meta">HTML + CSS + JavaScript + React.js</p></div><a class="stk"  href="https://github.com/HebaYasin/" target="_blank">View projects</a></li>
-      <li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
-      <li><div>A graphical solver that solves 2D and 3D LP problems<p class="meta"></p></div><a class="stk" href="https://colab.research.google.com/drive/1oUmmzuhHyf_ETIG6PPyxM3n2jRF1AK2Z?usp=sharing" target="_blank">View project</a></li>
+      <li><div>Winkly search engine<p class="meta">NLP + Data Retrieval + wiki API</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
       </ul>
       </section>
       <section class="note" style="gap:0rem; flex-direction:row; font-size:.75rem;"><b>Currently Building:</b><ul><li>BashratiAI Prototype</li><li>An AI harness for Pre-ML Data Pipelines that makes local LLMs perform like frontier models while minimizing token consumption.</li></ul></section>
