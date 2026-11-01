@@ -49,239 +49,7 @@ const page = (side, no, inner) => `<div class="pg ${side}">${inner}<span class="
     ? '<button class="turn next" type="button" data-action="next" aria-label="Turn to the next page"></button>'
     : '<button class="turn prev" type="button" data-action="prev" aria-label="Turn back a page"></button>') + '</div>';
 
-const SPREADS = [
-  {
-    section: "welcome",
-    left: page(
-      "left",
-      "",
-      ` <div class="cover-art"><div class="sticker"><div class="grad-card-2"><div class="img-wrapper"><img src="assets/images/personal-images/grad.webp" alt="Gradient background image" class="grad-img"></div><div class="text"> done it!</div>2025<div class="deco"><span class="dotted-hearts">💛💛💛</span><span class="crown">👑</span><span class="heart_1">💗</span><span class="heart_2">💙</span><span class="heart_22">💙</span><span class="balloon_1">🎈</span><span class="balloon_2">🎈</span><span class="balloon_3">🎈</span><span class="ribbon">🎀</span><span class="heart_3">🖤</span><span class="heart_33">🖤</span><span class="heart_333">🖤</span><span class="star_1">⭐</span><span class="star_11">⭐</span><span class="teddy">🧸</span><span class="sparkles">✨</span><span class="cake">🍰</span><span class="flowers">🌷</span><span class="heart_3">🖤</span><span class="cat">🐱</span></div></div></div></div>`,
-    ),
-    right: page(
-      "right",
-      "1",
-      `<header class="ph center"><h2>About me</h2></header>
-      <div class="pg-body">
-      <section class="entry"><p>Hi! I&rsquo;m ${FIRST}, and I&rsquo;m glad you&rsquo;re taking a look at my website! </p><br/><p>I&rsquo;m a Data Science and AI graduate at the beginning of my career, exploring opportunities to learn, build, and grow.</p></section>
-      <section class="note"><b>My interests</b><p>I enjoy using data and AI to build smart solutions and solve problems. I&rsquo;m also very interested in  AI research, particularly Natural Language Processing (NLP) and Agentic AI.  <br/><br/>Outside of AI, I enjoy front-end development as a hobby, where I explore web design and bring ideas to life through code.</p></section>
-      </div>
-      `,
-    ),
-  },
-  {
-    section: "education",
-    left: page(
-      "left",
-      2,
-      `<header class="ph">${HOME}<h1>Education</h1></header>
-      <div class="pg-body" style="gap:1rem;">
-      <section class="entry"><div style="display:flex;flex-direction:column;"><h2 class="subheading"><span class="mark">Bachelor of Data Science and AI</span></h2><p class="meta">Princess Sumaya University For Technology</p></div> <div style="width:100%;display:flex; justify-content: space-between;"><p class="meta">2021 &ndash; 2025</p> <p class="meta">GPA: <span class="mark">80.8</span></p></div></section>
-      <section class="note"><b>Graduation project</b><div><p>Together with my teammates <a href="https://www.linkedin.com/in/adam-abuyousef-ab5ab9253/" target="_blank" title="Adam's LinkedIn">Adam</a> and <a href="https://www.linkedin.com/in/abdelrahman-s-145a3b1ab/" target="_blank" title="Abdelrahman's LinkedIn">Abdelrahman</a> we chose to explore how AI can be used to predict local weather in Jordan, under the supervision of <a href="https://www.linkedin.com/in/mohammad-j-abdel-rahman-5b5a032a/" target="_blank" title="Dr. Mohammad's LinkedIn">Dr. Mohammad Abdel-Rahman</a>.<br/>We built a four-stage deep learning pipeline using a fine-tuned IBM Tiny Time Mixer, LSTM/ConvLSTM models, historical weather station data, and NASA satellite imagery.<br/> Despite challenges with data quality and pipeline design, the project gave us hands-on experience in AI-based weather forecasting.</p></div> 
-      <div class="shot edu"><img src="assets/images/project-images/grad_project.webp" alt="Graduation Project Image"><small>Jawwak</small></div><a class="stk" href="https://github.com/abood-shehade/Weather-prediction" target="_blank" rel="noopener noreferrer">View project</a></section>
-      </div>`,
-    ),
-    right: page(
-      "right",
-      3,
-      `<header class="ph center"><h2>Training & Certificates</h2></header>
-      <div class="pg-body">
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2026</span><div><b>Levant Samsung Innovation Campus AI Course</b><p class="meta">Samsung Levant<br/>Currently enrolled</p></div></div><img src="assets/images/course-images/sic_course.webp" alt="Samsung Course Image" class="course-img"></div>
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2026</span><div><b>Microsoft Azure AI Fundamentals<br/> <span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">AI-900</span></b><p class="meta">Microsoft <br/> Preparing for the Exam</p></div></div><img src="assets/images/course-images/azure_course.webp" alt="Microsoft Course Image" class="course-img"></div>
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2026</span><div><b>AWS AI Practitioner <br/><span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">AIF-C01</span></b><p class="meta">Amazon Web Services <br/>Preparing for the Exam</p></div></div><img src="assets/images/course-images/aws_ai_course.webp" alt="AWS AI Course Image" class="course-img"></div>
-      <div class="course"><div style="display:flex;flex-direction:row;align-items:flex-start; gap:1rem;"><span class="yr">2025</span><div><b>AWS Cloud Practitioner <br/><span style="font-weight: 100;font-size: 0.9em;color: #c30b0b;">CLF-C02</span></b><p class="meta">Amazon Web Services<br/> <a href="https://www.credly.com/badges/66c09cae-6b19-46ac-85ba-635d8c7f7513/" target="_blank" rel="noopener noreferrer">View the Badge</a></p></div></div><img src="assets/images/course-images/aws_course.webp" alt="AWS Cloud Course Image" class="course-img"></div>
-    </div>`,
-    ),
-  },
-  {
-    section: "experience",
-    left: page(
-      "left",
-      4,
-      `<header class="ph">${HOME}<h1>Experience</h1></header>
-      <div class="pg-body">
-      <section class="entry">
-      <h2 class="subheading"><span class="mark">Junior Data Scientist</span></h2><p class="meta exp"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p><p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
-      <div class="cardstack">
-          <div class="tcard"><span class="title">1. Agentic Multimodal RAG Chatbot</span> Built an assistant that answers questions over a freight-forwarding project PDFs and meeting transcripts, with Docling-based extraction of tables and images and hierarchical parent/child retrieval over a Chroma vector store.<br/>Delivered a Streamlit chat interface (LangChain + Ollama) that surfaces the referenced tables and images alongside answers.<div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task1.webp" alt=""></div><small>Project Architecture</small></div></div>
-          <div class="tcard"><span class="title">2. AI Document Parsing</span>Built a prototype OCR and HCR engine that extracts printed and handwritten text from scans and PDFs with per-word confidence scores, exporting structured data for downstream pipelines, which helped in solving a six-month bottleneck and reduced reliance on third-party tools.<br/>Evaluated a modular deep-learning pipeline against a single-step vision-language model (Qwen 2.5) and chose the modular approach.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task2.webp" alt=""></div><small>Project Architecture</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task2_2.webp" alt=""></div><small>Project Prototype</small></div></div></div>
-          <div class="tcard"><span class="title">3. Freight Email Processor</span>Designed an email-to-lead automation pipeline using 12 custom Claude Skills orchestrated across 5 stages to parse emails, extract shipment data, validate information, store records, and automate responses, achieving 98.6% recall against human-logged records. <div class="shot"><div class="img"><img src="assets/images/project-images/gwc_task3_.webp" alt=""></div><small>System Design</small></div></div>
-          <div class="tcard"><span class="title">4. Lead Maturity Automation Through Email Tracking & Analytics</span>Designed a workflow to track HubSpot email follow-ups with agents and managers, with activity reporting through a centralized dashboard. I designed 2 versions of this workflow, one for the marketing team and the other for the CEO.<div class="shot"><div class="img"><img src="assets/images/project-images/gwc_task4_.webp" alt=""></div><small>System Design</small></div></div>
-      </div>
-      </div>`,
-    ),
-    right: page(
-      "right",
-      5,
-      `<div class="pg-body">
-      <section class="entry">
-      <h2 class="subheading"><span class="mark">AI Intern</span></h2><p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
-      <div class="cardstack">
-          <div class="tcard"><span class="title">1. AI-powered Anti-Money Laundry</span>Enhanced an AML name similarity model accuracy by 20% by identifying and resolving critical data quality issues.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1.webp" alt=""></div><small>Names Clustering</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_2.webp" alt=""></div><small>Training Results</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_4.webp" alt=""></div><small>Testing</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_3.webp" alt=""></div><small>Evaluation</small></div></div></div>
-          <div class="tcard"><span class="title">2. Rule-based Fraud Detection</span>Developed a fraud detection system prototype that preprocesses transaction records stored in a MySQL database and identifies potentially fraudulent activity using predefined rule-based checks, Utilizing SQLAlchemy ORM for maintainability and scalability. <br/>This approach was chosen due to data availability constraints, without relying on a sufficiently large labeled dataset to train a machine learning model.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task2.webp" alt=""></div><small>Results Plot</small></div>    <div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task2_2.webp" alt=""></div><small>Results</small></div>  </div></div>
-          <div class="tcard"><span class="title">3. Text2SQL query generator</span>Built a text-to-SQL query generator by fine-tuning the Llama-2-7B using QLoRA on 2,000+ domain-specific query pairs. Prepared and cleaned training and validation datasets, explored database schemas, and implemented SQL validation workflows to improve the quality and consistency of fine-tuning examples. Generated synthetic NL2SQL training examples to expand the available dataset.<div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task3.webp" alt=""></div><small>Model Output vs. Human Baseline</small></div> </div>
-          <div class="tcard"><span class="title">4. Agentic Database Chatbot</span>Designed an agentic database chatbot prototype that enables clients to query databases through conversations. After user questions are translated into SQL queries, the LangChain agent execute them against a SQLite database, and return conversational responses with tabular results. Also implemented user-to-database mapping and integrated it with a Django web application.<div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task4.webp" alt=""></div><small>Chat Interface</small></div></div>
-      </div>
-      </div>`,
-    ),
-  },
-  {
-    section: "experience",
-    left: page(
-      "left",
-      6,
-      `<div class="pg-body">
-      <section class="entry">
-      <h2 class="subheading"><span class="mark">Data Science Intern</span></h2><p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
-      <div class="cardstack">
-          <div class="tcard"><span class="title">1. Building a classification model for HR data</span> Trained multiple ML models for a job status classification problem. Standardized 12,000+ job titles into clusters, and engineered features after analysis.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_1.webp" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_2.webp" alt=""></div><small>processing</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_3.webp" alt=""></div><small>feature engineering</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_4.webp" alt=""></div><small>ML evaluation</small></div></div></div>
-          <div class="tcard"><span class="title">2. Agentic Database Chatbot</span>Performed EDA and feature engineering across three datasets, addressing missing values and detecting outliers to improve data quality. Developed a Streamlit-based conversational chatbot using LangChain’s pre-built SQL agent and GPT-4o-mini, enabling users to query SQLite databases using natural language. Integrated conversational memory and an interactive data visualization dashboard to provide better insight.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task2_1.webp" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task2_2.webp" alt=""></div><small>Chatbot</small></div></div></div>
-      </div>
-      </div>`,
-    ),
-    right: page(
-      "right",
-      7,
-      `<div class="pg-body">
-      <section class="entry">
-      <h2 class="subheading"><span class="mark">Software Engineering Intern</span></h2><p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
-      <div class="cardstack">
-        <div class="tcard"><span class="title">1. Web Page Cloning with HTML, CSS, and JavaScript</span> Recreated multiple web pages to strengthen front-end development skills, focusing on clean HTML structure, consistent naming conventions, organized file architecture, and maintainable code.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task1.webp" alt=""></div><small>Clone One</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task2.webp" alt=""></div><small>Clone Two</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task3.webp" alt=""></div><small>Clone Three</small></div></div></div>
-        <div class="tcard"><span class="title">2. React Component Cloning</span>Recreated web components using React, applying best practices for component organization, naming conventions, and file structure. Practiced component-based development, state management, and the use of props and hooks to build reusable, interactive interfaces.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task4.webp" alt=""></div><small>Clone four</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task5.webp" alt=""></div><small>Clone five</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task6.webp" alt=""></div><small>Clone six</small></div></div></div>
-      </div>
-      </div>`,
-    ),
-  },
-  {
-    section: "projects",
-    left: page(
-      "left",
-      8,
-      `<header class="ph">${HOME}<h1>Projects</h1></header>
-      <div class="pg-body">
-      <section class="entry proj">
-      <h2 class="subheading"><span class="mark">Data Analysis Projects</span></h2>
-      <ul>
-      <li><div>One Piece Analysis<p class="meta">Web Scraping + NLP + Data Visualizing + ML</p></div><a class="stk"  href="https://github.com/HebaYasin/OnePieceDataAnalysis" target="_blank">View project</a></li>
-      <li><div>Enhancing Students well-being in jordanian schools form data analysis<p class="meta">Data Analysis + Data Visualization</p></div><a class="stk"  href="https://github.com/HebaYasin/EnhancingStudentsWellness" target="_blank">View project</a></li>
-      <li><div>Telecom Customer Churn Analysis<p class="meta">Data Visualization</p></div><a class="stk" href="https://github.com/HebaYasin/DataAnalysisofTelecomData" target="_blank">View project</a></li>  
-      </ul>
-      </section>
-      <section class="entry proj">
-      <h2 class="subheading"><span class="mark">ML/DL Projects</span></h2>
-      <ul> 
-      <li><div>AI-Driven SOC Dashboard for Anomaly Detection<p class="meta">Unsupervised ML+ Data Visualization</p></div><a class="stk"  href="https://github.com/llaxna/AI-driven-SOC-Dashboard" target="_blank">View project</a></li>
-      <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">ML + IBM CPLEX </p></div><a class="stk"  href="https://github.com/HebaYasin/ML-GuidedOptimization" target="_blank">View project</a></li>
-      <li><div>Gold Price Prediction with LSTM<p class="meta">Time Series Analysis + DL </p></div><a class="stk" href="https://github.com/HebaYasin/GoldPricePredictionLSTM" target="_blank">View project</a></li>
-      </ul>
-      </section>
-      </div>`,
-    ),
-    right: page(
-      "right",
-      9,
-      `<div class="pg-body">
-      <section class="entry proj">
-      <ul>
-      <li><div>Analysis of Classification Algorithms for Movies Data<p class="meta">EDA + ML</p></div><a class="stk" href="https://colab.research.google.com/drive/1LPuWyxpdnWAeRymv-151IYrneTh4z9DK?usp=sharing" target="_blank">View project</a></li>
-      <li><div>Employee Status Prediction<<p class="meta">EDA + Feature Engineering + NLP + ML</p></div><a class="stk"  href="https://colab.research.google.com/drive/1X_Vgkl_Kct1tc0cmVBsjWdBRBIHFmQiN?usp=sharing" target="_blank">View project</a></li>
-      </ul>
-      </section>
-      <section class="entry proj">
-      <h2 class="subheading"><span class="mark">LLMs and Agents Projects</span></h2>
-      <ul> 
-      <li><div>Multimodal RAG Chatbot<p class="meta">Document AI  + Langchain + Ollama</p></div><a class="stk"  href="https://github.com/HebaYasin/Multimodal-RAG-Chatbot" target="_blank">View project</a></li> 
-      </ul>
-      </section>
-      <section class="entry proj">
-      <h2 class="subheading"><span class="mark">Other Projects</span></h2>
-      <ul>
-      <li><div>Clones of Web Components<p class="meta">HTML + CSS + JavaScript + React.js</p></div><a class="stk"  href="https://github.com/HebaYasin/" target="_blank">View projects</a></li>
-      <li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
-      <li><div>A graphical solver that solves 2D and 3D LP problems<p class="meta"></p></div><a class="stk" href="https://colab.research.google.com/drive/1oUmmzuhHyf_ETIG6PPyxM3n2jRF1AK2Z?usp=sharing" target="_blank">View project</a></li>
-      </ul>
-      </section>
-      <section class="note" style="gap:0rem; flex-direction:row; font-size:.75rem;"><b>Currently Building:</b><ul><li>Bashrati Prototype</li><li>A team of agents to perform data cleaning and EDA</li><li>University Multimodal RAG</li></ul></section>
-      </div>`,
-    ),
-  },
-  {
-    section: "skills",
-    left: page(
-      "left",
-      10,
-      `<header class="ph">${HOME}<h2>Technical Skills</h2></header>
-      <div class="pg-body" style="gap:0rem">
-      <div class="group">
-      <h3><span class="mark">Tools I'm very good with:</span></h3>
-      <div class="skillrow">Programming Languages<img src="assets/icons/skills-programming-languages-1.svg" alt="Python Language" title="Python Language"></div>
-      <div class="skillrow">Data Analysis:<div class="tools-container"><img src="assets/icons/skills-data-analysis-1.svg" alt="Pandas Library" title="Pandas Library"><img src="assets/icons/skills-data-analysis-2.svg" alt="NumPy Library" title="NumPy Library"></div></div>
-      <div class="skillrow">Data Visualization:<div class="tools-container"><img src="assets/icons/skills-data-visualization-1.svg" alt="Plotly Library" title="Plotly Library"><img src="assets/icons/skills-data-visualization-2.svg" alt="MatPlotLib Library" title="MatPlotLib Library"><img src="assets/icons/skills-data-visualization-3.svg" alt="Seaborn Library" title="Seaborn Library"></div></div>
-      <div class="skillrow">ML and DL:<div class="tools-container"><img src="assets/icons/skills-ml-and-dl-1.svg" alt="Scikit-Learn Library" title="Scikit-Learn Library"><img src="assets/icons/skills-ml-and-dl-2.svg" alt="TensorFlow Library" title="TensorFlow Library"></div></div>
-      <div class="skillrow">GenAI and Agents:<div class="tools-container"><img src="assets/icons/skills-genai-and-agents-1.svg" alt="LangChain Library" title="LangChain Library"><img src="assets/icons/skills-genai-and-agents-2.svg" alt="Claude" title="Claude"><img src="assets/icons/skills-genai-and-agents-3.svg" alt="Ollama" title="Ollama"><img src="assets/icons/skills-genai-and-agents-4.svg" alt="Hugging Face" title="Hugging Face"></div></div>
-      <div class="skillrow">Documentation:<div class="tools-container"><img src="assets/icons/skills-documentation-1.svg" alt="Latex" title="Latex"><img src="assets/icons/skills-documentation-2.svg" alt="Diagram.net" title="Diagram.net"><img src="assets/icons/skills-documentation-3.svg" alt="Microsoft Office" title="Microsoft Office"></div></div>
-      <div class="skillrow">Operating Systems:<div class="tools-container"><img src="assets/icons/skills-operating-systems-1.svg" alt="Ubonto" title="Ubonto"><img src="assets/icons/skills-operating-systems-2.svg" alt="Windows" title="Windows"></div></div>
-      <div class="skillrow">Coding IDE:<div class="tools-container"><img src="assets/icons/skills-coding-ide-1.svg" alt="Google Colab" title="Google Colab"><img src="assets/icons/skills-coding-ide-2.svg" alt="Jupyter" title="Jupyter"><img src="assets/icons/skills-coding-ide-3.svg" alt="VS Code" title="VS Code"><img src="assets/icons/skills-coding-ide-4.svg" alt="Claude Code" title="Claude Code"></div></div>
-      <div class="skillrow">Web Development:<div class="tools-container"><img src="assets/icons/skills-web-development-1.svg" alt="CSS" title="CSS"><img src="assets/icons/skills-web-development-2.svg" alt="HTML" title="HTML"><img src="assets/icons/skills-web-development-3.svg" alt="JavaScript" title="JavaScript"><img src="assets/icons/skills-web-development-4.svg" alt="React.js" title="React.js"><img src="assets/icons/skills-web-development-5.svg" alt="Streamlit Framework" title="Streamlit Framework"></div></div>
-      <div class="skillrow">Cloud and DevOps:<div class="tools-container"><img src="assets/icons/skills-cloud-and-devops-3.svg" alt="GitHub" title="GitHub"><img src="assets/icons/skills-cloud-and-devops-4.svg" alt="GitLab" title="GitLab"><img src="assets/icons/skills-cloud-and-devops-5.svg" alt="Microsoft Azure Foundry" title="Microsoft Azure Foundry"></div></div>
-      </div>
-     </div>`,
-    ),
-    right: page(
-      "right",
-      11,
-      `<div class="pg-body">
-      <div class="group">
-      <h3><span class="mark">Tools I'm familiar with:</span></h3>
-      <div class="skillrow">Programming Languages:<div class="tools-container"><img src="assets/icons/skills-programming-languages-3.svg" alt="R Language" title="R Language"><img src="assets/icons/skills-programming-languages-2.svg" alt="C++ Language" title="C++ Language"></div></div>
-      <div class="skillrow">Document AI:<div class="tools-container"><img src="assets/icons/skills-document-ai-1.svg" alt="DocLing Library" title="DocLing Library"><img style="background:#082747; display:inline-block;" src="https://mindee.github.io/doctr/_static/Logo-docTR-white.png" alt="docTR Library" title="docTR Library"/> </div></div>
-      <div class="skillrow">Databases:<div class="tools-container"><img src="assets/icons/skills-databases-1.svg" alt="SQLAlchemy Framework" title="SQLAlchemy Framework"><img src="assets/icons/skills-databases-2.svg" alt="SQLite DBMS" title="SQLite DBMS"><img src="assets/icons/skills-databases-3.svg" alt="PostgreSQL DBMS" title="PostgreSQL DBMS"></div></div>
-      <div class="skillrow">Data Visualization:<div class="tools-container"><img src="assets/icons/skills-data-visualization-4.svg" alt="Tidyverse ggplot Library" title="Tidyverse ggplot Library"><img src="assets/icons/skills-data-visualization-5.svg" alt="Tablue" title="Tablue"><img src="assets/icons/skills-data-visualization-6.svg" alt="Microsoft Power BI" title="Microsoft Power BI"></div></div>
-      <div class="skillrow">Cloud and DevOps:<div class="tools-container"><img src="assets/icons/skills-cloud-and-devops-7.svg" alt="Docker" title="Docker"><img src="assets/icons/skills-cloud-and-devops-1.svg" alt="Amazon Web Services" title="Amazon Web Services"><img src="assets/icons/skills-cloud-and-devops-2.svg" alt="Microsoft Azure" title="Microsoft Azure"></div></div>
-      <div class="skillrow">Web Development:<div class="tools-container"><img src="assets/icons/skills-web-development-6.svg" alt="Postman" title="Postman"><img src="assets/icons/skills-web-development-7.svg" alt="WordPress" title="WordPress">    <img src="assets/icons/skills-web-development-8.svg" alt="Figma" title="Figma"><img src="assets/icons/skills-web-development-9.svg" alt="FastAPI Library" title="FastAPI Library"><img src="assets/icons/skills-web-development-11.svg" alt="Django Framework" title="Django Framework"></div></div>
-      </div>
-
-      <div class="group">
-      <h3><span class="mark">In general, I enjoy:</span></h3>
-      <ul>
-      <li>Research, reading papers and knowing every new about AI</li>
-      <li>Visualizing data</li>
-      <li>Finding and designing solutions that cost 0$</li>
-      <li>Building agents that do cool things!</li>
-      </ul>
-      </div>         
-      </div>`,
-    ),
-  },
-  {
-    section: "contact",
-    left: page(
-      "left",
-      12,
-      `<header class="ph">${HOME}<h1>Contact</h1></header>
-      <div class="envzone" id="envzone">
-        <div class="thanks"><h2>Thank you!</h2><p>Your letter is on its way.</p><p class="demo" id="demo"></p><button class="another" type="button" data-action="another"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l1-4L14 3l3 3L7 16z"/></svg>Write another message</button></div>
-        <div class="env" id="env"><div class="env-back"></div><div class="env-flap" id="flap"></div><div class="clip-fun">
-          <form class="letter" id="contact-form" novalidate>
-            <p>${FIRST},</p>
-            <p>This is <input required class="inp" id="f-name" name="name" type="text" autocomplete="name" placeholder="your name" aria-label="Your name">, and I&rsquo;d like to chat.</p>
-            <p>You can reach me at<input required class="inp wide" id="f-email" name="email" type="email" autocomplete="email" placeholder="your email" aria-label="Your email"></p>
-            <p>Here&rsquo;s what I&rsquo;m thinking:<textarea required class="inp msg" id="f-msg" name="message" placeholder="your message" aria-label="Your message"></textarea></p>
-            <button class="send" type="submit">Send</button>
-          </form>
-          </div>
-          <div class="env-pocket"><div class="env-bottom"><i class="fl"></i><i class="fr"></i><i class="fb"></i></div></div>
-        </div>
-      </div>`,
-    ),
-    right: page(
-      "right",
-      13,
-      `<div class="card"><div class="card-name">${CONFIG.name}</div><div class="card-role">${CONFIG.role}</div><div class="card-rule"></div><div class="card-mail" id="card-mail">${CONFIG.email}</div></div>
-      <div class="bio"><div><i class="tape"></i><img src="assets/images/personal-images/heba-emoji-2.webp" alt="Personal Emoji" class="grad-img"></div><p class="blurb">i am always open to aspiring disscussions and opportunities. so dont hesitate to contact me!</p></div>
-      <div class="social"><h2 class="find">Find me here</h2><div class="links"><a class="stk" data-link="linkedinUrl" href="#">LinkedIn</a><a class="stk" data-link="githubUrl" href="#">GitHub</a></div></div>`,
-    ),
-  },
-];
+const SPREADS = window.PORTFOLIO_CONTENT({ CONFIG, FIRST, HOME, page });
 const SECTIONS = {
   welcome: { label: 'Welcome', ready: true },
   education: { label: 'Education', ready: true },
@@ -312,6 +80,7 @@ let mode = window.innerWidth <= 760 ? 'phone' : 'desk';
 let pagesIn = null;
 let dk = 0;
 const leaves = new Array(N);
+const cardtab = $('.cardtab');            // desktop contact card: lives on the last page so pages flip over it
 const pageNodes = new Map();
 const getPageNode = (spread, side) => {
   const key = `${spread}:${side}`;
@@ -348,13 +117,14 @@ const buildLeafShell = j => {
   TABS.filter(t => t.leaf === j).forEach(t => {
     const wrap = document.createElement('div');
     wrap.className = 'tabwrap';
-    wrap.style.cssText = `left:${j === 0 ? 488 : 476}px;top:${t.top - (j === 0 ? -404 : -396)}px;width:${j === 0 ? 52 : 62}px`;
+    wrap.style.cssText = `left:${(j === 0 ? 488 : 476) / 16}rem;top:${(t.top - (j === 0 ? -404 : -396)) / 16}rem;width:${(j === 0 ? 52 : 62) / 16}rem`;
     wrap.innerHTML = ['front', 'back'].map(f => `<button class="tab ${f} ${t.cls}" type="button" data-action="section:${t.id}">${SECTIONS[t.id].label}</button>`).join('');
     el.appendChild(wrap);
   });
   el.style.zIndex = N + 2 - j;
   el.classList.toggle('flipped', isFlipped(j, state.s));
   book.appendChild(el);
+  if (j === N - 1) front.appendChild(cardtab);
   const leaf = { j, el, pagesReady: false };
   leaves[j] = leaf;
   return leaf;
@@ -456,6 +226,15 @@ function ensureSectionMarkup(id, fromSpread = rangeOf(id)[0], toSpread = rangeOf
     if (ci >= first && ci <= last) placeContactHeader(false);
   }
 }
+function ensureMarkup(id, firstSpread, lastSpread) {
+  ensureSectionMarkup(id, firstSpread, lastSpread);
+}
+function updateZIndex(items, getElement, getValue) {
+  items.forEach((item, index) => {
+    const element = getElement(item, index);
+    if (element) element.style.zIndex = getValue(item, index);
+  });
+}
 const deckSection = () => dk === 0 ? null : SPREADS[Math.floor((dk - 1) / 2)].section;
 
 const seatCard = () => deckEl.classList.toggle('seated', dk > contactCardPage);
@@ -481,14 +260,20 @@ function updateSheetWindow(instant = false, settleDelay = 1700) {
 }
 
 
-function deckApply(t, opts = {}) {
+function prepareDeckChange(t, opts) {
   const from = dk;
-  if (t === from) return;
+  if (t === from) return null;
   const fromSpread = from === 0 ? 0 : Math.floor((from - 1) / 2);
   const targetSpread = t === 0 ? 0 : Math.floor((t - 1) / 2);
   const firstSpread = opts.fromHash ? targetSpread : Math.min(fromSpread, targetSpread);
   const lastSpread = opts.fromHash ? targetSpread : Math.max(fromSpread, targetSpread);
-  ensureSectionMarkup(deckSectionIdFor(t), firstSpread, lastSpread);
+  return { t, opts, from, firstSpread, lastSpread };
+}
+function ensureDeckMarkup(change) {
+  ensureMarkup(deckSectionIdFor(change.t), change.firstSpread, change.lastSpread);
+}
+function updateDeckState(change) {
+  const { t, opts, from } = change;
   dk = t;
   const instant = !!opts.instant || reduced, total = dsheets.length;
   const changing = dsheets.map((el, i) => el && (i < t) !== (i < from) ? i : -1)
@@ -499,26 +284,41 @@ function deckApply(t, opts = {}) {
     : [...changing.slice(0, 4), changing[changing.length - 1]]);
   const duration = closingBook ? 500 : opts.unit ? 1000 : 800;
   const gap = instant || opts.unit ? 0 : closingBook ? 65 : Math.min(90, 700 / Math.max(1, keep.size));
+  return { ...change, instant, total, changing, keep, duration, gap };
+}
+function flipSheets(transition) {
   let k = 0;
-
-  dsheets.forEach((el, i) => { if (el) el.style.zIndex = i < t ? i + 2 : total + 2 - i; });
-  seatCard();
-  changing.forEach(i => {
-    const anim = keep.has(i);
-    const d = anim ? k++ * gap : 0, dur = instant ? 0 : duration;
+  transition.changing.forEach(i => {
+    const anim = transition.keep.has(i);
+    const d = anim ? k++ * transition.gap : 0, dur = transition.instant ? 0 : transition.duration;
 
     dsheets[i].style.setProperty('--vd', (anim ? d + dur / 2 : 0) + 'ms');
     dsheets[i].style.transition = anim
       ? `transform ${dur}ms var(--ease) ${d}ms, z-index 0s linear ${d + dur / 2}ms`
       : 'none';
-    dsheets[i].classList.toggle('flipped', i < t);
+    dsheets[i].classList.toggle('flipped', i < transition.t);
   });
 
-  keep.forEach(i => { dsheets[i].style.visibility = ''; });
+  transition.keep.forEach(i => { dsheets[i].style.visibility = ''; });
+}
 
-  const settleDelay = changing.length ? (keep.size - 1) * gap + (instant ? 0 : duration) + 100 : 1700;
-  updateSheetWindow(instant, Math.max(1700, settleDelay));
-  if (!opts.fromHash) syncHash();
+function scheduleDeckCull(transition) {
+  const settleDelay = transition.changing.length
+    ? (transition.keep.size - 1) * transition.gap + (transition.instant ? 0 : transition.duration) + 100
+    : 1700;
+  updateSheetWindow(transition.instant, Math.max(1700, settleDelay));
+}
+
+function deckApply(t, opts = {}) {
+  const change = prepareDeckChange(t, opts);
+  if (!change) return;
+  ensureDeckMarkup(change);
+  const transition = updateDeckState(change);
+  updateZIndex(dsheets, sheet => sheet, (_, i) => i < t ? i + 2 : transition.total + 2 - i);
+  seatCard();
+  flipSheets(transition);
+  scheduleDeckCull(transition);
+  syncHistory(opts);
   updateUI();
 }
 function rehome() {
@@ -530,6 +330,7 @@ function rehome() {
     deckEl.replaceChildren();
     dsheets.fill(undefined);
   } else if (previousMode === 'desk') {
+    book.appendChild(cardtab);                 // rescue the card before its leaf is removed
     book.querySelectorAll('.leaf').forEach(el => el.remove());
     leaves.fill(undefined);
   }
@@ -562,7 +363,7 @@ function rehome() {
       l.el.style.zIndex = isFlipped(l.j, state.s) ? l.j + 2 : N + 2 - l.j;
     });
     book.classList.toggle('open', state.s >= 0);
-    stage.style.transform = `translateX(${shiftFor(state.s, state.side)}px)`;
+    stage.style.transform = `translateX(${shiftFor(state.s, state.side)}rem)`;
     placeContactHeader(false);
     updateDesktopImages(state.s);
   }
@@ -570,8 +371,27 @@ function rehome() {
   updateUI();
 }
 deckEl.addEventListener('click', e => {
+  if ($('#tabbar').classList.contains('open')) {
+    setMenuOpen(false);
+    return;
+  }
   if (e.target.closest('a,button,input,textarea,label,.cardstack,[data-action]')) return;
   if (dk > 0 && e.clientY / innerHeight < .18) prev(); else next();
+});
+const tabbar = $('#tabbar');
+const menuButton = $('#menu-btn');
+function setMenuOpen(open, returnFocus = false) {
+  tabbar.classList.toggle('open', open);
+  menuButton.setAttribute('aria-expanded', String(open));
+  if (returnFocus) menuButton.focus();
+}
+menuButton.addEventListener('click', () => {
+  setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+});
+document.addEventListener('click', e => {
+  if (!tabbar.classList.contains('open')) return;
+  if (menuButton.contains(e.target)) return;
+  setMenuOpen(false);
 });
 function updatePhoneUI() {
   const sec = deckSection();
@@ -620,6 +440,7 @@ function updateDesktopImages(spread, delay = 0) {
 function layout() {
   const vw = window.innerWidth, vh = window.innerHeight;
   const nextMode = vw <= 760 ? 'phone' : 'desk';
+  if (nextMode !== 'phone' && tabbar.classList.contains('open')) setMenuOpen(false);
   let S, cy;
   if (nextMode === 'desk') {
     const availH = vh - 70;
@@ -627,62 +448,87 @@ function layout() {
     cy = availH / 2 + 26 * S;
   } else {
     const availH = vh - 128;
-    S = Math.min((vw - 120) / 500, (availH - 60) / 830);
+    S = Math.min((vw - 40) / 500, (availH - 60) / 830);
     cy = availH / 2 + 30;
   }
 
   mode = nextMode;
   root.dataset.mode = mode;
   if (mode !== pagesIn) rehome();
-  scaler.style.transform = dscaler.style.transform = `translate(0rem,${cy}px) scale(${S})`;
+  scaler.style.transform = dscaler.style.transform = `translate(0rem,${cy / 16}rem) scale(${S})`;
 }
-const shiftFor = (s, side) => s < 0 ? -244 : mode === 'phone' ? (side === 'L' ? 238 : -238) : 0;
+const shiftFor = (s, side) => s < 0 ? -244 / 16 : mode === 'phone' ? (side === 'L' ? 238 / 16 : -238 / 16) : 0;
 
-function setState(t, opts = {}) {
+function prepareDesktopChange(t, opts) {
   const from = { s: state.s, side: state.side };
-  if (t.s === from.s && t.side === from.side) return;
+  if (t.s === from.s && t.side === from.side) return null;
   const firstSpread = opts.fromHash ? t.s : Math.max(0, from.s < 0 ? 0 : Math.min(from.s, t.s));
   const lastSpread = opts.fromHash ? t.s : Math.max(from.s, t.s);
-  ensureSectionMarkup(SPREADS[t.s < 0 ? 0 : t.s].section, firstSpread, lastSpread);
+  return { t, opts, from, firstSpread, lastSpread };
+}
+function ensureDesktopMarkup(change) {
+  ensureMarkup(SPREADS[change.t.s < 0 ? 0 : change.t.s].section, change.firstSpread, change.lastSpread);
+}
+function updateDesktopState(change) {
+  const { t } = change;
   state.s = t.s; state.side = t.side;
   const coverOpen = $('.cover-open-trigger');
   if (coverOpen) coverOpen.style.pointerEvents = t.s < 0 ? 'auto' : 'none';
+}
+function prepareLeafTransition(change) {
+  const { t, opts, from } = change;
   const instant = !!opts.instant;
   const forward = t.s > from.s;
   const opening = from.s < 0 && t.s >= 0, closing = from.s >= 0 && t.s < 0;
   const changing = leaves.filter(l => l && isFlipped(l.j, t.s) !== isFlipped(l.j, from.s)).sort((a, b) => forward ? a.j - b.j : b.j - a.j);
   const lead = instant ? 0 : opening ? BAND : 0;
   const dur = instant ? 0 : opts.unit ? 1000 : FLIP;
-  let lastDelay = lead, coverDelay = 0;
-  leaves.forEach(l => {
-    if (!l) return;
-    const f = isFlipped(l.j, t.s);
-    l.el.style.zIndex = f ? l.j + 2 : N + 2 - l.j;
-  });
+  return { t, opts, instant, opening, closing, changing, lead, dur, lastDelay: lead, coverDelay: 0 };
+}
+function flipLeaves(transition) {
+  const { t, opts, instant, changing, lead, dur } = transition;
   changing.forEach((l, i) => {
     const d = instant ? 0 : lead + (opts.unit ? 0 : i * STAG);
-    lastDelay = Math.max(lastDelay, d);
-    if (l.j === 0) coverDelay = d;
+    transition.lastDelay = Math.max(transition.lastDelay, d);
+    if (l.j === 0) transition.coverDelay = d;
     l.el.style.setProperty('--vd', (d + dur / 2) + 'ms');     // when this leaf's hidden face switches off (halfway through its turn)
-    l.el.style.transition = `transform ${dur}ms var(--ease) ${d}ms, z-index 0s linear ${d + dur / 2}ms`;
     l.el.style.transition = `transform ${dur}ms var(--ease) ${d}ms, z-index 0s linear ${d + dur / 2}ms`;
     l.el.classList.toggle('flipped', isFlipped(l.j, t.s));
     if (!instant && !reduced) l.el.querySelectorAll('.shade').forEach(sh =>
       sh.animate([{ opacity: 0 }, { opacity: .3, offset: .5 }, { opacity: 0 }], { duration: dur, delay: d, easing: 'linear' }));
   });
+}
+function updateDesktopMotion(change, transition) {
+  const { t, opts } = change;
+  const { instant, opening, closing, coverDelay, dur, lastDelay } = transition;
   const sd = (opening || closing) ? coverDelay : 0;
   stage.style.transition = `transform ${dur}ms var(--ease) ${sd}ms`;
-  stage.style.transform = `translateX(${shiftFor(t.s, t.side)}px)`;
+  stage.style.transform = `translateX(${shiftFor(t.s, t.side)}rem)`;
   book.style.setProperty('--cdelay', sd + 'ms');
   const bd = instant ? 0 : closing ? Math.max(0, lastDelay + FLIP - 250) : 0;
   const bt = instant ? 0 : 560;
   band.style.transition = `transform ${bt}ms var(--ease) ${bd}ms, z-index 0s linear ${opening ? bd + bt : bd}ms`;
   book.classList.toggle('open', t.s >= 0);
+}
+function scheduleDesktopCull(change, transition) {
+  const { t, opts } = change;
+  const { instant, lead, changing, dur, lastDelay } = transition;
   const imageDelay = instant ? 0 : lead + Math.max(0, changing.length - 1) * (opts.unit ? 0 : STAG) + dur;
   updateDesktopImages(t.s, imageDelay);
   setTimeout(() => pruneDesktopLeaves(state.s), Math.max(1700, lastDelay + dur + 100));
+}
+function setState(t, opts = {}) {
+  const change = prepareDesktopChange(t, opts);
+  if (!change) return;
+  ensureDesktopMarkup(change);
+  updateDesktopState(change);
+  const transition = prepareLeafTransition(change);
+  updateZIndex(leaves, leaf => leaf?.el, leaf => isFlipped(leaf.j, change.t.s) ? leaf.j + 2 : N + 2 - leaf.j);
+  flipLeaves(transition);
+  updateDesktopMotion(change, transition);
+  scheduleDesktopCull(change, transition);
   updateUI();
-  if (!opts.fromHash) syncHash();
+  syncHistory(opts);
 }
 
 function updateUI() {
@@ -728,6 +574,9 @@ function syncHash() {
   } catch (e) {}
 
 
+}
+function syncHistory(opts) {
+  if (!opts.fromHash) syncHash();
 }
 function goSection(id, opts) {
   const sec = SECTIONS[id];
@@ -807,6 +656,10 @@ function copyEmail() {
   } catch (e) { sel(); toast('Press Ctrl/Cmd+C to copy the email'); }
 }
 document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && tabbar.classList.contains('open')) {
+    setMenuOpen(false, true);
+    return;
+  }
   if (e.target.closest('input,textarea')) return;
   if (e.key === 'ArrowRight') next();
   else if (e.key === 'ArrowLeft') prev();
@@ -815,7 +668,7 @@ document.addEventListener('keydown', e => {
 let sx = 0, sy = 0;
 document.addEventListener('pointerdown', e => { sx = e.clientX; sy = e.clientY; });
 document.addEventListener('pointerup', e => {
-  if (mode !== 'phone' || e.target.closest('input,textarea,#tabbar,#controls')) return;
+  if (mode !== 'phone' || e.target.closest('input,textarea,#tabbar,#navbar,#controls')) return;
   const dx = e.clientX - sx, dy = e.clientY - sy;
   if (Math.abs(dx) > 50 && Math.abs(dy) < Math.abs(dx) * .7) dx < 0 ? next() : prev();
 });
@@ -852,7 +705,7 @@ function resetEnvelope() {
   anims.forEach(a => a.cancel()); anims = [];
   flap.style.zIndex = ''; form.reset(); zone.classList.remove('sent'); sending = false;
   zone.classList.add('returning');
-env.animate([{ transform: 'translateY(760px)' }, { transform: 'translateY(0)' }], { duration: D(900), easing: 'cubic-bezier(.2,.8,.3,1)' });
+env.animate([{ transform: 'translateY(47.5rem)' }, { transform: 'translateY(0)' }], { duration: D(900), easing: 'cubic-bezier(.2,.8,.3,1)' });
 setTimeout(() => zone.classList.remove('returning'), D(900));}
 
 
@@ -883,12 +736,12 @@ document.addEventListener('click', e => {
 $('#ct-name').textContent = CONFIG.name; $('#ct-role').textContent = CONFIG.role; $('#ct-mail').textContent = CONFIG.email;
 
 layout();
-stage.style.transform = `translateX(${shiftFor(-1, 'L')}px)`;
+stage.style.transform = `translateX(${shiftFor(-1, 'L')}rem)`;
 updateUI();
 addEventListener('resize', () => {
   layout();
   scaler.classList.add('no-anim');
-  stage.style.transform = `translateX(${shiftFor(state.s, state.side)}px)`;
+  stage.style.transform = `translateX(${shiftFor(state.s, state.side)}rem)`;
   updateUI();
   requestAnimationFrame(() => scaler.classList.remove('no-anim'));
 });

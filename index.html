@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KBGH4B5GZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KBGH4B5GZY');
+</script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <script>
@@ -161,6 +172,10 @@
 
 
   <link rel="stylesheet" href="style.css">
+
+
+
+  
 </head>
 <body>
     <div id="loader" role="status" aria-label="Loading"><div class="ld-spin"></div><p>Opening my notebook</p></div>
@@ -168,7 +183,7 @@
   <noscript>
     <style>
       body { height: auto; min-height: 100%; overflow: auto; }
-      #scaler, #controls, #tabbar { display: none !important; }
+      #scaler, #controls, #navbar, #tabbar { display: none !important; }
       .nojs-fallback { max-width: 48rem; margin: 3rem auto; padding: 2rem; background: #fbefe1; color: #2b2018; }
     </style>
     <section class="nojs-fallback">
@@ -203,6 +218,7 @@
     <div id="hint">Click or tap the cover to open my portfolio</div>
   </div>
   <nav id="tabbar" aria-label="Sections">
+    <button type="button" data-action="section:welcome" data-sec="welcome">About me</button>
     <button type="button" data-action="section:education" data-sec="education">Education</button>
     <button type="button" data-action="section:experience" data-sec="experience">Experience</button>
     <button type="button" data-action="section:projects" data-sec="projects">Projects</button>
@@ -210,7 +226,13 @@
     <button type="button" data-action="section:contact" data-sec="contact">Contact</button>
     <a data-link="cvUrl" href="assets/documents/HebaYasinCV.pdf" aria-label="Download my CV (PDF)">Download my CV</a>
   </nav>
+  <div id="navbar">
+    <button id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="tabbar">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
   <div id="toast" role="status"></div>
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

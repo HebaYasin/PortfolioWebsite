@@ -200,7 +200,6 @@ img {
   border-radius: .1875rem;
   z-index: 100;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .28));
-  box-shadow: .125rem 0 .375rem rgba(0, 0, 0, .35);
   background-size: 20% 100%;
   box-shadow: .125rem 0 .3125rem rgba(0, 0, 0, 0.2);
   transition:
@@ -243,6 +242,23 @@ img {
   background: var(--paper);
   box-shadow: inset 0 0 2.25rem var(--paper-edge);
   border-radius: .1875rem 1.25rem 1.25rem .1875rem
+}
+
+.leaf .face,
+.psheet .face {
+  transition: visibility 0s var(--vd, 0s)
+}
+
+.leaf.flipped .face.front,
+.leaf:not(.flipped) .face.back,
+.psheet.flipped .face.front {
+  visibility: hidden
+}
+
+.leaf.flipped .face.front,
+.leaf:not(.flipped) .face.back,
+.psheet.flipped .face.front {
+  pointer-events: none
 }
 
 .face.back {
@@ -292,13 +308,12 @@ img {
   border-radius: 1.75rem .25rem .25rem 1.75rem;
   top: .375rem;
   height: 50.5625rem;
-  background: rgb(11, 11, 20);
-  ;
+  background: rgb(31, 32, 58) var(--noise);
+  box-shadow: none
 }
 
 .cover .face.back .pg.left {
   background-color: rgb(31, 32, 58);
-  ;
   background-image: var(--noise)
 }
 
@@ -389,8 +404,6 @@ img {
   position: relative;
   left: 25%;
   top: 20%;
-  width: 50%;
-  height: 30%;
   width: min(80%, 15.625rem);
   height: auto;
   min-height: 15.625rem;
@@ -406,27 +419,17 @@ img {
 
 
 
-.psheet .pg.left .sticker {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: .625rem;
-  height: .625rem;
-  background: red;
-  border: none;
-  border-radius: 0rem;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: none;
-}
-
 .psheet .grad-card-2 {
   position: relative;
-  bottom: 0rem;
+  bottom: -16.875rem;
+}
+
+
+.psheet .face.front .pg.left .cover-art .sticker {
+  height: 0rem;
+  width: 0rem;
+  border: none;
+  left: 15rem;
 }
 
 
@@ -479,17 +482,6 @@ img {
   transform: rotateX(180deg)
 }
 
-.tab.back:hover {
-  transform: rotateX(180deg)
-}
-
-.tab.back.current {
-  transform: rotateX(180deg)
-}
-
-
-
-
 .tab::before {
   content: "";
   position: absolute;
@@ -516,13 +508,7 @@ img {
 }
 
 .tab:hover {
-  box-shadow: .1875rem .1875rem .875rem rgba(0, 0, 0, .45), inset 0 0 1.625rem var(--crease);
   box-shadow: .4375rem .5625rem .875rem rgba(0, 0, 0, .45), inset -0.0625rem 0rem 1.25rem #ef8803;
-}
-
-
-.tab.soon {
-  filter: saturate(.7) brightness(.93)
 }
 
 .cardtab {
@@ -536,22 +522,22 @@ img {
   height: 12rem;
   transform: rotate(17deg);
   background: var(--card);
-  z-index: 1;
+  z-index: 4;
   text-align: left;
-  padding: .875rem 1.25rem;
+  padding: 1.25rem 1.5rem;
   font-family: var(--font-display);
   font-size: 1.375rem;
   color: var(--ink);
-  box-shadow: .3125rem -0.3125rem 1.5rem rgba(0, 0, 0, .25);
-  transition: transform .25s, opacity .35s;
-  z-index: 4;
-  /* opacity: 0.5; */
-  background: var(--card);
-  padding: 1.25rem 1.5rem;
   box-shadow: .3125rem -0.3125rem 1.5rem rgba(0, 0, 0, .22);
+  transition: transform .25s, opacity .35s;
   outline: .125rem dashed #d7d7d7;
   outline-offset: -0.625rem;
+}
 
+.leaf .cardtab {
+  top: -3rem;
+  z-index: 5;
+  transition: transform .8s var(--ease)
 }
 
 .cardtab:hover {
@@ -559,7 +545,9 @@ img {
 }
 
 .book.at-contact .cardtab {
-  z-index: 11
+  z-index: 11;
+  transform: translate(0rem, 5.625rem) rotate(357deg);
+  pointer-events: none
 }
 
 .book:not(.open) .cardtab {
@@ -581,8 +569,17 @@ img {
   transition: opacity .35s
 }
 
+.book .ct-label {
+  opacity: 1;
+  transition: opacity .25s .5s
+}
+
 .ct-info {
   opacity: 0
+}
+
+.book .ct-info {
+  transition: opacity .2s 0s
 }
 
 .ct-info>span {
@@ -590,30 +587,14 @@ img {
 }
 
 .book.at-contact .ct-label {
-  opacity: 0
+  opacity: 0;
+  transition: opacity .2s 0s
 }
 
 .book.at-contact .ct-info {
   opacity: 1;
-  transition-delay: .5s
+  transition: opacity .35s .55s
 }
-
-.book.at-contact .cardtab {
-  /* left:7rem; */
-  /* top:-23.125rem; */
-  /* transform:rotate(360deg); */
-  transform: translate(0rem, 5.625rem) rotate(357deg);
-
-  /* z-index:50; */
-  pointer-events: none;
-}
-
-/* transition:left .7s var(--ease),top .7s var(--ease),transform .7s var(--ease),z-index 0s linear .5s} */
-/* [data-mode=desk] .card{visibility:hidden} */
-.card {
-  visibility: hidden
-}
-
 
 .book.at-contact.cardtab:hover {
   transform: rotate3d(100, 100, 100, 180deg);
@@ -773,17 +754,6 @@ img {
   text-align: left;
 }
 
-.opening-copy {
-  font-size: 1.18em;
-  line-height: 1.7;
-  margin: 3.375rem .25rem 1.5rem !important
-}
-
-.opening-note {
-  margin: 0 .25rem !important;
-  color: var(--ink-soft)
-}
-
 .mark {
   background: linear-gradient(transparent 58%, rgba(242, 221, 114, .8) 58%);
   padding: 0 .1875rem;
@@ -850,22 +820,6 @@ img {
 .row span:last-child {
   order: 2;
   color: var(--ink-soft)
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .625rem;
-  margin-top: .625rem
-}
-
-.tags span {
-  background: #fff;
-  border: .125rem solid var(--ink);
-  border-radius: .75rem .25rem .75rem .25rem;
-  padding: .1875rem .75rem;
-  font-family: var(--font-display);
-  box-shadow: .125rem .125rem 0 var(--ink)
 }
 
 .pgno {
@@ -976,7 +930,6 @@ img {
   padding: .125rem;
   border-radius: 1em;
   background: linear-gradient(#ffffff, #f5f5f5) content-box, var(--airmail) padding-box;
-  box-shadow: 0 0 .1875rem rgba(0, 0, 0, .8);
   box-shadow: .0625rem .0625rem .5rem 0rem rgba(0, 0, 0, .8);
   transform: rotate(45deg) skew(-9deg, -9deg) scale(1.185)
 }
@@ -1038,13 +991,11 @@ img {
 
 .env-bottom .fl::before {
   left: -9.6em;
-  box-shadow: inset 1.25rem -1.25rem 1.25rem .9375rem rgba(0, 0, 0, 0.255);
   box-shadow: inset 1.25rem -1.25rem 1.25rem .9375rem rgba(0, 0, 0, 0.255), 0 0 .1875rem rgba(0, 0, 0, .6);
 }
 
 .env-bottom .fr::before {
   right: -9.6em;
-  box-shadow: inset -1.25rem 1.25rem 1.25rem .9375rem rgba(0, 0, 0, 0.255);
   box-shadow: inset -1.25rem 1.25rem 1.25rem .9375rem rgba(0, 0, 0, 0.255), 0 0 .1875rem rgba(0, 0, 0, 0.6);
 }
 
@@ -1244,7 +1195,8 @@ img {
   padding: 1.25rem 1.5rem;
   box-shadow: .3125rem -0.3125rem 1.5rem rgba(0, 0, 0, .22);
   outline: .125rem dashed #d7d7d7;
-  outline-offset: -0.625rem
+  outline-offset: -0.625rem;
+  visibility: hidden
 }
 
 .card-name {
@@ -1278,47 +1230,6 @@ img {
   display: flex;
   gap: 1.25rem;
   align-items: center;
-}
-
-.polaroid {
-  position: relative;
-  flex: none;
-  width: 8.25rem;
-  padding: .5rem .5rem 1.625rem;
-  background: #fff;
-  transform: rotate(-3deg);
-  box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .35)
-}
-
-.polaroid .tape {
-  position: absolute;
-  top: -0.625rem;
-  left: 2.375rem;
-  width: 3.5rem;
-  height: 1.125rem;
-  background: rgba(235, 235, 235, .8);
-  transform: rotate(-5deg);
-  box-shadow: .0625rem .0625rem .25rem rgba(0, 0, 0, .15)
-}
-
-.polaroid .img {
-  height: 7.25rem;
-  background: #bfdbe6;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-size: 2.75rem;
-  color: #1b5f7a
-}
-
-.polaroid small {
-  position: absolute;
-  bottom: .3125rem;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: .75rem;
-  color: var(--ink-soft)
 }
 
 .blurb {
@@ -1364,22 +1275,6 @@ img {
 }
 
 /* skills & projects */
-.dots {
-  display: inline-flex;
-  gap: .3125rem
-}
-
-.dots i {
-  width: .75rem;
-  height: .75rem;
-  border: .125rem solid var(--ink);
-  border-radius: 50%
-}
-
-.dots i.on {
-  background: var(--ink)
-}
-
 .skillrow {
   display: flex;
   justify-content: space-between;
@@ -1455,40 +1350,6 @@ img {
   padding: .1875rem .625rem;
 }
 
-/* certificates & courses */
-.cert {
-  position: relative;
-  background: #fffdf8;
-  border: .125rem solid var(--ink);
-  outline: .125rem solid var(--crease);
-  outline-offset: -0.5rem;
-  padding: .625rem 3.75rem .625rem .875rem;
-  margin: 0 0 1rem;
-  box-shadow: .125rem .1875rem .5rem rgba(0, 0, 0, .2);
-  transform: rotate(var(--r, -.8deg))
-}
-
-.cert:nth-of-type(even) {
-  --r: .9deg
-}
-
-.cert h3 {
-  font-size: 1.15em !important
-}
-
-.cert::after {
-  content: "";
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  width: 2.125rem;
-  height: 2.125rem;
-  margin-top: -1.0625rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--elastic) 38%, #8f1f26 40%, #8f1f26 62%, transparent 64%);
-  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .3)
-}
-
 .course {
   display: flex;
   flex-direction: row;
@@ -1531,38 +1392,6 @@ img {
   text-align: center
 }
 
-#pager {
-  display: none;
-  align-items: center;
-  gap: .875rem;
-  background: var(--paper);
-  color: var(--ink);
-  padding: .375rem .625rem;
-  border-radius: 62.4375rem;
-  box-shadow: 0 .1875rem .75rem rgba(0, 0, 0, .4)
-}
-
-#pager button {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  line-height: 1;
-  background: var(--paper-edge);
-  transition: opacity .2s
-}
-
-#pager button:disabled {
-  opacity: .3;
-  cursor: default
-}
-
-#pager-label {
-  font-size: .875rem;
-  min-width: 9.375rem;
-  text-align: center
-}
-
 #controls[data-state=open] #hint {
   display: flex;
 }
@@ -1580,11 +1409,89 @@ img {
 }
 
 [data-mode=phone] #tabbar {
+  display: none;
+  left: auto;
+  right: .625rem;
+  top: calc(env(safe-area-inset-top, 0rem) + 4rem);
+  bottom: auto;
+  width: min(13rem, 80vw);
+  box-sizing: border-box;
+  padding: .375rem;
+  flex-direction: column;
+  gap: .125rem;
+  border-radius: .75rem;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .4);
+  z-index: 1001
+}
+
+[data-mode=phone] #tabbar.open {
   display: flex
 }
 
+#navbar {
+  display: none
+}
+
+[data-mode=phone] #navbar {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0rem) + .625rem);
+  right: 0rem;
+  z-index: 1002;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box
+}
+
+[data-mode=phone] #menu-btn {
+  position: relative;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: .625rem;
+  background: transparent;
+  color: white;
+  cursor: pointer
+}
+
+[data-mode=phone] #menu-btn span {
+  position: absolute;
+  left: .6875rem;
+  width: 1.375rem;
+  height: .125rem;
+  border-radius: .125rem;
+  background: currentColor;
+  transition: transform .2s ease, opacity .2s ease
+}
+
+[data-mode=phone] #menu-btn span:nth-child(1) {
+  transform: translateY(-.4375rem)
+}
+
+[data-mode=phone] #menu-btn span:nth-child(2) {
+  transform: translateY(0)
+}
+
+[data-mode=phone] #menu-btn span:nth-child(3) {
+  transform: translateY(.4375rem)
+}
+
+[data-mode=phone] #menu-btn[aria-expanded=true] span:nth-child(1) {
+  transform: rotate(45deg)
+}
+
+[data-mode=phone] #menu-btn[aria-expanded=true] span:nth-child(2) {
+  opacity: 0
+}
+
+[data-mode=phone] #menu-btn[aria-expanded=true] span:nth-child(3) {
+  transform: rotate(-45deg)
+}
+
 [data-mode=phone] #controls {
-  bottom: calc(env(safe-area-inset-bottom, 0rem) + 4.6875rem)
+  bottom: calc(env(safe-area-inset-bottom, 0rem) + 2.5rem)
 }
 
 [data-mode=phone] #hint {
@@ -1617,8 +1524,15 @@ img {
   box-shadow: inset 0 0 0 .125rem var(--crease)
 }
 
-#tabbar .soon {
-  opacity: .6
+[data-mode=phone] #tabbar a,
+[data-mode=phone] #tabbar button {
+  flex: none;
+  width: 100%;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+  padding: .5rem;
+  font-size: .9375rem;
+  white-space: normal
 }
 
 #toast {
@@ -1648,43 +1562,15 @@ img {
 
 
 
-svg {
-  width: 0;
-  height: 0;
-}
-
-
 .grad-card-2 {
   position: absolute;
-  bottom: 13.3125rem;
+  bottom: 9.3125rem;
   width: 21.25rem;
   aspect-ratio: 4/5;
   padding: 1.5rem;
   rotate: -6deg;
   background-color: #ffffff;
   box-shadow: .125rem .125rem .75rem #0003;
-}
-
-.grad-card .tape.top {
-  position: absolute;
-  top: 0rem;
-  left: -1.125rem;
-  width: 4.25rem;
-  height: 1.125rem;
-  background: rgb(255 247 232 / 49%);
-  transform: rotate(325deg);
-  box-shadow: .0625rem .0625rem .25rem rgba(0, 0, 0, .15);
-}
-
-.grad-card .tape.bottom {
-  position: absolute;
-  bottom: .125rem;
-  right: -0.9375rem;
-  width: 4.375rem;
-  height: 1.125rem;
-  background: rgba(235, 235, 235, .8);
-  transform: rotate(335deg);
-  box-shadow: .0625rem .0625rem .25rem rgba(0, 0, 0, .15);
 }
 
 .img-wrapper {
@@ -1887,8 +1773,6 @@ svg {
 .cardstack {
   position: relative;
   cursor: pointer;
-  height: 31.25rem;
-  width: 18.75rem;
 }
 
 .tcard {
@@ -2148,7 +2032,7 @@ svg {
   box-shadow: .3125rem -0.3125rem 1.5rem rgba(0, 0, 0, .22);
   outline: .125rem dashed #d7d7d7;
   outline-offset: -0.625rem;
-  transition: left .8s var(--ease), top .8s var(--ease), transform .8s var(--ease);
+  transition: left .8s var(--ease), top .8s var(--ease), transform .8s var(--ease), visibility 0s .4s;
 }
 
 .pcard svg {
@@ -2176,7 +2060,7 @@ svg {
 
 #deck.seated .pcard {
   left: 7rem;
-  top: 3.125rem;
+  top: 8.125rem;
   transform: rotate(4deg);
   pointer-events: none
 }
@@ -2257,25 +2141,24 @@ svg {
   display: inline;
 }
 
-#deck.seated .pcard {
-  top: 8.125rem
-}
-
 [data-mode=phone] .pg.left .envzone {
   top: 1.875rem
-}
-
-.pcard {
-  transition: left .8s var(--ease), top .8s var(--ease), transform .8s var(--ease), visibility 0s .4s
 }
 
 .psheet.flipped .pcard {
   visibility: hidden
 }
 
-.psheet h1,
+.psheet h1{
+  font-size: 2.1875rem;
+}
+
 .psheet h2 {
   font-size: 2.1875rem;
+}
+
+.pg h2.subheading{
+  font-size: 1.5rem;
 }
 
 .psheet .home {
@@ -2283,7 +2166,7 @@ svg {
 }
 
 .psheet h3 {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
 }
 
 .psheet .shot.edu {
@@ -2305,7 +2188,7 @@ svg {
 }
 
 .psheet .course {
-  font-size: 1.125rem;
+  font-size: 16px;
 }
 
 .entry .meta.exp {
@@ -2318,8 +2201,3 @@ svg {
   flex-direction: row;
   gap: .75rem;
 }
-
-
-
-.leaf .face,.psheet .face{transition:visibility 0s var(--vd,0s)}
-.leaf.flipped .face.front,.leaf:not(.flipped) .face.back,.psheet.flipped .face.front{visibility:hidden}
