@@ -1,3 +1,44 @@
+@font-face {
+  font-family: "Gochi Hand";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/gochi-hand.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Indie Flower";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/indie-flower.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Emoji";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/noto-emoji-subset.woff2") format("woff2");
+  unicode-range: U+2728, U+2B50, U+1F337, U+1F370, U+1F380, U+1F388, U+1F431, U+1F451, U+1F497, U+1F499, U+1F49B, U+1F5A4, U+1F9F8;
+}
+
+@font-face {
+  font-family: "Short Stack";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/short-stack.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Walter Turncoat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/walter-turncoat.woff2") format("woff2");
+}
+
 :root {
   --cover: #0d0d0f;
   --elastic: #6b1218;
@@ -673,6 +714,11 @@ img {
 }
 
 .pg h3 {
+  font-size: 1.25em;
+  line-height: 1.25
+}
+
+.pg h2.subheading {
   font-size: 1.25em;
   line-height: 1.25
 }
