@@ -563,8 +563,7 @@ img {
 }
 
 .book:not(.open) .cardtab {
-  visibility: hidden;
-  pointer-events: none
+  z-index: 1
 }
 
 .cardtab svg {
