@@ -295,7 +295,6 @@ const rangeOf = id => { const idx = SPREADS.map((s, i) => s.section === id ? i :
 /* ===== Build the leaves ===== */
 const book = $('#book'), stage = $('#stage'), scaler = $('#scaler'), band = $('#band');
 const N = SPREADS.length + 1;
-$('.cardtab').style.zIndex = String(N + 3);
 const coverFront = `<div class="sticker"><h1 aria-label="${CONFIG.name} Portfolio"><span class="nm">${CONFIG.name.split(' ')[0]}</span><span class="nm">${CONFIG.name.split(' ').slice(1).join(' ')}</span><span class="pf">Portfolio</span></h1>
   <svg viewBox="0 0 170 20" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M4 12c14-12 26 10 40 0s26 10 40 0 26 10 40 0 26 8 40 0"/></svg></div>
   <p class="tagline">${CONFIG.tagline}</p>`;
