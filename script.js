@@ -40,7 +40,7 @@ const loadImagesIn = element => element.querySelectorAll('img[data-src]').forEac
 const releaseImagesIn = element => element.querySelectorAll('img[src][data-src]').forEach(img => img.removeAttribute('src'));
 
 root.style.setProperty('--wood-grain', 'url("assets/images/bg/wood.webp")');
-root.style.setProperty('--noise', 'url("assets/images/bg/noise.png")');
+root.style.setProperty('--noise', 'url("assets/images/bg/noise.webp")');
 
 const FIRST = CONFIG.name.split(' ')[0];
 const HOME = `<button class="home" type="button" data-action="home" aria-label="Close the notebook and go back to the cover"><svg viewBox="0 0 66 42" fill="none" stroke="#2b2018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22L33 4l27 18"/><path d="M14 19v19h38V19"/><path d="M29 38V27h8v11"/></svg></button>`;
