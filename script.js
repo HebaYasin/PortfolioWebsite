@@ -75,7 +75,7 @@ const SPREADS = [
       2,
       `<header class="ph">${HOME}<h1>Education</h1></header>
       <div class="pg-body" style="gap:1rem;">
-      <section class="entry"><div style="display:flex;flex-direction:column;"><h3><span class="mark">Bachelor of Data Science and AI</span></h3><p class="meta">Princess Sumaya University For Technology</p></div> <div style="width:100%;display:flex; justify-content: space-between;"><p class="meta">2021 &ndash; 2025</p> <p class="meta">GPA: <span class="mark">80.8</span></p></div></section>
+      <section class="entry"><div style="display:flex;flex-direction:column;"><h2 class="subheading"><span class="mark">Bachelor of Data Science and AI</span></h2><p class="meta">Princess Sumaya University For Technology</p></div> <div style="width:100%;display:flex; justify-content: space-between;"><p class="meta">2021 &ndash; 2025</p> <p class="meta">GPA: <span class="mark">80.8</span></p></div></section>
       <section class="note"><b>Graduation project</b><div><p>Together with my teammates <a href="https://www.linkedin.com/in/adam-abuyousef-ab5ab9253/" target="_blank" title="Adam's LinkedIn">Adam</a> and <a href="https://www.linkedin.com/in/abdelrahman-s-145a3b1ab/" target="_blank" title="Abdelrahman's LinkedIn">Abdelrahman</a> we chose to explore how AI can be used to predict local weather in Jordan, under the supervision of <a href="https://www.linkedin.com/in/mohammad-j-abdel-rahman-5b5a032a/" target="_blank" title="Dr. Mohammad's LinkedIn">Dr. Mohammad Abdel-Rahman</a>.<br/>We built a four-stage deep learning pipeline using a fine-tuned IBM Tiny Time Mixer, LSTM/ConvLSTM models, historical weather station data, and NASA satellite imagery.<br/> Despite challenges with data quality and pipeline design, the project gave us hands-on experience in AI-based weather forecasting.</p></div> 
       <div class="shot edu"><img src="assets/images/project-images/grad_project.webp" alt="Graduation Project Image"><small>Jawwak</small></div><a class="stk" href="https://github.com/abood-shehade/Weather-prediction" target="_blank" rel="noopener noreferrer">View project</a></section>
       </div>`,
@@ -100,7 +100,7 @@ const SPREADS = [
       `<header class="ph">${HOME}<h1>Experience</h1></header>
       <div class="pg-body">
       <section class="entry">
-      <h3><span class="mark">Junior Data Scientist</span></h3><p class="meta exp"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p><p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
+      <h2 class="subheading"><span class="mark">Junior Data Scientist</span></h2><p class="meta exp"><a href="https://www.gwclogistics.com/" target="_blank" title="GWC Logistics Website">GWC Logistics</a> &middot; 3 months</p><p>During this temporary contract role, I worked on 4 projects<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. Agentic Multimodal RAG Chatbot</span> Built an assistant that answers questions over a freight-forwarding project PDFs and meeting transcripts, with Docling-based extraction of tables and images and hierarchical parent/child retrieval over a Chroma vector store.<br/>Delivered a Streamlit chat interface (LangChain + Ollama) that surfaces the referenced tables and images alongside answers.<div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task1.webp" alt=""></div><small>Project Architecture</small></div></div>
           <div class="tcard"><span class="title">2. AI Document Parsing</span>Built a prototype OCR and HCR engine that extracts printed and handwritten text from scans and PDFs with per-word confidence scores, exporting structured data for downstream pipelines, which helped in solving a six-month bottleneck and reduced reliance on third-party tools.<br/>Evaluated a modular deep-learning pipeline against a single-step vision-language model (Qwen 2.5) and chose the modular approach.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task2.webp" alt=""></div><small>Project Architecture</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/gwc_task2_2.webp" alt=""></div><small>Project Prototype</small></div></div></div>
@@ -114,7 +114,7 @@ const SPREADS = [
       5,
       `<div class="pg-body">
       <section class="entry">
-      <h3><span class="mark">AI Intern</span></h3><p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
+      <h2 class="subheading"><span class="mark">AI Intern</span></h2><p class="meta exp"><a href="https://www.adstratech.com/" target="_blank" title="ADSTRA Website">ADSTRA – AI Fintech Solutions</a> &middot; 3 months</p><p>I had a great internship experience at ADSTRA where I got to work on some really cool projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. AI-powered Anti-Money Laundry</span>Enhanced an AML name similarity model accuracy by 20% by identifying and resolving critical data quality issues.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1.webp" alt=""></div><small>Names Clustering</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_2.webp" alt=""></div><small>Training Results</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_4.webp" alt=""></div><small>Testing</small></div><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task1_3.webp" alt=""></div><small>Evaluation</small></div></div></div>
           <div class="tcard"><span class="title">2. Rule-based Fraud Detection</span>Developed a fraud detection system prototype that preprocesses transaction records stored in a MySQL database and identifies potentially fraudulent activity using predefined rule-based checks, Utilizing SQLAlchemy ORM for maintainability and scalability. <br/>This approach was chosen due to data availability constraints, without relying on a sufficiently large labeled dataset to train a machine learning model.<div class="shots"><div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task2.webp" alt=""></div><small>Results Plot</small></div>    <div class="shot" ><div class="img"><img src="assets/images/project-images/adstra_task2_2.webp" alt=""></div><small>Results</small></div>  </div></div>
@@ -131,7 +131,7 @@ const SPREADS = [
       6,
       `<div class="pg-body">
       <section class="entry">
-      <h3><span class="mark">Data Science Intern</span></h3><p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
+      <h2 class="subheading"><span class="mark">Data Science Intern</span></h2><p class="meta exp"><a href="https://www.jo.zain.com/english/" target="_blank" title="Zain Jordan Website">Zain Jordan</a> &middot; 3 months</p><p>I worked on 2 projects.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
       <div class="cardstack">
           <div class="tcard"><span class="title">1. Building a classification model for HR data</span> Trained multiple ML models for a job status classification problem. Standardized 12,000+ job titles into clusters, and engineered features after analysis.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_1.webp" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_2.webp" alt=""></div><small>processing</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_3.webp" alt=""></div><small>feature engineering</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task1_4.webp" alt=""></div><small>ML evaluation</small></div></div></div>
           <div class="tcard"><span class="title">2. Agentic Database Chatbot</span>Performed EDA and feature engineering across three datasets, addressing missing values and detecting outliers to improve data quality. Developed a Streamlit-based conversational chatbot using LangChain’s pre-built SQL agent and GPT-4o-mini, enabling users to query SQLite databases using natural language. Integrated conversational memory and an interactive data visualization dashboard to provide better insight.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task2_1.webp" alt=""></div><small>EDA</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/zain_task2_2.webp" alt=""></div><small>Chatbot</small></div></div></div>
@@ -143,7 +143,7 @@ const SPREADS = [
       7,
       `<div class="pg-body">
       <section class="entry">
-      <h3><span class="mark">Software Engineering Intern</span></h3><p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
+      <h2 class="subheading"><span class="mark">Software Engineering Intern</span></h2><p class="meta exp"><a href="https://optimumpartners.com/" target="_blank" title="Optimum Partners Global's Website">Optimum Partners Global</a> &middot; 2 months</p><p>I trained on front-end projects here.<br/><span class="mark" style="background: linear-gradient(transparent 38%, rgb(121 255 254 / 66%) 58%);font-size: .75rem;">click on the cards to view them</span></p></section>
       <div class="cardstack">
         <div class="tcard"><span class="title">1. Web Page Cloning with HTML, CSS, and JavaScript</span> Recreated multiple web pages to strengthen front-end development skills, focusing on clean HTML structure, consistent naming conventions, organized file architecture, and maintainable code.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task1.webp" alt=""></div><small>Clone One</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task2.webp" alt=""></div><small>Clone Two</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task3.webp" alt=""></div><small>Clone Three</small></div></div></div>
         <div class="tcard"><span class="title">2. React Component Cloning</span>Recreated web components using React, applying best practices for component organization, naming conventions, and file structure. Practiced component-based development, state management, and the use of props and hooks to build reusable, interactive interfaces.<div class="shots"><div class="shot"><div class="img"><img src="assets/images/project-images/op_task4.webp" alt=""></div><small>Clone four</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task5.webp" alt=""></div><small>Clone five</small></div><div class="shot"><div class="img"><img src="assets/images/project-images/op_task6.webp" alt=""></div><small>Clone six</small></div></div></div>
@@ -159,7 +159,7 @@ const SPREADS = [
       `<header class="ph">${HOME}<h1>Projects</h1></header>
       <div class="pg-body">
       <section class="entry proj">
-      <h3><span class="mark">Data Analysis Projects</span></h3>
+      <h2 class="subheading"><span class="mark">Data Analysis Projects</span></h2>
       <ul>
       <li><div>One Piece Analysis<p class="meta">Web Scraping + NLP + Data Visualizing + ML</p></div><a class="stk"  href="https://github.com/HebaYasin/OnePieceDataAnalysis" target="_blank">View project</a></li>
       <li><div>Enhancing Students well-being in jordanian schools form data analysis<p class="meta">Data Analysis + Data Visualization</p></div><a class="stk"  href="https://github.com/HebaYasin/EnhancingStudentsWellness" target="_blank">View project</a></li>
@@ -167,7 +167,7 @@ const SPREADS = [
       </ul>
       </section>
       <section class="entry proj">
-      <h3><span class="mark">ML/DL Projects</span></h3>
+      <h2 class="subheading"><span class="mark">ML/DL Projects</span></h2>
       <ul> 
       <li><div>AI-Driven SOC Dashboard for Anomaly Detection<p class="meta">Unsupervised ML+ Data Visualization</p></div><a class="stk"  href="https://github.com/llaxna/AI-driven-SOC-Dashboard" target="_blank">View project</a></li>
       <li><div>ML-Guided Optimization for Capital Budgeting Problems<p class="meta">ML + IBM CPLEX </p></div><a class="stk"  href="https://github.com/HebaYasin/ML-GuidedOptimization" target="_blank">View project</a></li>
@@ -187,13 +187,13 @@ const SPREADS = [
       </ul>
       </section>
       <section class="entry proj">
-      <h3><span class="mark">LLMs and Agents Projects</span></h3>
+      <h2 class="subheading"><span class="mark">LLMs and Agents Projects</span></h2>
       <ul> 
       <li><div>Multimodal RAG Chatbot<p class="meta">Document AI  + Langchain + Ollama</p></div><a class="stk"  href="https://github.com/HebaYasin/Multimodal-RAG-Chatbot" target="_blank">View project</a></li> 
       </ul>
       </section>
       <section class="entry proj">
-      <h3><span class="mark">Other Projects</span></h3>
+      <h2 class="subheading"><span class="mark">Other Projects</span></h2>
       <ul>
       <li><div>Clones of Web Components<p class="meta">HTML + CSS + JavaScript + React.js</p></div><a class="stk"  href="https://github.com/HebaYasin/" target="_blank">View projects</a></li>
       <li><div>Winkly search engine<p class="meta">NLP + Data Retrieval</p></div><a class="stk"  href="https://github.com/HebaYasin/InformationRetreivalProject" target="_blank">View project</a></li>
@@ -295,6 +295,7 @@ const rangeOf = id => { const idx = SPREADS.map((s, i) => s.section === id ? i :
 /* ===== Build the leaves ===== */
 const book = $('#book'), stage = $('#stage'), scaler = $('#scaler'), band = $('#band');
 const N = SPREADS.length + 1;
+$('.cardtab').style.zIndex = String(N + 3);
 const coverFront = `<div class="sticker"><h1 aria-label="${CONFIG.name} Portfolio"><span class="nm">${CONFIG.name.split(' ')[0]}</span><span class="nm">${CONFIG.name.split(' ').slice(1).join(' ')}</span><span class="pf">Portfolio</span></h1>
   <svg viewBox="0 0 170 20" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M4 12c14-12 26 10 40 0s26 10 40 0 26 10 40 0 26 8 40 0"/></svg></div>
   <p class="tagline">${CONFIG.tagline}</p>`;
@@ -308,161 +309,175 @@ const TABS = [
 ];
 
 
+let mode = window.innerWidth <= 760 ? 'phone' : 'desk';
+let pagesIn = null;
+let dk = 0;
 const leaves = new Array(N);
-function buildLeaf(j) {
+const pageNodes = new Map();
+const getPageNode = (spread, side) => {
+  const key = `${spread}:${side}`;
+  let node = pageNodes.get(key);
+  if (!node) {
+    const container = document.createElement('div');
+    setPageMarkup(container, SPREADS[spread][side]);
+    node = container.firstElementChild;
+    pageNodes.set(key, node);
+  }
+  return node;
+};
+const isFlipped = (j, s) => j <= s;
+const buildLeafShell = j => {
+  if (leaves[j]) return leaves[j];
   const el = document.createElement('div');
   el.className = 'leaf' + (j === 0 ? ' cover' : '');
-  const front = j === 0 ? coverFront : SPREADS[j - 1].right;
-  const back = j < SPREADS.length ? SPREADS[j].left : '';
-  setPageMarkup(el, `<div class="face front">${front}<div class="shade"></div></div><div class="face back">${back}<div class="shade"></div></div>`);
+  el.innerHTML = '<div class="face front"></div><div class="face back"></div>';
+  const front = el.querySelector('.face.front'), back = el.querySelector('.face.back');
+  if (j === 0) setPageMarkup(front, coverFront);
+  front.appendChild(document.createElement('div')).className = 'shade';
+  back.appendChild(document.createElement('div')).className = 'shade';
   if (j === 0) {
-    const insideCover = el.querySelector('.face.back');
-    insideCover.dataset.action = 'home';
-    insideCover.setAttribute('aria-label', 'Click to close the notebook');
+    back.dataset.action = 'home';
+    back.setAttribute('aria-label', 'Click to close the notebook');
     const coverOpen = document.createElement('button');
     coverOpen.className = 'cover-open-trigger';
     coverOpen.type = 'button';
     coverOpen.dataset.action = 'section:welcome';
     coverOpen.setAttribute('aria-label', 'Open the notebook');
     coverOpen.title = 'Open to About';
-    el.querySelector('.face.front').appendChild(coverOpen);
+    front.appendChild(coverOpen);
   }
   TABS.filter(t => t.leaf === j).forEach(t => {
-  const wrap = document.createElement('div');
-  wrap.className = 'tabwrap';
-  wrap.style.cssText = `left:${j === 0 ? 488 : 476}px;top:${t.top - (j === 0 ? -404 : -396)}px;width:${j === 0 ? 52 : 62}px`;
-  wrap.innerHTML = ['front', 'back'].map(f => `<button class="tab ${f} ${t.cls}" type="button" data-action="section:${t.id}">${SECTIONS[t.id].label}</button>`).join('');
-  el.appendChild(wrap);
-});
-  
+    const wrap = document.createElement('div');
+    wrap.className = 'tabwrap';
+    wrap.style.cssText = `left:${j === 0 ? 488 : 476}px;top:${t.top - (j === 0 ? -404 : -396)}px;width:${j === 0 ? 52 : 62}px`;
+    wrap.innerHTML = ['front', 'back'].map(f => `<button class="tab ${f} ${t.cls}" type="button" data-action="section:${t.id}">${SECTIONS[t.id].label}</button>`).join('');
+    el.appendChild(wrap);
+  });
   el.style.zIndex = N + 2 - j;
+  el.classList.toggle('flipped', isFlipped(j, state.s));
   book.appendChild(el);
-  leaves[j] = { j, el };
-}
-buildLeaf(0);
-if (N > 1) buildLeaf(1);
-const isFlipped = (j, s) => j <= s;
+  const leaf = { j, el, pagesReady: false };
+  leaves[j] = leaf;
+  return leaf;
+};
+const buildLeaf = j => {
+  const leaf = buildLeafShell(j);
+  if (leaf.pagesReady) return;
+  const { el } = leaf;
+  const front = el.querySelector('.face.front'), back = el.querySelector('.face.back');
+  const addPage = (face, node) => {
+    face.insertBefore(node, face.querySelector('.shade'));
+    initializePage(node);
+    bindContactForm();
+  };
+  if (j > 0) addPage(front, getPageNode(j - 1, 'right'));
+  if (j < SPREADS.length) addPage(back, getPageNode(j, 'left'));
+  leaf.pagesReady = true;
+};
 
 /* ===== Phone notebook: top-bound, pages flip vertically ===== */
 const dscaler = document.createElement('div'); dscaler.id = 'dscaler';
 const deckEl = document.createElement('div'); deckEl.id = 'deck';
 dscaler.appendChild(deckEl); $('#app').appendChild(dscaler);
-const DPAGES = SPREADS.flatMap(sp => sp.section === 'contact'
-  ? [sp.right, sp.left]
-  : [sp.left, sp.right]);                                                // phone reading order
-const dsheets = new Array(DPAGES.length + 1);
-function buildSheet(i) {
-  const el = document.createElement('div');
-  el.className = 'psheet' + (i === 0 ? ' pcover' : '');
-  el.innerHTML = `<div class="face front">${i === 0 ? coverFront : ''}<div class="shade"></div></div><div class="face back"></div>`;
-  deckEl.appendChild(el);
-  dsheets[i] = el;
-}
-buildSheet(0);
-buildSheet(1);
-buildSheet(2);
-const bind = document.createElement('div'); bind.className = 'pbind'; deckEl.appendChild(bind);
-
-let nextLeaf = Math.min(2, N), nextSheet = 3;
-let startupReady = false, pendingSection = null;
-function ensureSectionMarkup(id) {
-  const spread = rangeOf(id)[0];
-  const lastLeaf = Math.min(N - 1, spread + 1);
-  while (nextLeaf <= lastLeaf) buildLeaf(nextLeaf++);
-  const lastSheet = Math.min(dsheets.length - 1, spread * 2 + 1);
-  while (nextSheet <= lastSheet) buildSheet(nextSheet++);
-}
-document.addEventListener('click', event => {
-  if (startupReady) return;
-  const target = event.target.closest('[data-action^="section:"]');
-  if (!target) return;
-  pendingSection = target.dataset.action.slice(8);
-  event.preventDefault();
-  event.stopImmediatePropagation();
-  if (SECTIONS[pendingSection]) ensureSectionMarkup(pendingSection);
-}, true);
-
-await new Promise((resolve, reject) => {
-  const requestIdle = window.requestIdleCallback
-    ? callback => window.requestIdleCallback(callback, { timeout: 100 })
-    : callback => setTimeout(() => callback({ didTimeout: true, timeRemaining: () => 50 }), 0);
-  const buildChunk = deadline => {
-    try {
-      let built = 0;
-      while (built < 2 && (deadline.didTimeout || deadline.timeRemaining() > 1)) {
-        if (nextLeaf < N) buildLeaf(nextLeaf++);
-        else if (nextSheet < dsheets.length) buildSheet(nextSheet++);
-        else break;
-        built++;
-      }
-      if (nextLeaf < N || nextSheet < dsheets.length) requestIdle(buildChunk);
-      else resolve();
-    } catch (error) {
-      reject(error);
-    }
-  };
-
-  const initialSection = location.hash.slice(1);
-  if (SECTIONS[initialSection]) ensureSectionMarkup(initialSection);
-  requestIdle(buildChunk);
-});
-
-const ppad = document.createElement('a');
-ppad.className = 'ppad'; ppad.dataset.link = 'cvUrl'; ppad.href = '#';
-ppad.setAttribute('aria-label', 'Open my CV (PDF) in a new tab'); ppad.innerHTML = '<span>CV</span>';
-dscaler.insertBefore(ppad, deckEl);
-
-
-const contactCardPage = DPAGES.indexOf(SPREADS.find(sp => sp.section === 'contact').right);
+const DPAGE_KEYS = SPREADS.flatMap((sp, spread) => sp.section === 'contact'
+  ? [[spread, 'right'], [spread, 'left']]
+  : [[spread, 'left'], [spread, 'right']]);
+const dsheets = new Array(DPAGE_KEYS.length + 1);
+const contactCardPage = DPAGE_KEYS.findIndex(([spread, side]) =>
+  SPREADS[spread].section === 'contact' && side === 'right');
 const pcard = document.createElement('button');
 pcard.className = 'pcard'; pcard.type = 'button'; pcard.dataset.action = 'section:contact'; pcard.setAttribute('aria-label', 'Contact');
 pcard.innerHTML = '<span class="ct-label"><svg viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="30" height="20" rx="2"/><path d="M3 5l14 11L31 5"/></svg>Contact</span><span class="ct-info"><span class="card-name"></span><span class="card-role"></span><span class="card-rule"></span><span class="card-mail"></span></span>';
 pcard.querySelector('.card-name').textContent = CONFIG.name;
 pcard.querySelector('.card-role').textContent = CONFIG.role;
 pcard.querySelector('.card-mail').textContent = CONFIG.email;
-dsheets[contactCardPage + 1].querySelector('.face.front').appendChild(pcard);
-const orig = [];
-SPREADS.forEach((sp, i) => {
-  const lf = leaves[i].el.querySelector('.face.back'), rf = leaves[i + 1].el.querySelector('.face.front');
-  const left = { node: lf.querySelector('.pg'), face: lf };
-  const right = { node: rf.querySelector('.pg'), face: rf };
-  orig.push(...(sp.section === 'contact' ? [right, left] : [left, right]));
-});
+function buildSheet(i, withPage = true) {
+  let el = dsheets[i];
+  if (!el) {
+    el = document.createElement('div');
+    el.className = 'psheet' + (i === 0 ? ' pcover' : '');
+    el.innerHTML = '<div class="face front"></div><div class="face back"></div>';
+    dsheets[i] = el;
+    el.classList.toggle('flipped', i < dk);
+    el.style.zIndex = i < dk ? i + 2 : dsheets.length + 2 - i;
+    deckEl.appendChild(el);
+    const front = el.querySelector('.face.front'), back = el.querySelector('.face.back');
+    if (i === 0) setPageMarkup(front, coverFront);
+    front.appendChild(document.createElement('div')).className = 'shade';
+    back.appendChild(document.createElement('div')).className = 'shade';
+    if (i === contactCardPage + 1) front.appendChild(pcard);
+  }
+  if (withPage && i > 0) {
+    const [spread, side] = DPAGE_KEYS[i - 1];
+    const front = el.querySelector('.face.front');
+    const node = getPageNode(spread, side);
+    if (node.parentElement !== front) front.insertBefore(node, front.querySelector('.shade'));
+    initializePage(node);
+    bindContactForm();
+  }
+  return el;
+}
+const bind = document.createElement('div'); bind.className = 'pbind';
+const ppad = document.createElement('a');
+ppad.className = 'ppad'; ppad.dataset.link = 'cvUrl'; ppad.href = '#';
+ppad.setAttribute('aria-label', 'Open my CV (PDF) in a new tab'); ppad.innerHTML = '<span>CV</span>';
+dscaler.insertBefore(ppad, deckEl);
 
-// contact spread: the header + page number sit on the form page on desktop, on the first (bio) page on phone
 const ci = SPREADS.findIndex(sp => sp.section === 'contact');
-const cLeft = orig[2 * ci + 1].node, cRight = orig[2 * ci].node;       // orig holds [right, left] for contact
-const cHead = cLeft.querySelector('header.ph');
-const cNoL = cLeft.querySelector('.pgno'), cNoR = cRight.querySelector('.pgno');
-const noL = cNoL.textContent, noR = cNoR.textContent;
-const placeContactHeader = phone => {
+function placeContactHeader(phone) {
+  const cLeft = pageNodes.get(`${ci}:left`), cRight = pageNodes.get(`${ci}:right`);
+  if (!cLeft || !cRight) return;
+  const cHead = cLeft.querySelector('header.ph') || cRight.querySelector('header.ph');
+  if (!cHead) return;
+  const cNoL = cLeft.querySelector('.pgno'), cNoR = cRight.querySelector('.pgno');
+  const noL = cNoL.dataset.desktopNumber ?? cNoL.textContent;
+  const noR = cNoR.dataset.desktopNumber ?? cNoR.textContent;
+  cNoL.dataset.desktopNumber = noL;
+  cNoR.dataset.desktopNumber = noR;
   (phone ? cRight : cLeft).prepend(cHead);
   cNoL.textContent = phone ? noR : noL;
   cNoR.textContent = phone ? noL : noR;
-};
-
-
-let dk = 0, pagesIn = 'desk';                                            // dk = sheet on top (0 = cover)
+}
+function ensureSectionMarkup(id, fromSpread = rangeOf(id)[0], toSpread = rangeOf(id)[0], padding = 1) {
+  const first = Math.max(0, Math.min(fromSpread, toSpread) - padding);
+  const last = Math.min(SPREADS.length - 1, Math.max(fromSpread, toSpread) + padding);
+  if (mode === 'phone') {
+    buildSheet(0, false);
+    buildSheet(contactCardPage + 1, false);
+    for (let spread = first; spread <= last; spread++) {
+      DPAGE_KEYS.forEach(([pageSpread], index) => {
+        if (pageSpread === spread) buildSheet(index + 1);
+      });
+    }
+    if (ci >= first && ci <= last) placeContactHeader(true);
+    if (!deckEl.contains(bind)) deckEl.appendChild(bind);
+  } else {
+    for (let j = 0; j < N; j++) buildLeafShell(j);
+    for (let j = Math.max(0, first); j <= Math.min(N - 1, last + 1); j++) buildLeaf(j);
+    if (ci >= first && ci <= last) placeContactHeader(false);
+  }
+}
 const deckSection = () => dk === 0 ? null : SPREADS[Math.floor((dk - 1) / 2)].section;
 
 const seatCard = () => deckEl.classList.toggle('seated', dk > contactCardPage);
 
 const WINDOW = 1;
-const inWindow = i => i === 0 || Math.abs(i - dk) <= WINDOW || i === contactCardPage + 1;
+const inWindow = i => i === 0 || i === contactCardPage + 1 ||
+  (i > 0 && Math.abs(DPAGE_KEYS[i - 1][0] - (dk === 0 ? 0 : Math.floor((dk - 1) / 2))) <= WINDOW);
 let cullT;
 function updateSheetWindow(instant = false, settleDelay = 1700) {
   dsheets.forEach((el, i) => {
-    if (inWindow(i)) {
+    if (el && inWindow(i)) {
       el.style.visibility = '';
       loadImagesIn(el);
     }
   });
   clearTimeout(cullT);
   cullT = setTimeout(() => dsheets.forEach((el, i) => {
-    if (!inWindow(i)) {
-      el.style.visibility = 'hidden';
-      releaseImagesIn(el);
-    }
+    if (!el || inWindow(i)) return;
+    releaseImagesIn(el);
+    el.remove();
+    dsheets[i] = undefined;
   }), instant ? 0 : settleDelay);
 }
 
@@ -470,9 +485,15 @@ function updateSheetWindow(instant = false, settleDelay = 1700) {
 function deckApply(t, opts = {}) {
   const from = dk;
   if (t === from) return;
+  const fromSpread = from === 0 ? 0 : Math.floor((from - 1) / 2);
+  const targetSpread = t === 0 ? 0 : Math.floor((t - 1) / 2);
+  const firstSpread = opts.fromHash ? targetSpread : Math.min(fromSpread, targetSpread);
+  const lastSpread = opts.fromHash ? targetSpread : Math.max(fromSpread, targetSpread);
+  ensureSectionMarkup(deckSectionIdFor(t), firstSpread, lastSpread);
   dk = t;
   const instant = !!opts.instant || reduced, total = dsheets.length;
-  const changing = dsheets.map((_, i) => i).filter(i => (i < t) !== (i < from)).sort((a, b) => t > from ? a - b : b - a);
+  const changing = dsheets.map((el, i) => el && (i < t) !== (i < from) ? i : -1)
+    .filter(i => i >= 0).sort((a, b) => t > from ? a - b : b - a);
   const closingBook = t === 0 && from > 0;
   const keep = new Set(closingBook || changing.length <= 5
     ? changing
@@ -481,7 +502,7 @@ function deckApply(t, opts = {}) {
   const gap = instant || opts.unit ? 0 : closingBook ? 65 : Math.min(90, 700 / Math.max(1, keep.size));
   let k = 0;
 
-  dsheets.forEach((el, i) => { el.style.zIndex = i < t ? i + 2 : total + 2 - i; });
+  dsheets.forEach((el, i) => { if (el) el.style.zIndex = i < t ? i + 2 : total + 2 - i; });
   seatCard();
   changing.forEach(i => {
     const anim = keep.has(i);
@@ -502,22 +523,52 @@ function deckApply(t, opts = {}) {
   updateUI();
 }
 function rehome() {
-  if (mode === 'phone') {
-    dk = state.s < 0 ? 0 : 2 * state.s + 1 + (state.side === 'R' ? 1 : 0);
-    orig.forEach((o, p) => { const f = dsheets[p + 1].querySelector('.face.front'); f.insertBefore(o.node, f.querySelector('.shade')); });
-    dsheets.forEach((el, i) => { el.style.transition = 'none'; el.classList.toggle('flipped', i < dk); el.style.zIndex = i < dk ? i + 2 : dsheets.length + 2 - i; });
-    placeContactHeader(true);          // <- add, before seatCard();
-    seatCard();
-    updateSheetWindow(true);
+  const previousMode = pagesIn;
+  clearTimeout(cullT);
+  if (previousMode === 'phone') {
+    state.s = dk === 0 ? -1 : Math.floor((dk - 1) / 2);
+    state.side = dk > 0 && dk % 2 === 0 ? 'R' : 'L';
+    deckEl.replaceChildren();
+    dsheets.fill(undefined);
+  } else if (previousMode === 'desk') {
+    book.querySelectorAll('.leaf').forEach(el => el.remove());
+    leaves.fill(undefined);
+  }
 
+  if (mode === 'phone') {
+    if (previousMode !== 'phone') dk = state.s < 0 ? 0 : 2 * state.s + 1 + (state.side === 'R' ? 1 : 0);
+    const hashId = location.hash.slice(1);
+    const target = state.s >= 0 ? state.s : SECTIONS[hashId] ? rangeOf(hashId)[0] : 0;
+    if (previousMode === null && SECTIONS[hashId]) dk = 2 * target + 1;
+    ensureSectionMarkup(SPREADS[target].section, target, target, previousMode === null ? 0 : 1);
+    dsheets.forEach((el, i) => {
+      if (!el) return;
+      el.style.transition = 'none';
+      el.classList.toggle('flipped', i < dk);
+      el.style.zIndex = i < dk ? i + 2 : dsheets.length + 2 - i;
+    });
     seatCard();
     updateSheetWindow(true);
   } else {
+    if (previousMode === 'phone') {
+      state.s = dk === 0 ? -1 : Math.floor((dk - 1) / 2);
+      state.side = dk > 0 && dk % 2 === 0 ? 'R' : 'L';
+    }
+    const hashId = location.hash.slice(1);
+    const target = state.s >= 0 ? state.s : SECTIONS[hashId] ? rangeOf(hashId)[0] : 0;
+    ensureSectionMarkup(SPREADS[target].section, target, target, previousMode === null ? 0 : 1);
+    leaves.forEach(l => {
+      if (!l) return;
+      l.el.classList.toggle('flipped', isFlipped(l.j, state.s));
+      l.el.style.zIndex = isFlipped(l.j, state.s) ? l.j + 2 : N + 2 - l.j;
+    });
+    book.classList.toggle('open', state.s >= 0);
+    stage.style.transform = `translateX(${shiftFor(state.s, state.side)}px)`;
     placeContactHeader(false);
-    orig.forEach(o => o.face.insertBefore(o.node, o.face.querySelector('.shade')));
-    setState({ s: dk === 0 ? -1 : Math.floor((dk - 1) / 2), side: 'L' }, { instant: true, fromHash: true });
+    updateDesktopImages(state.s);
   }
   pagesIn = mode;
+  updateUI();
 }
 deckEl.addEventListener('click', e => {
   if (e.target.closest('a,button,input,textarea,label,.cardstack,[data-action]')) return;
@@ -537,19 +588,32 @@ function updatePhoneUI() {
 /* ===== State ===== */
 const FLIP = reduced ? 1 : 950, STAG = reduced ? 0 : 120, BAND = reduced ? 0 : 480;
 const state = { s: -1, side: 'L' };
-let mode = 'desk';
 const sectionOf = s => s < 0 ? null : SPREADS[s].section;
 let desktopImageCull;
+const deckSectionIdFor = index => index === 0 ? 'welcome' : SPREADS[Math.floor((index - 1) / 2)]?.section || 'welcome';
+function pruneDesktopLeaves(spread) {
+  const first = Math.max(0, spread - 1), last = Math.min(SPREADS.length - 1, spread + 1);
+  pageNodes.forEach((node, key) => {
+    const pageSpread = Number(key.slice(0, key.indexOf(':')));
+    if (pageSpread >= first && pageSpread <= last) return;
+    const owner = node.closest('.leaf');
+    const leaf = leaves.find(item => item && item.el === owner);
+    if (leaf) leaf.pagesReady = false;
+    releaseImagesIn(node);
+    node.remove();
+  });
+}
 
 function updateDesktopImages(spread, delay = 0) {
   const faces = spread < 0
-    ? [leaves[0].el.querySelector('.face.front')]
-    : [leaves[spread].el.querySelector('.face.back'), leaves[spread + 1].el.querySelector('.face.front')];
-  faces.forEach(loadImagesIn);
+    ? [leaves[0]?.el.querySelector('.face.front')]
+    : [leaves[spread]?.el.querySelector('.face.back'), leaves[spread + 1]?.el.querySelector('.face.front')];
+  const activeFaces = faces.filter(Boolean);
+  activeFaces.forEach(loadImagesIn);
   clearTimeout(desktopImageCull);
   desktopImageCull = setTimeout(() => {
     book.querySelectorAll('img[src][data-src]').forEach(img => {
-      if (!faces.some(face => face.contains(img))) img.removeAttribute('src');
+      if (!activeFaces.some(face => face.contains(img))) img.removeAttribute('src');
     });
   }, delay);
 }
@@ -578,18 +642,24 @@ const shiftFor = (s, side) => s < 0 ? -244 : mode === 'phone' ? (side === 'L' ? 
 function setState(t, opts = {}) {
   const from = { s: state.s, side: state.side };
   if (t.s === from.s && t.side === from.side) return;
+  const firstSpread = opts.fromHash ? t.s : Math.max(0, from.s < 0 ? 0 : Math.min(from.s, t.s));
+  const lastSpread = opts.fromHash ? t.s : Math.max(from.s, t.s);
+  ensureSectionMarkup(SPREADS[t.s < 0 ? 0 : t.s].section, firstSpread, lastSpread);
   state.s = t.s; state.side = t.side;
   const coverOpen = $('.cover-open-trigger');
   if (coverOpen) coverOpen.style.pointerEvents = t.s < 0 ? 'auto' : 'none';
   const instant = !!opts.instant;
   const forward = t.s > from.s;
   const opening = from.s < 0 && t.s >= 0, closing = from.s >= 0 && t.s < 0;
-  const changing = leaves.filter(l => isFlipped(l.j, t.s) !== isFlipped(l.j, from.s)).sort((a, b) => forward ? a.j - b.j : b.j - a.j);
+  const changing = leaves.filter(l => l && isFlipped(l.j, t.s) !== isFlipped(l.j, from.s)).sort((a, b) => forward ? a.j - b.j : b.j - a.j);
   const lead = instant ? 0 : opening ? BAND : 0;
   const dur = instant ? 0 : opts.unit ? 1000 : FLIP;
   let lastDelay = lead, coverDelay = 0;
-  leaves.forEach(l => { const f = isFlipped(l.j, t.s); 
-  l.el.style.zIndex = f ? l.j + 2 : N + 2 - l.j; });
+  leaves.forEach(l => {
+    if (!l) return;
+    const f = isFlipped(l.j, t.s);
+    l.el.style.zIndex = f ? l.j + 2 : N + 2 - l.j;
+  });
   changing.forEach((l, i) => {
     const d = instant ? 0 : lead + (opts.unit ? 0 : i * STAG);
     lastDelay = Math.max(lastDelay, d);
@@ -611,6 +681,7 @@ function setState(t, opts = {}) {
   book.classList.toggle('open', t.s >= 0);
   const imageDelay = instant ? 0 : lead + Math.max(0, changing.length - 1) * (opts.unit ? 0 : STAG) + dur;
   updateDesktopImages(t.s, imageDelay);
+  setTimeout(() => pruneDesktopLeaves(state.s), Math.max(1700, lastDelay + dur + 100));
   updateUI();
   if (!opts.fromHash) syncHash();
 }
@@ -701,7 +772,10 @@ function toast(msg) {
   const t = $('#toast'); t.textContent = msg; t.classList.add('show');
   clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2800);
 }
-document.querySelectorAll('[data-link]').forEach(a => {
+const initializedLinks = new WeakSet();
+function initializeLink(a) {
+  if (initializedLinks.has(a)) return;
+  initializedLinks.add(a);
   const url = CONFIG[a.dataset.link];
   if (!url) return;
   a.href = url;
@@ -712,7 +786,8 @@ document.querySelectorAll('[data-link]').forEach(a => {
   }
   a.target = '_blank';
   a.rel = 'noopener noreferrer';
-});
+}
+document.querySelectorAll('[data-link]').forEach(initializeLink);
 document.addEventListener('click', e => {
   const lk = e.target.closest('[data-link]');
   if (lk && !CONFIG[lk.dataset.link]) { e.preventDefault(); toast('Add this link in CONFIG at the top of the script.'); return; }
@@ -747,29 +822,33 @@ document.addEventListener('pointerup', e => {
 });
 
 /* ===== Envelope ===== */
-const form = $('#contact-form'), zone = $('#envzone'), env = $('#env'), flap = $('#flap');
+let form, zone, env, flap;
 let sending = false, anims = [];
 const D = n => reduced ? 1 : n;
 const run = (el, kf, o) => { const a = el.animate(kf, { fill: 'forwards', ...o }); anims.push(a); return a.finished.catch(() => {}); };
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  if (sending) return;
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-  sending = true;
-  if (CONFIG.contactEndpoint) fetch(CONFIG.contactEndpoint, { method: 'POST', body: new FormData(form), mode: 'no-cors' }).catch(() => {});
-  $('#demo').textContent = CONFIG.contactEndpoint ? '' : 'Demo mode: no form endpoint is set, so nothing was actually sent.';
-  await run(form, [{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(21.875rem)', opacity: 1, offset: .85 }, { transform: 'translateY(23.75rem)', opacity: 1 }], { duration: D(1200), easing: 'cubic-bezier(.6,0,.3,1)' });
-  setTimeout(() => { flap.style.zIndex = 5; }, D(400));
-  await run(flap, [{ transform: 'rotateX(0)' }, { transform: 'rotateX(180deg)' }], { duration: D(800), easing: 'ease-in-out' });
-  env.classList.add('fly');
-await new Promise(r => setTimeout(r, D(500)));
-zone.classList.add('sent');          // hides the envelope
-env.classList.remove('fly');         // releases the lifted page so it can go back to its normal layer
-
-
-
-});
+function bindContactForm() {
+  if (form) return;
+  form = $('#contact-form');
+  if (!form) return;
+  zone = $('#envzone'); env = $('#env'); flap = $('#flap');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (sending) return;
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    sending = true;
+    if (CONFIG.contactEndpoint) fetch(CONFIG.contactEndpoint, { method: 'POST', body: new FormData(form), mode: 'no-cors' }).catch(() => {});
+    $('#demo').textContent = CONFIG.contactEndpoint ? '' : 'Demo mode: no form endpoint is set, so nothing was actually sent.';
+    await run(form, [{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(21.875rem)', opacity: 1, offset: .85 }, { transform: 'translateY(23.75rem)', opacity: 1 }], { duration: D(1200), easing: 'cubic-bezier(.6,0,.3,1)' });
+    setTimeout(() => { flap.style.zIndex = 5; }, D(400));
+    await run(flap, [{ transform: 'rotateX(0)' }, { transform: 'rotateX(180deg)' }], { duration: D(800), easing: 'ease-in-out' });
+    env.classList.add('fly');
+    await new Promise(r => setTimeout(r, D(500)));
+    zone.classList.add('sent');
+    env.classList.remove('fly');
+  });
+}
 function resetEnvelope() {
+  if (!form) return;
   env.classList.remove('fly');
   anims.forEach(a => a.cancel()); anims = [];
   flap.style.zIndex = ''; form.reset(); zone.classList.remove('sent'); sending = false;
@@ -780,10 +859,16 @@ setTimeout(() => zone.classList.remove('returning'), D(900));}
 
 /* ===== Task cards (click the top card to send it to the back) ===== */
 const ROT = ['rotate(2deg)', 'rotate(-1deg)', 'rotate(1.5deg)', 'rotate(3deg)', 'rotate(-2deg)'];
-document.querySelectorAll('.cardstack').forEach(st => {
-  st.append(...[...st.children].reverse());               // first card written = top card
-  [...st.children].forEach((c, i) => c.style.setProperty('--rotation', ROT[i % ROT.length]));
-});
+const initializedPages = new WeakSet();
+function initializePage(pageNode) {
+  if (initializedPages.has(pageNode)) return;
+  initializedPages.add(pageNode);
+  pageNode.querySelectorAll('[data-link]').forEach(initializeLink);
+  pageNode.querySelectorAll('.cardstack').forEach(st => {
+    st.append(...[...st.children].reverse());
+    [...st.children].forEach((c, i) => c.style.setProperty('--rotation', ROT[i % ROT.length]));
+  });
+}
 document.addEventListener('click', e => {
   const st = e.target.closest('.cardstack');
   if (!st || st.dataset.busy || st.children.length < 2) return;
@@ -811,11 +896,7 @@ addEventListener('resize', () => {
 
 addEventListener('popstate', () => fromHash(false));            // Back / Forward move the notebook
 addEventListener('hashchange', () => fromHash(false));          // typed #section in the address bar
-scaler.classList.add('no-anim');
 try { history.replaceState({ open: location.hash.slice(1) in SECTIONS, pushed: history.state && history.state.pushed }, '', location.href); } catch (e) {}
-if (pendingSection && SECTIONS[pendingSection]) goSection(pendingSection);
-else fromHash(true);
-startupReady = true;
-requestAnimationFrame(() => requestAnimationFrame(() => scaler.classList.remove('no-anim')));
+fromHash(true);
 
 })();
