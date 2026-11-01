@@ -144,7 +144,7 @@ window.PORTFOLIO_CONTENT = ({ CONFIG, FIRST, HOME, page }) => [
       <section class="entry proj">
       <h2 class="subheading"><span class="mark">Computer Vision Projects</span></h2>
       <ul> 
-      <li><div>Smart Document Parser<p class="meta">DocTr  + Image Preprocessing </p></div><a class="stk"  href="https://github.com/HebaYasin/Multimodal-RAG-Chatbot" target="_blank">View project</a></li> 
+      <li><div>Smart Document Parser<p class="meta">DocTr  + Image Preprocessing </p></div><a class="stk"  href="https://github.com/HebaYasin/SimpleOCRPrototype" target="_blank">View project</a></li> 
       </ul>
       </section>
       <section class="entry proj">
